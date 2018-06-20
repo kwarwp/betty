@@ -3,7 +3,7 @@ from _spy.vitollino.main import Cena, Texto, Elemento
 from _spy.vitollino.main import INVENTARIO as inv
 #colocar codog soraya.main e import bloco
 from browser import alert
-STYLE["width"] = 600
+STYLE["width"] = "600px"
 STYLE["height"] = "600px"
 
 CARINHAF ="https://i.imgur.com/n6b2S6t.png"
