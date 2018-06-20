@@ -29,16 +29,11 @@ TRISTE1 = "https://i.imgur.com/RslYMn9.jpg"
 TRISTE2 = "https://i.imgur.com/PzDcx3q.jpg"
 TABELAFASE1 = "https://i.imgur.com/EMLDBhH.jpg"
 TABELAFASE2 = "https://i.imgur.com/yaeq5Ua.jpg"
-
-class faseum():
-    def __init__(self):
-        self.tabelafase1 = Cena(img=TABELAFASE1)
+tabelafase1 = Cena(img=TABELAFASE1)
     
-    
-    
-    def fase1 ():
-        tabelafase1 = Cena(img=TABELAFASE1)
-        tabelafase1.vai()
+def faseum ():
+    tabelafase1 = Cena(img=TABELAFASE1)
+    tabelafase1.vai()
     
 
 faseum()
