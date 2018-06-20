@@ -23,12 +23,26 @@ SORRISOMAIS1 = "https://i.imgur.com/WCWBdwU.jpg"
 SORRISOMAIS2 = "https://i.imgur.com/xZ5mpcS.jpg"
 SORRISO1 = "https://i.imgur.com/M4LKzQL.jpg"
 SORRISO2 = "https://i.imgur.com/XpVabA8.jpg"
+SUJO1 = "https://i.imgur.com/A64jbtF.jpg"
+SUJO2 = "https://i.imgur.com/5Vfq64q.jpg"
+TRISTE1 = "https://i.imgur.com/RslYMn9.jpg"
+TRISTE2 = "https://i.imgur.com/PzDcx3q.jpg"
+TABELAFASE1 = "https://i.imgur.com/EMLDBhH.jpg"
+TABELAFASE2 = "https://i.imgur.com/yaeq5Ua.jpg"
 
-def Robotica ():
-    sono1 = Cena(img=SONO1)
-    sono1.vai()
+class faseum():
+    def __init__(self):
+        self.tabelafase1 = Cena(img=TABELAFASE1)
+    
+    
+    
+    def faseum ():
+        tabelafase1 = Cena(img=TABELAFASE1)
+        tabelafase1.vai()
     
 
-Robotica()
+faseum()
+
+
 
 
