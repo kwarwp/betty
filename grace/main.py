@@ -36,7 +36,7 @@ class faseum():
     
     
     
-    def faseum ():
+    def fase1 ():
         tabelafase1 = Cena(img=TABELAFASE1)
         tabelafase1.vai()
     
