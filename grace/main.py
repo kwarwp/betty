@@ -4,15 +4,15 @@ from _spy.vitollino.main import Cena, Texto, Elemento, STYLE, INVENTARIO
 from browser import document, alert, html
 STYLE["width"]=900
 STYLE["height"]="600px"
-
+FUNDO_BRANCO = "https://i.imgur.com/92bebxa.jpg"
 CARINHAF ="https://i.imgur.com/n6b2S6t.png"
-ALIMENTO1 = "https://i.imgur.com/kUlL42h.jpg"
-ALIMENTO2 = "https://i.imgur.com/wPCVCa4.jpg"
+ALIMENTO2 = "https://i.imgur.com/kUlL42h.jpg"
+ALIMENTO1 = "https://i.imgur.com/wPCVCa4.jpg"
 DESCANSO1 =  "https://i.imgur.com/kALoNiv.jpg"
 DESCANSO2 = "https://i.imgur.com/uLJYxzK.jpg"
 DIVERSAO1 = "https://i.imgur.com/qXk60ff.jpg"
 DIVERSAO2 ="https://i.imgur.com/PkJbh6T.jpg"
-EXCRMENTO1 = "https://i.imgur.com/6bhgxtG.jpg"
+EXCREMENTO1 = "https://i.imgur.com/6bhgxtG.jpg"
 EXCREMENTO2 = "https://i.imgur.com/kgnZgVq.jpg"
 FELIZ1 =  "https://i.imgur.com/fADJqIx.jpg"
 FELIZ2 ="https://i.imgur.com/s60ZiT1.jpg"
@@ -50,8 +50,8 @@ class Tabuleiro:
         self.pilha0.img.Id,  self.pilha.img.Id = 'descanso1', 'alimento1'
         self.lista_de_cartas = {'descanso1':self.pilha0, 'alimento1':self.pilha}
         
-        self.pilha0.vai = move_carta
-        self.pilha.vai = move_carta
+        #self.pilha0.vai = move_carta
+        #self.pilha.vai = move_carta
         self.pilha0.entra(tabelafase1)
         self.pilha.entra(tabelafase1)
         
@@ -68,9 +68,10 @@ class Tabuleiro:
         for coluna in range(4):
             for linha in range(4):
                 nome = "{}_{}".format(linha, coluna)
-                self.tabuleiro[nome] = Elemento(SONO1, tit=nome, style=dict(
+                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome, style=dict(
                     width=TBX-8, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
                 self.tabuleiro[nome].entra(tabelafase1)
+                self.tabuleiro[nome].onclick = move_carta
 
         tabelafase1.vai()
 
