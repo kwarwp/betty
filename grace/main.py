@@ -53,6 +53,23 @@ class Tabuleiro:
         self.pilha.vai = move_carta
         self.pilha0.entra(tabelafase1)
         self.pilha.entra(tabelafase1)
+        
+        ### TABULEIRO ####
+        TBX, TBY = 120, 90
+        self.tab0 = Elemento(SONO1, tit='0_0', style=dict(
+            width=TBX, height=TBY, left=220, top=140))
+        self.tab = Elemento(SONO1, tit='0_1', style=dict(
+            width=TBX, height=TBY, left=400, top=140))
+        self.tabuleiro = {'0_0':self.tab0, '0_1':self.tab}
+        self.casa0.entra(tabelafase1)
+        self.casa.entra(tabelafase1)
+        inicio_x, inicio_y = 
+        for coluna in range(4):
+            for linha in range(4):
+                nome = "{}_{}".format(linha, coluna)
+                self.tabuleiro[nome] = Elemento(SONO1, tit=nome, style=dict(
+                    width=TBX, height=TBY, left=220+coluna*TBX, top=140+linha*TBY))
+
         tabelafase1.vai()
 
 Tabuleiro()
