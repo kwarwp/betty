@@ -51,3 +51,10 @@ AttributeError: 'Elemento' object has no attribute 'onclick'
     self.pilha.elt.onclick(move_carta)
 TypeError: 'NoneType' object is not callable
 '''},
+{'date': 'Wed Jul 11 2018 16:05:04.882 GMt-0300 (-03) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 66
+  inicio_x, inicio_y = 
+                        ^
+SyntaxError: invalid syntax
+'''},
