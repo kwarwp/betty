@@ -3,6 +3,7 @@ from _spy.vitollino.main import Cena, Texto, Elemento, STYLE, INVENTARIO
 #colocar codog soraya.main e import bloco
 from browser import document, alert, html
 STYLE["width"]=900
+STYLE["height"]="600px"
 
 CARINHAF ="https://i.imgur.com/n6b2S6t.png"
 ALIMENTO1 = "https://i.imgur.com/kUlL42h.jpg"
@@ -55,20 +56,21 @@ class Tabuleiro:
         self.pilha.entra(tabelafase1)
         
         ### TABULEIRO ####
-        TBX, TBY = 120, 90
-        self.tab0 = Elemento(SONO1, tit='0_0', style=dict(
+        TBX, TBY = 153, 103
+        self.casa0 = Elemento(SONO1, tit='0_0', style=dict(
             width=TBX, height=TBY, left=220, top=140))
-        self.tab = Elemento(SONO1, tit='0_1', style=dict(
+        self.casa = Elemento(SONO1, tit='0_1', style=dict(
             width=TBX, height=TBY, left=400, top=140))
-        self.tabuleiro = {'0_0':self.tab0, '0_1':self.tab}
-        self.casa0.entra(tabelafase1)
-        self.casa.entra(tabelafase1)
-        inicio_x, inicio_y = 
+        self.tabuleiro = {}
+        #self.casa0.entra(tabelafase1)
+        #self.casa.entra(tabelafase1)
+        inicio_x, inicio_y = 220, 145
         for coluna in range(4):
             for linha in range(4):
                 nome = "{}_{}".format(linha, coluna)
                 self.tabuleiro[nome] = Elemento(SONO1, tit=nome, style=dict(
-                    width=TBX, height=TBY, left=220+coluna*TBX, top=140+linha*TBY))
+                    width=TBX-8, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
+                self.tabuleiro[nome].entra(tabelafase1)
 
         tabelafase1.vai()
 
