@@ -32,11 +32,30 @@ TABELAFASE2 = "https://i.imgur.com/yaeq5Ua.jpg"
 tabelafase1 = Cena(img=TABELAFASE1)
     
 
-def faseum ():
-    tabelafase1 = Cena(img=TABELAFASE1)
-    tabelafase1.vai()    
+class Tabuleiro:
 
-faseum()
+    def __init__ (self):
+        def move_carta(carta):
+            print(carta.target.id)
+            # acarta = self.lista_de_cartas[carta.target.id]
+            carta.target.setAttribute("left", 250)
+            carta.target.setAttribute("top", 250)
+        
+        tabelafase1 = Cena(img=TABELAFASE1)
+        self.pilha0 = Elemento(DESCANSO1, tit='descanso1', style=dict(
+            width="120px", height="90px", left=10, top=10))
+        self.pilha = Elemento(ALIMENTO1, tit='alimento1', style=dict(
+            width="120px", height="90px", left=10, top=10))
+        self.pilha0.elt.Id,  self.pilha.elt.Id = 'descanso1', 'alimento1'
+        self.lista_de_cartas = {'descanso1':self.pilha0, 'alimento1':self.pilha}
+        
+        self.pilha0.vai = move_carta
+        self.pilha.vai = move_carta
+        self.pilha0.entra(tabelafase1)
+        self.pilha.entra(tabelafase1)
+        tabelafase1.vai()
+
+Tabuleiro()
 
 class Baralho ():
     def __init__ (self, bloco, left=0, top=0, ileft=0, itop=0,
