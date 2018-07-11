@@ -46,8 +46,10 @@ class Tabuleiro:
             carta_a_mover.elt.style.top = elemento_casa_do_tabuleiro.style.top
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
+            dica_do_valor = Elemento(SORRISOMAIS1, style=dict(left=950))
+            dica_do_valor.entra(self.tabela_fase1)
         
-        tabelafase1 = Cena(img=TABELAFASE1)
+        self.tabela_fase1 = tabelafase1 = Cena(img=TABELAFASE1)
         self.pilha = Elemento(DESCANSO1, tit='descanso1', style=dict(
             width="120px", height="90px", left=10, top=10))
             
