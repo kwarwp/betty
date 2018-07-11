@@ -130,3 +130,10 @@ AttributeError: 'Tabuleiro' object has no attribute 'lista_de_cartas'
     self.lista_de_cartas[carta] = Elemento (carta, tit= carta, style=dict(
 AttributeError: 'Tabuleiro' object has no attribute 'lista_de_cartas'
 '''},
+{'date': 'Wed Jul 11 2018 17:37:45.30 GMt-0300 (-03) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
+                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
