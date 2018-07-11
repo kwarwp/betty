@@ -53,6 +53,7 @@ class Tabuleiro:
             
         self.lista_de_cartas =[]
         Pilha_Cartas = [ALIMENTO1, DESCANSO1, DIVERSAO1, EXCREMENTO1]
+        Resposta_Cartas = [(ALIMENTO1,"0_1","0_2 0_3 0_0"), DESCANSO1, DIVERSAO1, EXCREMENTO1]
         
         
         #self.pilha0.vai = move_carta
