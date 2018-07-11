@@ -36,24 +36,29 @@ tabelafase1 = Cena(img=TABELAFASE1)
 class Tabuleiro:
 
     def __init__ (self):
-        def move_carta(carta):
-            print(carta.target.id)
-            acarta = self.lista_de_cartas[carta.target.id]
-            acarta.elt.style.left = "250px"
-            acarta.elt.style.top = "250px"
+        def move_carta(casa):
+            print(casa.target.id)
+            print(list(self.tabuleiro.keys()))
+            carta_a_mover = self.lista_de_cartas.pop()
+            casa_destino = casa.target.id
+            elemento_casa_do_tabuleiro = self.tabuleiro[casa_destino].elt
+            carta_a_mover.elt.style.left = elemento_casa_do_tabuleiro.style.left
+            carta_a_mover.elt.style.top = elemento_casa_do_tabuleiro.style.top
+            print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
+            print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
         
         tabelafase1 = Cena(img=TABELAFASE1)
-        self.pilha0 = Elemento(DESCANSO1, tit='descanso1', style=dict(
+        self.pilha = Elemento(DESCANSO1, tit='descanso1', style=dict(
             width="120px", height="90px", left=10, top=10))
-        self.pilha = Elemento(ALIMENTO1, tit='alimento1', style=dict(
-            width="120px", height="90px", left=10, top=10))
-        self.pilha0.img.Id,  self.pilha.img.Id = 'descanso1', 'alimento1'
-        self.lista_de_cartas = {'descanso1':self.pilha0, 'alimento1':self.pilha}
+            
+        self.lista_de_cartas =[]
+        Pilha_Cartas = [ALIMENTO1, DESCANSO1, DIVERSAO1, EXCREMENTO1]
+        
         
         #self.pilha0.vai = move_carta
         #self.pilha.vai = move_carta
-        self.pilha0.entra(tabelafase1)
-        self.pilha.entra(tabelafase1)
+        #self.pilha.entra(tabelafase1)
+       
         
         ### TABULEIRO ####
         TBX, TBY = 153, 103
@@ -68,35 +73,18 @@ class Tabuleiro:
         for coluna in range(4):
             for linha in range(4):
                 nome = "{}_{}".format(linha, coluna)
-                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome, style=dict(
+                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
                     width=TBX-8, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
                 self.tabuleiro[nome].entra(tabelafase1)
-                self.tabuleiro[nome].onclick = move_carta
+                self.tabuleiro[nome].img.id = nome
+                self.tabuleiro[nome].elt.onclick = move_carta
+
+        for carta in Pilha_Cartas:
+            a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
+            width="120px", height="90px", left=10, top=10))
+            self.lista_de_cartas.append(a_carta_a_ser_empilhada)
+            a_carta_a_ser_empilhada.entra(tabelafase1)
 
         tabelafase1.vai()
 
 Tabuleiro()
-
-class Baralho ():
-    def __init__ (self, bloco, left=0, top=0, ileft=0, itop=0,
-                 size=dict(width=100, height=100)):
-        self.suporte = None
-        w, h = size.values()
-        self.fid = fid = "baralho_{}_{}".format(ileft, itop)
-        self.casa = "casa_{}_{}".format(left, top)
-        ileft, itop = "%dpx" % (-ileft*w), "%dpx" % (-itop*h)
-        style = {'position': 'absolute', 'overflow': 'hidden',
-                'background-image': 'url({})'.format(bloco.img),
-                'background-position': '{} {}'.format(ileft, itop),
-                'background-size': '{}px {}px'.format(*bloco.size),
-        }
-        style.update({k:'{}px'.format(v) for k, v in size.items() })
-        style.update(left="%dpx" % (left*(w+10)), top="%dpx" % (top*(h+10)))
-        self.folha = html.DIV(Id=fid, style=style, draggable=True)        
-        bloco.folha <= self.folha
-        self.folha.ondragstart = self.drag_start
-        self.folha.onmouseover = self.mouse_over
-        bloco.folhas[fid]=self
-        #INVENTARIO.score(casa=self.casa, carta=self.fid, move="INIT", ponto=0, valor=0)
-
-
