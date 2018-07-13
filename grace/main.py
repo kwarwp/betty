@@ -82,6 +82,30 @@ class Tabuleiro:
                 self.tabuleiro[nome].entra(tabelafase1)
                 self.tabuleiro[nome].img.id = nome
                 self.tabuleiro[nome].elt.onclick = move_carta
+                
+        ### TABULEIRO RESPOSTA ####
+        TBX, TBY = 75, 120
+        self.casa0 = Elemento(SONO1, tit='0_0', style=dict(
+            width=TBX, height=TBY, left=220, top=140))
+        self.casa = Elemento(SONO1, tit='0_1', style=dict(
+            width=TBX, height=TBY, left=400, top=140))
+        self.tabuleiro = {}
+        #self.casa0.entra(tabelafase1)
+        #self.casa.entra(tabelafase1)
+        inicio_x, inicio_y = 760, 60
+        for coluna in range(4):
+            for linha in range(4):
+                nome = "{}_{}".format(linha, coluna)
+                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO_TESTE, tit=nome+"_", style=dict(
+                    width=TBX-5, height="{}px".format(TBY-21), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
+                self.tabuleiro[nome].entra(tabelafase1)
+                self.tabuleiro[nome].img.id = nome
+                self.tabuleiro[nome].elt.onclick = move_carta
+        
+        
+        
+        
+        
 
         for carta in Pilha_Cartas:
             a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
