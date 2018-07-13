@@ -2,9 +2,10 @@
 from _spy.vitollino.main import Cena, Texto, Elemento, STYLE, INVENTARIO
 #colocar codog soraya.main e import bloco
 from browser import document, alert, html
-STYLE["width"]=900
+STYLE["width"]=1100
 STYLE["height"]="600px"
 FUNDO_BRANCO = "https://i.imgur.com/92bebxa.jpg"
+FUNDO_BRANCO_TESTE ="https://i.imgur.com/BxBeCrY.jpg"
 CARINHAF ="https://i.imgur.com/n6b2S6t.png"
 ALIMENTO2 = "https://i.imgur.com/kUlL42h.jpg"
 ALIMENTO1 = "https://i.imgur.com/wPCVCa4.jpg"
@@ -28,8 +29,8 @@ SUJO1 = "https://i.imgur.com/A64jbtF.jpg"
 SUJO2 = "https://i.imgur.com/5Vfq64q.jpg"
 TRISTE1 = "https://i.imgur.com/RslYMn9.jpg"
 TRISTE2 = "https://i.imgur.com/PzDcx3q.jpg"
-TABELAFASE1 = "https://i.imgur.com/EMLDBhH.jpg"
-TABELAFASE2 = "https://i.imgur.com/yaeq5Ua.jpg"
+TABELAFASE1 = "https://i.imgur.com/sp2gLBu.jpg"
+TABELAFASE2 = "https://i.imgur.com/SYkuH9o.jpg"
 tabelafase1 = Cena(img=TABELAFASE1)
     
 
@@ -64,7 +65,7 @@ class Tabuleiro:
        
         
         ### TABULEIRO ####
-        TBX, TBY = 153, 103
+        TBX, TBY = 140, 84
         self.casa0 = Elemento(SONO1, tit='0_0', style=dict(
             width=TBX, height=TBY, left=220, top=140))
         self.casa = Elemento(SONO1, tit='0_1', style=dict(
@@ -72,12 +73,12 @@ class Tabuleiro:
         self.tabuleiro = {}
         #self.casa0.entra(tabelafase1)
         #self.casa.entra(tabelafase1)
-        inicio_x, inicio_y = 220, 145
+        inicio_x, inicio_y = 165, 218
         for coluna in range(4):
             for linha in range(4):
                 nome = "{}_{}".format(linha, coluna)
                 self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
-                    width=TBX-8, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
+                    width=TBX-15, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
                 self.tabuleiro[nome].entra(tabelafase1)
                 self.tabuleiro[nome].img.id = nome
                 self.tabuleiro[nome].elt.onclick = move_carta
