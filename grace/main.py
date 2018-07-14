@@ -6,20 +6,22 @@ STYLE["width"]=1100
 STYLE["height"]="600px"
 FUNDO_BRANCO = "https://i.imgur.com/92bebxa.jpg"
 FUNDO_BRANCO_TESTE ="https://i.imgur.com/BxBeCrY.jpg"
-CARINHAF ="https://i.imgur.com/n6b2S6t.png"
-ALIMENTO2 = "https://i.imgur.com/kUlL42h.jpg"
 ALIMENTO_FASE1_1 = "https://i.imgur.com/C2sTazM.jpg"
-ALIMENTO_FASE1_5 = "https://i.imgur.com/i8u03BA.jpg"
-ALIMENTO_FASE1_9 = "https://i.imgur.com/gn9cGsu.jpg"
-DESCANSO_FASE1_2 =  "https://i.imgur.com/ruxtdF1.jpg"
-DESCANSO_FASE1_6 = "https://i.imgur.com/CBYMr6w.jpg"
-DESCANSO_FASE1_10 = "https://i.imgur.com/8Ufyps0.jpg"
+DESCANSO_FASE1_2 = "https://i.imgur.com/ruxtdF1.jpg"
 DIVERSAO_FASE1_3 = "https://i.imgur.com/usgSqOU.jpg"
-DIVERSAO_FASE1_7 = "https://i.imgur.com/bKn7iba.jpg"
-DIVERSAO_FASE1_11 = "https://i.imgur.com/8jJkqbp.jpg"
 EXCREMENTO_FASE1_4 = "https://i.imgur.com/RqQOALU.jpg"
+ALIMENTO_FASE1_5 = "https://i.imgur.com/i8u03BA.jpg"
+DESCANSO_FASE1_6 = "https://i.imgur.com/CBYMr6w.jpg"
+DIVERSAO_FASE1_7 = "https://i.imgur.com/bKn7iba.jpg"
 EXCREMENTO_FASE1_8 = "https://i.imgur.com/CH5iGGZ.jpg"
+ALIMENTO_FASE1_9 = "https://i.imgur.com/gn9cGsu.jpg"
+DESCANSO_FASE1_10 = "https://i.imgur.com/8Ufyps0.jpg"
+DIVERSAO_FASE1_11 = "https://i.imgur.com/8jJkqbp.jpg"
 EXCREMENTO_FASE1_12 = "https://i.imgur.com/jopwq9M.jpg"
+ALIMENTO_FASE1_13 = "https://i.imgur.com/qPPddW9.jpg"
+DESCANSO_FASE1_14 = "https://i.imgur.com/Wx18Rc9.jpg"
+DIVERSAO_FASE1_15 = "https://i.imgur.com/mmXE6vl.jpg"
+EXCREMENTO_FASE1_16 = "https://i.imgur.com/xYci2H4.jpg"
 EXCREMENTO2 = "https://i.imgur.com/kgnZgVq.jpg"
 FELIZ1 =  "https://i.imgur.com/fADJqIx.jpg"
 FELIZ2 ="https://i.imgur.com/s60ZiT1.jpg"
@@ -62,7 +64,10 @@ class Tabuleiro:
             width="120px", height="90px", left=10, top=10))
             
         self.lista_de_cartas =[]
-        Pilha_Cartas = [EXCREMENTO_FASE1_4, DIVERSAO_FASE1_3, DESCANSO_FASE1_2, ALIMENTO_FASE1_1]
+        Pilha_Cartas = [EXCREMENTO_FASE1_16, DIVERSAO_FASE1_15, DESCANSO_FASE1_14, ALIMENTO_FASE1_13,\
+        EXCREMENTO_FASE1_12, DIVERSAO_FASE1_11, DESCANSO_FASE1_10,ALIMENTO_FASE1_9,\
+        EXCREMENTO_FASE1_8, DIVERSAO_FASE1_7, DESCANSO_FASE1_6, ALIMENTO_FASE1_5,\
+        EXCREMENTO_FASE1_4, DIVERSAO_FASE1_3, DESCANSO_FASE1_2, ALIMENTO_FASE1_1]
         Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), DESCANSO_FASE1_2, DIVERSAO_FASE1_3, EXCREMENTO_FASE1_4]
         
         
