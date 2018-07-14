@@ -126,8 +126,16 @@ class Tabuleiro:
             self.lista_de_cartas.append(a_carta_a_ser_empilhada)
             a_carta_a_ser_empilhada.entra(tabelafase1)
             
-        Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40)).entra (tabelafase1)     
-
+        
+        cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40))
+        cliqueaqui.entra (tabelafase1)
+        
+        for self.cliqueaqui.elt.onclick:
+            self.cliqueaqui.sai (tabelafase1)         
+        
+                
+        
+        
         tabelafase1.vai()
 
 Tabuleiro()
