@@ -73,7 +73,9 @@ class Tabuleiro:
         Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), (DESCANSO_FASE1_2, "3_0","0_2 0_3 0_0"),\
         (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")] 
         
-                 
+                
+            
+                
         """if Resposta_Carta =[(ALIMENTO_FASE1_1,"0_1"), (DESCANSO_FASE1_2, "3_0")]:
         else: valor_resposta = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(width="60px", height="87px", left= TBRY, Top= TBRX ))
             valor_resposta.entra(self.tabela_fase1)"""
@@ -120,12 +122,8 @@ class Tabuleiro:
                 self.tabuleiro[nome].entra(tabelafase1)
                 self.tabuleiro[nome].img.id = nome
                 self.tabuleiro[nome].elt.onclick = move_carta
-                
-        
-        def recoloca_clique_aqui(_):
-            self.cliqueaqui.entra(tabelafase1)
-        self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui
-                
+               
+                              
         
         ### PILHA DE CARTAS ###
         for carta in Pilha_Cartas:
@@ -143,7 +141,10 @@ class Tabuleiro:
         def recoloca_clique_aqui(_):
             self.cliqueaqui.entra(tabelafase1)
         self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui
-                
+         
+        """for carta in Pilha_Cartas:
+            self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui""" 
+         
         
         
         tabelafase1.vai()
