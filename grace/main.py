@@ -56,12 +56,13 @@ class Tabuleiro:
             carta_a_mover.elt.style.top = elemento_casa_do_tabuleiro.style.top
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
-            dica_do_valor = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(width="80px", height="110px", left=750))
+            dica_do_valor = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(width="60px", height="87px",\
+            left=750, top=55))
             dica_do_valor.entra(self.tabela_fase1)
         
         self.tabela_fase1 = tabelafase1 = Cena(img=TABELAFASE1)
         self.pilha = Elemento(ALIMENTO_FASE1_1, tit='Alimento1', style=dict(
-            width="120px", height="90px", left=10, top=10))
+            width="100px", height="70px", left=5, top=5))
             
         self.lista_de_cartas =[]
         Pilha_Cartas = [EXCREMENTO_FASE1_16, DIVERSAO_FASE1_15, DESCANSO_FASE1_14, ALIMENTO_FASE1_13,\
@@ -115,8 +116,6 @@ class Tabuleiro:
                 self.tabuleiro[nome].img.id = nome
                 self.tabuleiro[nome].elt.onclick = move_carta
                 
-               
-              
         
         
 
