@@ -129,11 +129,12 @@ class Tabuleiro:
             width="115px", height="79px", left=40, top=40))
             self.lista_de_cartas.append(a_carta_a_ser_empilhada)
             a_carta_a_ser_empilhada.entra(tabelafase1)
+        self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40))
+        self.cliqueaqui.entra (tabelafase1)
             
-        
-        cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40))
-        cliqueaqui.entra (tabelafase1)
-        
+        def remove_clique_aqui(_):
+            self.cliqueaqui.elt.remove()
+        self.cliqueaqui.elt.onclick = remove_clique_aqui
         """for self.cliqueaqui.elt.onclick:
             self.cliqueaqui.sai (tabelafase1)"""         
         
