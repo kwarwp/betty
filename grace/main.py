@@ -122,6 +122,10 @@ class Tabuleiro:
                 self.tabuleiro[nome].elt.onclick = move_carta
                 
         
+        def recoloca_clique_aqui(_):
+            self.cliqueaqui.entra(tabelafase1)
+        self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui
+                
         
         ### PILHA DE CARTAS ###
         for carta in Pilha_Cartas:
@@ -135,9 +139,10 @@ class Tabuleiro:
         def remove_clique_aqui(_):
             self.cliqueaqui.elt.remove()
         self.cliqueaqui.elt.onclick = remove_clique_aqui
-        """for self.cliqueaqui.elt.onclick:
-            self.cliqueaqui.sai (tabelafase1)"""         
-        
+               
+        def recoloca_clique_aqui(_):
+            self.cliqueaqui.entra(tabelafase1)
+        self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui
                 
         
         
