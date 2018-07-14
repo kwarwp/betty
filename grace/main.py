@@ -119,12 +119,14 @@ class Tabuleiro:
                 
         
         
-
+        ### PILHA DE CARTAS ###
         for carta in Pilha_Cartas:
             a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
-            width="115px", height="79px", left=30, top=30))
+            width="115px", height="79px", left=40, top=40))
             self.lista_de_cartas.append(a_carta_a_ser_empilhada)
             a_carta_a_ser_empilhada.entra(tabelafase1)
+            
+        Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40)).entra (tabelafase1)     
 
         tabelafase1.vai()
 
