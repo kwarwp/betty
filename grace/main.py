@@ -62,7 +62,7 @@ class Tabuleiro:
             width="120px", height="90px", left=10, top=10))
             
         self.lista_de_cartas =[]
-        Pilha_Cartas = [ALIMENTO_FASE1_1, DESCANSO_FASE1_2, DIVERSAO_FASE1_3, EXCREMENTO_FASE1_4]
+        Pilha_Cartas = [EXCREMENTO_FASE1_4, DIVERSAO_FASE1_3, DESCANSO_FASE1_2, ALIMENTO_FASE1_1]
         Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), DESCANSO_FASE1_2, DIVERSAO_FASE1_3, EXCREMENTO_FASE1_4]
         
         
@@ -73,9 +73,9 @@ class Tabuleiro:
         
         ### TABULEIRO ####
         TBX, TBY = 140, 84
-        self.casa0 = Elemento(SONO1, tit='0_0', style=dict(
+        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='0_0', style=dict(
             width=TBX, height=TBY, left=220, top=140))
-        self.casa = Elemento(SONO1, tit='0_1', style=dict(
+        self.casa = Elemento(ALIMENTO_FASE1_1, tit='0_1', style=dict(
             width=TBX, height=TBY, left=400, top=140))
         self.tabuleiro = {}
         #self.casa0.entra(tabelafase1)
@@ -92,9 +92,9 @@ class Tabuleiro:
                 
         ### TABULEIRO RESPOSTA ####
         TBX, TBY = 79, 128
-        self.casa0 = Elemento(SONO1, tit='0_0', style=dict(
+        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='0_0', style=dict(
             width=TBX, height=TBY, left=220, top=140))
-        self.casa = Elemento(SONO1, tit='0_1', style=dict(
+        self.casa = Elemento(ALIMENTO_FASE1_1, tit='0_1', style=dict(
             width=TBX, height=TBY, left=400, top=140))
         self.tabuleiro = {}
         #self.casa0.entra(tabelafase1)
