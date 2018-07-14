@@ -57,8 +57,8 @@ class Tabuleiro:
             carta_a_mover.elt.style.top = elemento_casa_do_tabuleiro.style.top
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
-            dica_do_valor = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(width="60px", height="87px",\
-            left=751, top=55))
+            dica_do_valor = Elemento(RESP_SORRISO_FASE1, style=dict(width="60px", height="87px", left= TBRY, Top= TBRX ))
+            """left=751, top=55))"""
             dica_do_valor.entra(self.tabela_fase1)
         
         self.tabela_fase1 = tabelafase1 = Cena(img=TABELAFASE1)
@@ -70,31 +70,35 @@ class Tabuleiro:
         EXCREMENTO_FASE1_12, DIVERSAO_FASE1_11, DESCANSO_FASE1_10,ALIMENTO_FASE1_9,\
         EXCREMENTO_FASE1_8, DIVERSAO_FASE1_7, DESCANSO_FASE1_6, ALIMENTO_FASE1_5,\
         EXCREMENTO_FASE1_4, DIVERSAO_FASE1_3, DESCANSO_FASE1_2, ALIMENTO_FASE1_1]
-        Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), DESCANSO_FASE1_2, DIVERSAO_FASE1_3, EXCREMENTO_FASE1_4]
+        Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), (DESCANSO_FASE1_2, "3_0","0_2 0_3 0_0"),\
+        (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")] 
         
+                 
+        """if Resposta_Carta =[(ALIMENTO_FASE1_1,"0_1"), (DESCANSO_FASE1_2, "3_0")]:
+        else: valor_resposta = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(width="60px", height="87px", left= TBRY, Top= TBRX ))
+            valor_resposta.entra(self.tabela_fase1)"""
+            
+                   
         
-        #self.pilha0.vai = move_carta
-        #self.pilha.vai = move_carta
-        #self.pilha.entra(tabelafase1)
        
        ### TABULEIRO RESPOSTA ####
-        TBX, TBY = 79, 128
-        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='20_20', style=dict(
-            width=TBX, height=TBY, left=220, top=140))
-        self.casa = Elemento(ALIMENTO_FASE1_1, tit='20_21', style=dict(
-            width=TBX, height=TBY, left=400, top=140))
-        self.tabuleiro = {}
+        TBRX, TBRY = 79, 128
+        self.casa0 = Elemento(RESP_SORRISOMAIS_FASE1, tit='0_0', style=dict(
+            width=TBRX, height=TBRY, left=751, top=55))
+        self.casa = Elemento(RESP_SORRISOMAIS_FASE1, tit='0_1', style=dict(
+            width=TBRX, height=TBRY, left=800, top=55))
+        self.tabuleiro_respostas = {}
         #self.casa0.entra(tabelafase1)
         #self.casa.entra(tabelafase1)
-        inicio_x, inicio_y = 754, 62
+        inicio_resp_x, inicio_resp_y = 754, 62
         for coluna in range(4):
             for linha in range(4):
                 nome = "{}_{}".format(linha, coluna)
-                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
-                    width=TBX-11, height="{}px".format(TBY-52), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
-                self.tabuleiro[nome].entra(tabelafase1)
-                self.tabuleiro[nome].img.id = nome
-                self.tabuleiro[nome].elt.onclick = move_carta
+                self.tabuleiro_respostas[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
+                    width=TBRX-11, height="{}px".format(TBRY-52), left=inicio_resp_x+coluna*TBRX, top=inicio_resp_y+linha*TBRY))
+                self.tabuleiro_respostas[nome].entra(tabelafase1)
+                self.tabuleiro_respostas[nome].img.id = nome
+                self.tabuleiro_respostas[nome].elt.onclick = move_carta
                 
        
         
@@ -130,8 +134,8 @@ class Tabuleiro:
         cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40))
         cliqueaqui.entra (tabelafase1)
         
-        for self.cliqueaqui.elt.onclick:
-            self.cliqueaqui.sai (tabelafase1)         
+        """for self.cliqueaqui.elt.onclick:
+            self.cliqueaqui.sai (tabelafase1)"""         
         
                 
         
