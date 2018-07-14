@@ -54,7 +54,7 @@ class Tabuleiro:
             carta_a_mover.elt.style.top = elemento_casa_do_tabuleiro.style.top
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
-            dica_do_valor = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(left=950))
+            dica_do_valor = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(width="80px", height="110px", left=750))
             dica_do_valor.entra(self.tabela_fase1)
         
         self.tabela_fase1 = tabelafase1 = Cena(img=TABELAFASE1)
@@ -69,6 +69,26 @@ class Tabuleiro:
         #self.pilha0.vai = move_carta
         #self.pilha.vai = move_carta
         #self.pilha.entra(tabelafase1)
+       
+       ### TABULEIRO RESPOSTA ####
+        TBX, TBY = 79, 128
+        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='20_20', style=dict(
+            width=TBX, height=TBY, left=220, top=140))
+        self.casa = Elemento(ALIMENTO_FASE1_1, tit='20_21', style=dict(
+            width=TBX, height=TBY, left=400, top=140))
+        self.tabuleiro = {}
+        #self.casa0.entra(tabelafase1)
+        #self.casa.entra(tabelafase1)
+        inicio_x, inicio_y = 754, 62
+        for coluna in range(4):
+            for linha in range(4):
+                nome = "{}_{}".format(linha, coluna)
+                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
+                    width=TBX-11, height="{}px".format(TBY-52), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
+                self.tabuleiro[nome].entra(tabelafase1)
+                self.tabuleiro[nome].img.id = nome
+                self.tabuleiro[nome].elt.onclick = move_carta
+                
        
         
         ### TABULEIRO ####
@@ -90,27 +110,8 @@ class Tabuleiro:
                 self.tabuleiro[nome].img.id = nome
                 self.tabuleiro[nome].elt.onclick = move_carta
                 
-        ### TABULEIRO RESPOSTA ####
-        TBX, TBY = 79, 128
-        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='0_0', style=dict(
-            width=TBX, height=TBY, left=220, top=140))
-        self.casa = Elemento(ALIMENTO_FASE1_1, tit='0_1', style=dict(
-            width=TBX, height=TBY, left=400, top=140))
-        self.tabuleiro = {}
-        #self.casa0.entra(tabelafase1)
-        #self.casa.entra(tabelafase1)
-        inicio_x, inicio_y = 754, 62
-        for coluna in range(4):
-            for linha in range(4):
-                nome = "{}_{}".format(linha, coluna)
-                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
-                    width=TBX-11, height="{}px".format(TBY-52), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
-                self.tabuleiro[nome].entra(tabelafase1)
-                self.tabuleiro[nome].img.id = nome
-                self.tabuleiro[nome].elt.onclick = move_carta
-        
-        
-        
+               
+              
         
         
 
