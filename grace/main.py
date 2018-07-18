@@ -43,7 +43,8 @@ TABELAFASE1 ="https://i.imgur.com/sp2gLBu.jpg"
 TABELAFASE2 ="https://i.imgur.com/SYkuH9o.jpg"
 tabelafase1 = Cena(img=TABELAFASE1)
 TBRESPY, TBRESPX =  55, 751
-#TBRESPY, TBRESPX =  0, 0
+RESPOSTA = [RESP_TRISTE_FASE1, RESP_SORRISO_FASE1, RESP_SORRISOMAIS_FASE1]
+
 
 class Tabuleiro:
 
@@ -54,12 +55,17 @@ class Tabuleiro:
             carta_a_mover = self.lista_de_cartas.pop()
             casa_destino = casa.target.id
             elemento_casa_do_tabuleiro = self.tabuleiro[casa_destino].elt
-            carta_a_mover.elt.style.left = elemento_casa_do_tabuleiro.style.left
-            carta_a_mover.elt.style.top = elemento_casa_do_tabuleiro.style.top
+            cx, cy =  carta_a_mover.posicao_certa
+            tx, ty =  self.tabuleiro[casa_destino].posicao_certa
+            pontos = (1 if cx == tx else 0) + (1 if ty == cy else 0)
+            #alert(pontos)
+            carta_a_mover.elt.style.left = x = elemento_casa_do_tabuleiro.style.left
+            carta_a_mover.elt.style.top = y = elemento_casa_do_tabuleiro.style.top
+            pos = elemento_casa_do_tabuleiro.title
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
             ordem_da_carta = 15 - len(self.lista_de_cartas)
-            dica_do_valor = Elemento(RESP_SORRISO_FASE1, style=dict(
+            dica_do_valor = Elemento(RESPOSTA[pontos], style=dict(
                width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))
             """left=751, top=55))"""
             dica_do_valor.entra(self.tabela_fase1)
@@ -74,9 +80,11 @@ class Tabuleiro:
         EXCREMENTO_FASE1_8, DIVERSAO_FASE1_7, DESCANSO_FASE1_6, ALIMENTO_FASE1_5,\
         EXCREMENTO_FASE1_4, DIVERSAO_FASE1_3, DESCANSO_FASE1_2, ALIMENTO_FASE1_1]
         Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), (DESCANSO_FASE1_2, "3_0","0_2 0_3 0_0"),\
-        (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")] 
+        (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")]
+        respostas= "1_3,2_2,0_3,0_2,1_3,2_2,0_3,0_2,1_3,2_2,0_3,0_2,1_3,2_2,0_3,0_2"
+        self.resposta_certa = {nome:pos.split("_") for nome,pos in zip(Pilha_Cartas,respostas.split(","))}
         
-                
+             
             
                 
         """if Resposta_Carta =[(ALIMENTO_FASE1_1,"0_1"), (DESCANSO_FASE1_2, "3_0")]:
@@ -123,6 +131,7 @@ class Tabuleiro:
                 self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
                     width=TBX-15, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
                 self.tabuleiro[nome].entra(tabelafase1)
+                self.tabuleiro[nome].posicao_certa = nome.split("_")
                 self.tabuleiro[nome].img.id = nome
                 self.tabuleiro[nome].elt.onclick = move_carta
                
@@ -132,6 +141,7 @@ class Tabuleiro:
         for carta in Pilha_Cartas:
             a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
             width="115px", height="79px", left=40, top=40))
+            a_carta_a_ser_empilhada.posicao_certa = self.resposta_certa[carta]
             self.lista_de_cartas.append(a_carta_a_ser_empilhada)
             a_carta_a_ser_empilhada.entra(tabelafase1)
         self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40))
