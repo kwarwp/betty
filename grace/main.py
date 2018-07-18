@@ -42,7 +42,8 @@ TRISTE2 ="https://i.imgur.com/PzDcx3q.jpg"
 TABELAFASE1 ="https://i.imgur.com/sp2gLBu.jpg"
 TABELAFASE2 ="https://i.imgur.com/SYkuH9o.jpg"
 tabelafase1 = Cena(img=TABELAFASE1)
-    
+TBRESPY, TBRESPX =  55, 751
+#TBRESPY, TBRESPX =  0, 0
 
 class Tabuleiro:
 
@@ -57,7 +58,9 @@ class Tabuleiro:
             carta_a_mover.elt.style.top = elemento_casa_do_tabuleiro.style.top
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
-            dica_do_valor = Elemento(RESP_SORRISO_FASE1, style=dict(width="60px", height="87px", left= TBRY, Top= TBRX ))
+            ordem_da_carta = 15 - len(self.lista_de_cartas)
+            dica_do_valor = Elemento(RESP_SORRISO_FASE1, style=dict(
+               width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))
             """left=751, top=55))"""
             dica_do_valor.entra(self.tabela_fase1)
         
@@ -84,7 +87,7 @@ class Tabuleiro:
         
        
        ### TABULEIRO RESPOSTA ####
-        TBRX, TBRY = 79, 128
+        TBRX, TBRY = 80, 130
         self.casa0 = Elemento(RESP_SORRISOMAIS_FASE1, tit='0_0', style=dict(
             width=TBRX, height=TBRY, left=751, top=55))
         self.casa = Elemento(RESP_SORRISOMAIS_FASE1, tit='0_1', style=dict(
