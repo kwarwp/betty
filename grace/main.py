@@ -45,7 +45,6 @@ tabelafase1 = Cena(img=TABELAFASE1)
 TBRESPY, TBRESPX =  55, 751
 RESPOSTA = [RESP_TRISTE_FASE1, RESP_SORRISO_FASE1, RESP_SORRISOMAIS_FASE1]
 
-
 class Tabuleiro:
 
     def __init__ (self):
