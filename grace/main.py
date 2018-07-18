@@ -53,6 +53,7 @@ class Tabuleiro:
             print(list(self.tabuleiro.keys()))
             carta_a_mover = self.lista_de_cartas.pop()
             casa_destino = casa.target.id
+            self.cliqueaqui.elt.style.left=40
             elemento_casa_do_tabuleiro = self.tabuleiro[casa_destino].elt
             cx, cy =  carta_a_mover.posicao_certa
             tx, ty =  self.tabuleiro[casa_destino].posicao_certa
@@ -145,7 +146,7 @@ class Tabuleiro:
         self.cliqueaqui.entra (tabelafase1)
             
         def remove_clique_aqui(_):
-            self.cliqueaqui.elt.remove()
+            self.cliqueaqui.elt.style.left=-1000
         self.cliqueaqui.elt.onclick = remove_clique_aqui
                
         def recoloca_clique_aqui(_):
