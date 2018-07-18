@@ -80,7 +80,7 @@ class Tabuleiro:
         EXCREMENTO_FASE1_4, DIVERSAO_FASE1_3, DESCANSO_FASE1_2, ALIMENTO_FASE1_1]
         Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), (DESCANSO_FASE1_2, "3_0","0_2 0_3 0_0"),\
         (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")]
-        respostas= "1_3,2_2,0_3,0_1,1_3,2_2,0_3,0_1,1_3,2_2,0_3,0_1,1_3,2_2,0_3,0_1"
+        respostas= "1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1"
         self.resposta_certa = {nome:pos.split("_") for nome,pos in zip(Pilha_Cartas,respostas.split(","))}
         
              
@@ -100,8 +100,7 @@ class Tabuleiro:
         self.casa = Elemento(RESP_SORRISOMAIS_FASE1, tit='0_1', style=dict(
             width=TBRX, height=TBRY, left=800, top=55))
         self.tabuleiro_respostas = {}
-        #self.casa0.entra(tabelafase1)
-        #self.casa.entra(tabelafase1)
+        
         inicio_resp_x, inicio_resp_y = 754, 62
         for coluna in range(4):
             for linha in range(4):
@@ -121,8 +120,7 @@ class Tabuleiro:
         self.casa = Elemento(ALIMENTO_FASE1_1, tit='0_1', style=dict(
             width=TBX, height=TBY, left=400, top=140))
         self.tabuleiro = {}
-        #self.casa0.entra(tabelafase1)
-        #self.casa.entra(tabelafase1)
+       
         inicio_x, inicio_y = 165, 218
         for coluna in range(4):
             for linha in range(4):
@@ -154,9 +152,7 @@ class Tabuleiro:
             self.cliqueaqui.entra(tabelafase1)
         self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui
          
-        """for carta in Pilha_Cartas:
-            self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui""" 
-         
+                
         
         
         tabelafase1.vai()
