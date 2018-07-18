@@ -105,7 +105,7 @@ class Tabuleiro:
                 self.tabuleiro_respostas[nome].img.id = nome
                 self.tabuleiro_respostas[nome].elt.onclick = move_carta
                 
-         ### PILHA DE CARTAS ###
+        ### PILHA DE CARTAS ###
         for carta in Pilha_Cartas:
             a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
             width="115px", height="79px", left=40, top=40))
@@ -142,8 +142,6 @@ class Tabuleiro:
             self.cliqueaqui.entra(tabelafase1)
         self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui
          
-                
-        
         
         tabelafase1.vai()
 
