@@ -83,15 +83,7 @@ class Tabuleiro:
         (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")]
         respostas= "1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1"
         self.resposta_certa = {nome:pos.split("_") for nome,pos in zip(Pilha_Cartas,respostas.split(","))}
-        
-             
-            
-                
-        """if Resposta_Carta =[(ALIMENTO_FASE1_1,"0_1"), (DESCANSO_FASE1_2, "3_0")]:
-        else: valor_resposta = Elemento(RESP_SORRISOMAIS_FASE1, style=dict(width="60px", height="87px", left= TBRY, Top= TBRX ))
-            valor_resposta.entra(self.tabela_fase1)"""
-            
-                   
+                                 
         
        
        ### TABULEIRO RESPOSTA ####
