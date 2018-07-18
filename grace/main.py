@@ -80,7 +80,7 @@ class Tabuleiro:
         EXCREMENTO_FASE1_4, DIVERSAO_FASE1_3, DESCANSO_FASE1_2, ALIMENTO_FASE1_1]
         Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), (DESCANSO_FASE1_2, "3_0","0_2 0_3 0_0"),\
         (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")]
-        respostas= "1_3,2_2,0_3,0_2,1_3,2_2,0_3,0_2,1_3,2_2,0_3,0_2,1_3,2_2,0_3,0_2"
+        respostas= "1_3,2_2,0_3,0_1,1_3,2_2,0_3,0_1,1_3,2_2,0_3,0_1,1_3,2_2,0_3,0_1"
         self.resposta_certa = {nome:pos.split("_") for nome,pos in zip(Pilha_Cartas,respostas.split(","))}
         
              
