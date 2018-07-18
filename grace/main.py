@@ -6,6 +6,7 @@ STYLE["width"]=1100
 STYLE["height"]="600px"
 FUNDO_BRANCO ="https://i.imgur.com/92bebxa.jpg"
 FUNDO_BRANCO_TESTE ="https://i.imgur.com/BxBeCrY.jpg"
+FUNDO_VAZIO ="https://i.imgur.com/GG7xQgb.png"
 CLIQUEAQUI ="https://i.imgur.com/j8nkqpT.jpg"
 ALIMENTO_FASE1_1 ="https://i.imgur.com/C2sTazM.jpg"
 DESCANSO_FASE1_2 ="https://i.imgur.com/ruxtdF1.jpg"
@@ -104,30 +105,7 @@ class Tabuleiro:
                 self.tabuleiro_respostas[nome].img.id = nome
                 self.tabuleiro_respostas[nome].elt.onclick = move_carta
                 
-       
-        
-        ### TABULEIRO ####
-        TBX, TBY = 140, 84
-        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='0_0', style=dict(
-            width=TBX, height=TBY, left=220, top=140))
-        self.casa = Elemento(ALIMENTO_FASE1_1, tit='0_1', style=dict(
-            width=TBX, height=TBY, left=400, top=140))
-        self.tabuleiro = {}
-       
-        inicio_x, inicio_y = 165, 218
-        for coluna in range(4):
-            for linha in range(4):
-                nome = "{}_{}".format(linha, coluna)
-                self.tabuleiro[nome] = Elemento(FUNDO_BRANCO, tit=nome+"_", style=dict(
-                    width=TBX-15, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
-                self.tabuleiro[nome].entra(tabelafase1)
-                self.tabuleiro[nome].posicao_certa = nome.split("_")
-                self.tabuleiro[nome].img.id = nome
-                self.tabuleiro[nome].elt.onclick = move_carta
-               
-                              
-        
-        ### PILHA DE CARTAS ###
+         ### PILHA DE CARTAS ###
         for carta in Pilha_Cartas:
             a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
             width="115px", height="79px", left=40, top=40))
@@ -136,7 +114,26 @@ class Tabuleiro:
             a_carta_a_ser_empilhada.entra(tabelafase1)
         self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40))
         self.cliqueaqui.entra (tabelafase1)
-            
+        
+        ### TABULEIRO ####
+        TBX, TBY = 140, 84
+        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='0_0', style=dict(
+            width=TBX, height=TBY, left=220, top=140))
+        self.casa = Elemento(ALIMENTO_FASE1_1, tit='0_1', style=dict(
+            width=TBX, height=TBY, left=400, top=140))
+        self.tabuleiro = {}
+        inicio_x, inicio_y = 165, 218
+        for coluna in range(4):
+            for linha in range(4):
+                nome = "{}_{}".format(linha, coluna)
+                self.tabuleiro[nome] = Elemento(FUNDO_VAZIO, tit=nome+"_", style=dict(
+                    width=TBX-15, height="{}px".format(TBY-8), left=inicio_x+coluna*TBX, top=inicio_y+linha*TBY))
+                self.tabuleiro[nome].entra(tabelafase1)
+                self.tabuleiro[nome].posicao_certa = nome.split("_")
+                self.tabuleiro[nome].img.id = nome
+                self.tabuleiro[nome].elt.onclick = move_carta
+               
+                            
         def remove_clique_aqui(_):
             self.cliqueaqui.elt.style.left=-1000
         self.cliqueaqui.elt.onclick = remove_clique_aqui
