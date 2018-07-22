@@ -123,7 +123,8 @@ class Tabuleiro:
                             
         def remove_clique_aqui(_):
             self.cliqueaqui.elt.style.left=-1000
-        self.cliqueaqui.elt.onclick = remove_clique_aqui
+            alert ("Observe as figuras da tabela maior e escolha uma posição para a carta da vez")
+        self.cliqueaqui.elt.onclick = remove_clique_aqui        
                
         def recoloca_clique_aqui(_):
             self.cliqueaqui.entra(tabelafase1)
