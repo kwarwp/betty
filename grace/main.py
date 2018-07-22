@@ -56,7 +56,7 @@ class Tabuleiro:
                width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))
             """left=751, top=55))"""
             dica_do_valor.entra(self.tabela_fase1)
-            alert ("Dependendo da carta e da posição escolhida, você receberá uma resposta na tabela menor.")
+            alert ("Dependendo da carta e da posição escolhida, você receberá uma resposta na tabela numerada.")
         
         self.tabela_fase1 = tabelafase1 = Cena(img=TABELAFASE1)
         self.pilha = Elemento(ALIMENTO_FASE1_1, tit='Alimento1', style=dict(
