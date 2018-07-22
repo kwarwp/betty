@@ -53,7 +53,7 @@ RESP_TRISTE_FASE2 ="https://i.imgur.com/2ndnjP4.jpg"
 TABELAFASE2 ="https://i.imgur.com/70tegLO.jpg"
 tabelafase2 = Cena(img=TABELAFASE2)
 TBRESPY, TBRESPX =  55, 751
-RESPOSTA = [RESP_TRISTE_FASE2, RESP_SORRISO_FASE2, RESP_SORRISOMAIS_FASE2]
+RESPOSTA2 = [RESP_TRISTE_FASE2, RESP_SORRISO_FASE2, RESP_SORRISOMAIS_FASE2]
 
 class Tabuleiro:
 
@@ -175,7 +175,7 @@ class Tabuleiro:
                         print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
                         print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
                         ordem_da_carta = 15 - len(self.lista_de_cartas)
-                        dica_do_valor = Elemento(RESPOSTA[pontos], style=dict(
+                        dica_do_valor = Elemento(RESPOSTA2[pontos], style=dict(
                         width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))            
                         dica_do_valor.entra(self.tabela_fase2)
                         alert ("Dependendo da carta e da posição escolhida, você receberá uma resposta na tabela numerada.")
