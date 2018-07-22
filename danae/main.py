@@ -53,9 +53,9 @@ class Tabuleiro:
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
             ordem_da_carta = 15 - len(self.lista_de_cartas)
             dica_do_valor = Elemento(RESPOSTA[pontos], style=dict(
-               width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))
-            """left=751, top=55))"""
+               width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))            
             dica_do_valor.entra(self.tabela_fase2)
+            alert ("Dependendo da carta e da posição escolhida, você receberá uma resposta na tabela numerada.")
         
         self.tabela_fase2 = tabelafase2 = Cena(img=TABELAFASE2)
         self.pilha = Elemento(ALIMENTO_FASE2_1, tit='Alimento2', style=dict(
@@ -122,6 +122,7 @@ class Tabuleiro:
                             
         def remove_clique_aqui(_):
             self.cliqueaqui.elt.style.left=-1000
+            alert ("Observe as figuras da tabela maior e escolha uma posição para a carta da vez")
         self.cliqueaqui.elt.onclick = remove_clique_aqui
                
         def recoloca_clique_aqui(_):
