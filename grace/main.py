@@ -121,7 +121,7 @@ class Tabuleiro:
             a_carta_a_ser_empilhada.posicao_certa = self.resposta_certa[carta]
             self.lista_de_cartas.append(a_carta_a_ser_empilhada)
             a_carta_a_ser_empilhada.entra(tabelafase1)
-        self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=40, top=40))
+        self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=30, top=30))
         self.cliqueaqui.entra (tabelafase1)
         
         ### TABULEIRO ####
@@ -219,7 +219,7 @@ class Tabuleiro:
                     a_carta_a_ser_empilhada.posicao_certa = self.resposta_certa[carta]
                     self.lista_de_cartas.append(a_carta_a_ser_empilhada)
                     a_carta_a_ser_empilhada.entra(tabelafase2)
-                self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="155px", height="90px", left=30, top=35))
+                self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="155px", height="90px", left=30, top=30))
                 self.cliqueaqui.entra (tabelafase2)
         
                 ### TABULEIRO ####
