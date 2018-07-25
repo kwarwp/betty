@@ -61,6 +61,8 @@ class Tabuleiro:
         def move_carta(casa):
             print(casa.target.id)
             print(list(self.tabuleiro.keys()))
+            if self.lista_de_cartas==[]:
+                alert ("Fim da Fase 1")
             carta_a_mover = self.lista_de_cartas.pop()
             casa_destino = casa.target.id
             self.cliqueaqui.elt.style.left=40
@@ -69,8 +71,13 @@ class Tabuleiro:
             tx, ty =  self.tabuleiro[casa_destino].posicao_certa
             pontos = (1 if cx == tx else 0) + (1 if ty == cy else 0)
             #alert(pontos)
+            """carta_a_mover.entra(tabelafase1)"""
+            tabelafase1.elt<=carta_a_mover.elt
+            #tabelafase1.elt<=casa.target
+            self.tabuleiro[casa_destino].entra(tabelafase1)
             carta_a_mover.elt.style.left = x = elemento_casa_do_tabuleiro.style.left
             carta_a_mover.elt.style.top = y = elemento_casa_do_tabuleiro.style.top
+            
             pos = elemento_casa_do_tabuleiro.title
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
@@ -78,7 +85,8 @@ class Tabuleiro:
             dica_do_valor = Elemento(RESPOSTA[pontos], style=dict(
                width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))            
             dica_do_valor.entra(self.tabela_fase1)
-            alert ("Dependendo da carta e da posição escolhida, você receberá uma resposta na tabela numerada.")
+            if len (self.lista_de_cartas)==15:
+                alert ("Dependendo da carta e da posicao escolhida, voce recebera uma resposta na tabela numerada.")
         
         self.tabela_fase1 = tabelafase1 = Cena(img=TABELAFASE1)
         self.pilha = Elemento(ALIMENTO_FASE1_1, tit='Alimento1', style=dict(
@@ -145,7 +153,13 @@ class Tabuleiro:
                             
         def remove_clique_aqui(_):
             self.cliqueaqui.elt.style.left=-1000
-            alert ("Observe as figuras da tabela maior e escolha uma posição para a carta da vez")
+            if len (self.lista_de_cartas)==16:
+                alert ("Observe as figuras da tabela maior e escolha uma posicao para a carta da vez")
+            if self.lista_de_cartas==[]:
+                alert ("Fim da Fase 1")
+                tb_fase2 = Tabuleiro()
+                tb_fase2.tabelafase1.esquerda = tabelafase1
+                tabelafase1.direita = tb_fase2.tabelafase1
         self.cliqueaqui.elt.onclick = remove_clique_aqui        
                
         def recoloca_clique_aqui(_):
@@ -178,7 +192,7 @@ class Tabuleiro:
                         dica_do_valor = Elemento(RESPOSTA2[pontos], style=dict(
                         width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))            
                         dica_do_valor.entra(self.tabela_fase2)
-                        alert ("Dependendo da carta e da posição escolhida, você receberá uma resposta na tabela numerada.")
+                        alert ("Dependendo da carta e da posiÃ§Ã£o escolhida, vocÃª receberÃ¡ uma resposta na tabela numerada.")
         
                 self.tabela_fase2 = tabelafase2 = Cena(img=TABELAFASE2)
                 self.pilha = Elemento(ALIMENTO_FASE2_1, tit='Alimento2', style=dict(
@@ -242,18 +256,18 @@ class Tabuleiro:
                                            
                 def remove_clique_aqui(_):
                     self.cliqueaqui.elt.style.left=-1000
-                    alert ("Observe as figuras da tabela maior e escolha uma posição para a carta da vez")
+                    alert ("Observe as figuras da tabela maior e escolha uma posiÃ§Ã£o para a carta da vez")
                 self.cliqueaqui.elt.onclick = remove_clique_aqui
                 
                 def recoloca_clique_aqui(_):
                     self.cliqueaqui.entra(tabelafase2)
                 self.tabuleiro[nome].elt.onclick = recoloca_clique_aqui    
 
-        
-            tabelafase1.direita = segunda_fase.vai()
-            if tabelafase1.direita(self):
-                self.segunda_fase()        
                 
+            #tabelafase1.direita = segunda_fase.vai()
+            #if tabelafase1.direita(self):
+                #self.segunda_fase()        
+            #Tabuleiro2()    
         
         
         tabelafase1.vai()
