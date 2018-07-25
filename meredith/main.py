@@ -53,7 +53,7 @@ RESP_SORRISOMAIS_FASE ="https://i.imgur.com/U2ngNDX.jpg",
 RESP_SORRISO_FASE ="https://i.imgur.com/kBZLxlC.jpg",
 RESP_TRISTE_FASE ="https://i.imgur.com/2ndnjP4.jpg",
 TABELAFASE ="https://i.imgur.com/70tegLO.jpg",
-RESPOSTA = [RESP_TRISTE_FASE, RESP_SORRISO_FASE, RESP_SORRISOMAIS_FASE]
+RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
 )
 TBRESPY, TBRESPX =  55, 751
 
@@ -84,7 +84,7 @@ class Tabuleiro:
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
             ordem_da_carta = 15 - len(self.lista_de_cartas)
-            dica_do_valor = Elemento(RESPOSTA[pontos], style=dict(
+            dica_do_valor = Elemento(fase["RESPOSTA"][pontos], style=dict(
                width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))            
             dica_do_valor.entra(self.tabela_fase1)
             if len (self.lista_de_cartas)==15:
