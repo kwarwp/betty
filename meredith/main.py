@@ -30,7 +30,7 @@ RESP_SORRISOMAIS_FASE ="https://i.imgur.com/kjQFRv8.jpg",
 RESP_SORRISO_FASE ="https://i.imgur.com/r5ZovCe.jpg",
 RESP_TRISTE_FASE ="https://i.imgur.com/CbrmJpE.jpg",
 TABELAFASE ="https://i.imgur.com/sp2gLBu.jpg",
-FIM_DA_FASE_2 ="Fim da Fase 2",
+ALERTA ="Fim da Fase 1",
 RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
 )
 FASE2 =dict(
@@ -54,10 +54,9 @@ RESP_SORRISOMAIS_FASE ="https://i.imgur.com/U2ngNDX.jpg",
 RESP_SORRISO_FASE ="https://i.imgur.com/kBZLxlC.jpg",
 RESP_TRISTE_FASE ="https://i.imgur.com/2ndnjP4.jpg",
 TABELAFASE ="https://i.imgur.com/70tegLO.jpg",
-FIM_DA_FASE_2 ="Fim da Fase 2"
+ALERTA ="Fim da Fase 2"
 )
 RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
-ALERTA = ["FIM_DA_FASE_1", "FIM_DA_FASE_2"]
 TBRESPY, TBRESPX =  55, 751
 FASES = [FASE2, FASE1]
 class Tabuleiro:
@@ -145,7 +144,7 @@ class Tabuleiro:
             if len (self.lista_de_cartas)==16:
                 alert ("Observe as figuras da tabela maior e escolha uma posicao para a carta da vez")
             if self.lista_de_cartas==[]:
-                #alert (fase[ALERTA])
+                alert (fase["ALERTA"])
                 tb_fase2 = Tabuleiro(FASES.pop(0))
                 tb_fase2.tabela_fase1.esquerda = self.tabela_fase1
                 self.tabela_fase1.direita = tb_fase2.tabela_fase1
