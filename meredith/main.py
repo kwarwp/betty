@@ -30,6 +30,7 @@ RESP_SORRISOMAIS_FASE ="https://i.imgur.com/kjQFRv8.jpg",
 RESP_SORRISO_FASE ="https://i.imgur.com/r5ZovCe.jpg",
 RESP_TRISTE_FASE ="https://i.imgur.com/CbrmJpE.jpg",
 TABELAFASE ="https://i.imgur.com/sp2gLBu.jpg",
+FIM_DA_FASE_2 ="Fim da Fase 2",
 RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
 )
 FASE2 =dict(
@@ -53,8 +54,10 @@ RESP_SORRISOMAIS_FASE ="https://i.imgur.com/U2ngNDX.jpg",
 RESP_SORRISO_FASE ="https://i.imgur.com/kBZLxlC.jpg",
 RESP_TRISTE_FASE ="https://i.imgur.com/2ndnjP4.jpg",
 TABELAFASE ="https://i.imgur.com/70tegLO.jpg",
+FIM_DA_FASE_2 ="Fim da Fase 2"
 )
 RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
+ALERTA = ["FIM_DA_FASE_1", "FIM_DA_FASE_2"]
 TBRESPY, TBRESPX =  55, 751
 FASES = [FASE2, FASE1]
 class Tabuleiro:
@@ -71,9 +74,7 @@ class Tabuleiro:
             elemento_casa_do_tabuleiro = self.tabuleiro[casa_destino].elt
             cx, cy =  carta_a_mover.posicao_certa
             tx, ty =  self.tabuleiro[casa_destino].posicao_certa
-            pontos = (1 if cx == tx else 0) + (1 if ty == cy else 0)
-            #alert(pontos)
-            """carta_a_mover.entra(tabelafase1)"""
+            pontos = (1 if cx == tx else 0) + (1 if ty == cy else 0)           
             tabelafase1.elt<=carta_a_mover.elt
             #tabelafase1.elt<=casa.target
             self.tabuleiro[casa_destino].entra(tabelafase1)
@@ -90,32 +91,17 @@ class Tabuleiro:
             if len (self.lista_de_cartas)==15:
                 alert ("Dependendo da carta e da posicao escolhida, voce recebera uma resposta na tabela numerada.")
         
-        self.tabela_fase1 = tabelafase1 = Cena(img=fase["TABELAFASE"])
-        '''
-        self.pilha = Elemento(ALIMENTO_FASE1_1, tit='Alimento1', style=dict(
-            width="100px", height="50px", left=10, top=10))
-        '''
-            
+        self.tabela_fase1 = tabelafase1 = Cena(img=fase["TABELAFASE"])                    
         self.lista_de_cartas =[]
         Pilha_Cartas = ["EXCREMENTO_16", "DIVERSAO_15", "DESCANSO_14", "ALIMENTO_13",\
         "EXCREMENTO_12", "DIVERSAO_11", "DESCANSO_10", "ALIMENTO_9",\
         "EXCREMENTO_8", "DIVERSAO_7", "DESCANSO_6", "ALIMENTO_5",\
-        "EXCREMENTO_4", "DIVERSAO_3", "DESCANSO_2", "ALIMENTO_1"]
-        '''
-        Resposta_Cartas = [(ALIMENTO_FASE1_1,"0_1","0_2 0_3 0_0"), (DESCANSO_FASE1_2, "3_0","0_2 0_3 0_0"),\
-        (DIVERSAO_FASE1_3, "2_2","0_2 0_3 0_0"), (EXCREMENTO_FASE1_4, "1_3","0_2 0_3 0_0")]
-        '''
+        "EXCREMENTO_4", "DIVERSAO_3", "DESCANSO_2", "ALIMENTO_1"]       
         respostas= "1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1,1_3,2_2,3_0,0_1"
         self.resposta_certa = {nome:pos.split("_") for nome,pos in zip(Pilha_Cartas,respostas.split(","))}
                                  
         ### TABULEIRO RESPOSTA ####
         TBRX, TBRY = 80, 130
-        '''
-        self.casa0 = Elemento(RESP_SORRISOMAIS_FASE1, tit='0_0', style=dict(
-            width=TBRX, height=TBRY, left=751, top=55))
-        self.casa = Elemento(RESP_SORRISOMAIS_FASE1, tit='0_1', style=dict(
-            width=TBRX, height=TBRY, left=800, top=55))
-        '''
         self.tabuleiro_respostas = {}
         
         inicio_resp_x, inicio_resp_y = 754, 62
@@ -141,12 +127,6 @@ class Tabuleiro:
         
         ### TABULEIRO ####
         TBX, TBY = 140, 84
-        '''
-        self.casa0 = Elemento(ALIMENTO_FASE1_1, tit='0_0', style=dict(
-            width=TBX, height=TBY, left=220, top=140))
-        self.casa = Elemento(ALIMENTO_FASE1_1, tit='0_1', style=dict(
-            width=TBX, height=TBY, left=400, top=140))
-        '''
         self.tabuleiro = {}
         inicio_x, inicio_y = 165, 218
         for coluna in range(4):
@@ -165,7 +145,7 @@ class Tabuleiro:
             if len (self.lista_de_cartas)==16:
                 alert ("Observe as figuras da tabela maior e escolha uma posicao para a carta da vez")
             if self.lista_de_cartas==[]:
-                alert ("Fim da Fase 1")
+                #alert (fase[ALERTA])
                 tb_fase2 = Tabuleiro(FASES.pop(0))
                 tb_fase2.tabela_fase1.esquerda = self.tabela_fase1
                 self.tabela_fase1.direita = tb_fase2.tabela_fase1
