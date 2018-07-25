@@ -30,7 +30,7 @@ RESP_SORRISOMAIS_FASE ="https://i.imgur.com/kjQFRv8.jpg",
 RESP_SORRISO_FASE ="https://i.imgur.com/r5ZovCe.jpg",
 RESP_TRISTE_FASE ="https://i.imgur.com/CbrmJpE.jpg",
 TABELAFASE ="https://i.imgur.com/sp2gLBu.jpg",
-RESPOSTA = [RESP_TRISTE_FASE, RESP_SORRISO_FASE, RESP_SORRISOMAIS_FASE]
+RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
 )
 FASE2 =dict(
 ALIMENTO_1 ="https://i.imgur.com/kMqVEwX.jpg",
@@ -53,10 +53,10 @@ RESP_SORRISOMAIS_FASE ="https://i.imgur.com/U2ngNDX.jpg",
 RESP_SORRISO_FASE ="https://i.imgur.com/kBZLxlC.jpg",
 RESP_TRISTE_FASE ="https://i.imgur.com/2ndnjP4.jpg",
 TABELAFASE ="https://i.imgur.com/70tegLO.jpg",
-RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
 )
+RESPOSTA = ["RESP_TRISTE_FASE", "RESP_SORRISO_FASE", "RESP_SORRISOMAIS_FASE"]
 TBRESPY, TBRESPX =  55, 751
-
+FASES = [FASE2, FASE1]
 class Tabuleiro:
 
     def __init__ (self, fase=FASE1):
@@ -84,7 +84,7 @@ class Tabuleiro:
             print(elemento_casa_do_tabuleiro.style.left, elemento_casa_do_tabuleiro.style.top)
             print(carta_a_mover.elt.style.left, carta_a_mover.elt.style.top)
             ordem_da_carta = 15 - len(self.lista_de_cartas)
-            dica_do_valor = Elemento(fase["RESPOSTA"][pontos], style=dict(
+            dica_do_valor = Elemento(fase[RESPOSTA[pontos]], style=dict(
                width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))            
             dica_do_valor.entra(self.tabela_fase1)
             if len (self.lista_de_cartas)==15:
@@ -130,8 +130,8 @@ class Tabuleiro:
                 
         ### PILHA DE CARTAS ###
         for carta in Pilha_Cartas:
-            carta = fase[carta]
-            a_carta_a_ser_empilhada = Elemento (carta, tit= carta, style=dict(
+            #carta = 
+            a_carta_a_ser_empilhada = Elemento (fase[carta], tit= carta, style=dict(
             width="115px", height="79px", left=40, top=40))
             a_carta_a_ser_empilhada.posicao_certa = self.resposta_certa[carta]
             self.lista_de_cartas.append(a_carta_a_ser_empilhada)
@@ -166,9 +166,9 @@ class Tabuleiro:
                 alert ("Observe as figuras da tabela maior e escolha uma posicao para a carta da vez")
             if self.lista_de_cartas==[]:
                 alert ("Fim da Fase 1")
-                tb_fase2 = Tabuleiro()
-                tb_fase2.tabelafase1.esquerda = tabelafase1
-                tabelafase1.direita = tb_fase2.tabelafase1
+                tb_fase2 = Tabuleiro(FASES.pop(0))
+                tb_fase2.tabela_fase1.esquerda = self.tabela_fase1
+                self.tabela_fase1.direita = tb_fase2.tabela_fase1
         self.cliqueaqui.elt.onclick = remove_clique_aqui        
                
         def recoloca_clique_aqui(_):
