@@ -33,3 +33,10 @@ NameError: name 'RESP_TRISTE_FASE' is not defined
     a_carta_a_ser_empilhada.posicao_certa = self.resposta_certa[carta]
 KeyError: https://i.imgur.com/xYci2H4.jpg
 '''},
+{'date': 'Wed Jul 25 2018 18:57:53.573 GMt-0300 (Hora oficial do Brasil) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  FASE1 = dict(
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
