@@ -192,7 +192,7 @@ class Tabuleiro:
                         dica_do_valor = Elemento(RESPOSTA2[pontos], style=dict(
                         width="60px", height="87px", left= TBRESPX+(ordem_da_carta%4)*TBRX, top= TBRESPY+(ordem_da_carta//4)*TBRY ))            
                         dica_do_valor.entra(self.tabela_fase2)
-                        alert ("Dependendo da carta e da posiÃ§Ã£o escolhida, vocÃª receberÃ¡ uma resposta na tabela numerada.")
+                        alert ("Dependendo da carta e da posiÃÂ§ÃÂ£o escolhida, vocÃÂª receberÃÂ¡ uma resposta na tabela numerada.")
         
                 self.tabela_fase2 = tabelafase2 = Cena(img=TABELAFASE2)
                 self.pilha = Elemento(ALIMENTO_FASE2_1, tit='Alimento2', style=dict(
@@ -256,7 +256,7 @@ class Tabuleiro:
                                            
                 def remove_clique_aqui(_):
                     self.cliqueaqui.elt.style.left=-1000
-                    alert ("Observe as figuras da tabela maior e escolha uma posiÃ§Ã£o para a carta da vez")
+                    alert ("Observe as figuras da tabela maior e escolha uma posiÃÂ§ÃÂ£o para a carta da vez")
                 self.cliqueaqui.elt.onclick = remove_clique_aqui
                 
                 def recoloca_clique_aqui(_):
@@ -266,7 +266,7 @@ class Tabuleiro:
                 
             #tabelafase1.direita = segunda_fase.vai()
             #if tabelafase1.direita(self):
-                #self.segunda_fase()        
+             #   self.segunda_fase()        
             #Tabuleiro2()    
         
         
