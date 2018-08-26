@@ -69,7 +69,7 @@ class Tabuleiro:
                 alert ("Fim da Fase 1")
             carta_a_mover = self.lista_de_cartas.pop()
             casa_destino = casa.target.id
-            self.cliqueaqui.elt.style.left=40
+            self.cliqueaqui.elt.style.left=10
             elemento_casa_do_tabuleiro = self.tabuleiro[casa_destino].elt
             cx, cy =  carta_a_mover.posicao_certa
             tx, ty =  self.tabuleiro[casa_destino].posicao_certa
@@ -121,7 +121,7 @@ class Tabuleiro:
             a_carta_a_ser_empilhada.posicao_certa = self.resposta_certa[carta]
             self.lista_de_cartas.append(a_carta_a_ser_empilhada)
             a_carta_a_ser_empilhada.entra(tabelafase1)
-        self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=30, top=30))
+        self.cliqueaqui = Elemento (CLIQUEAQUI, style=dict(width="170px", height="100px", left=10, top=30))
         self.cliqueaqui.entra (tabelafase1)
         
         ### TABULEIRO ####
@@ -141,7 +141,7 @@ class Tabuleiro:
                             
         def remove_clique_aqui(_):
             self.cliqueaqui.elt.style.left=-1000
-            if len (self.lista_de_cartas)==16:
+            if len (self.lista_de_cartas)==15:
                 alert ("Observe as figuras da tabela maior e escolha uma posicao para a carta da vez")
             if self.lista_de_cartas==[]:
                 alert (fase["ALERTA"])
