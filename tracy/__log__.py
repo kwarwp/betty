@@ -29,3 +29,10 @@ IndentationError: expected an indented block
     circus(1, [[TOPO_ESQUERDA, TOPO_CENTRO, TOPO_DIREITA], [MEIO_ESQUERDA, CENTRO,
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Tue Dec 04 2018 16:38:56.933 GMt-0200 (Horário de Verão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  circus(<1>, <parâmetro indicado>)
+          ^
+SyntaxError: invalid syntax
+'''},
