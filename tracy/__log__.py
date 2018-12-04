@@ -43,3 +43,10 @@ SyntaxError: invalid syntax
           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Dec 04 2018 16:40:24.596 GMt-0200 (Horário de Verão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  circus(<1>,TOPO_ESQUERDA = "LS"
+          ^
+SyntaxError: invalid syntax
+'''},
