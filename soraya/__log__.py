@@ -24,3 +24,10 @@ SyntaxError: Unbalanced bracket (
     	cena1 = Cena (img = link_cenario)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Aug 01 2019 23:29:23.287 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  cena1.vai()
+  ^
+IndentationError: unexpected indent
+'''},
