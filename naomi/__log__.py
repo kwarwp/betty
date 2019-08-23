@@ -123,3 +123,10 @@ SyntaxError: invalid syntax
                                                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Aug 23 2019 14:34:19.721 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 7
+  cena = Cena (img = bananeira, style=dict( width="500", height="500")
+                                                                         ^
+SyntaxError: invalid syntax
+'''},
