@@ -6,6 +6,6 @@ banana = "https://i.imgur.com/VbszxUx.png"
 def minions():
 	cena = Cena (img = bananeira)
 	elemento = Elemento(img = banana)
-	elemento.vai()
+	elemento.entra(cena)
 	cena.vai()
 minions()
