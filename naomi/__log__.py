@@ -300,3 +300,10 @@ SyntaxError: invalid syntax
                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Aug 30 2019 14:36:32.702 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  banana = imgu "https://i.r.com/VbszxUx.png"
+                 ^
+SyntaxError: invalid syntax
+'''},
