@@ -4,7 +4,6 @@ bananeira = "https://bykamy.com.br/media/magpleasure/mpblog/upload/a/e/ae69211a1
 banana = "https://i.imgur.com/VbszxUx.png
 STYLE["width"]=1100
 STYLE["height"]="600px"
-
 def minions():
 	cena = Cena (img = bananeira)
 	elemento = Elemento(img = banana ,
