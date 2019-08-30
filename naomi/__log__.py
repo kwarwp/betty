@@ -244,3 +244,10 @@ SyntaxError: EOL while scanning string literal
                                            ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Fri Aug 30 2019 14:23:05.538 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  , top=200, width="100px", height="120px"))
+  ^
+IndentationError: unexpected indent
+'''},
