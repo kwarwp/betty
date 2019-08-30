@@ -325,3 +325,21 @@ SyntaxError: invalid syntax
     	elemento1 = Elemento1(img = banana ,
 NameError: name 'Elemento1' is not defined
 '''},
+{'date': 'Fri Aug 30 2019 14:50:34.624 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 18
+    minions()
+  module <module> line 13
+    	elemento = Elemento1(img = banana1 ,
+NameError: name 'Elemento1' is not defined
+'''},
