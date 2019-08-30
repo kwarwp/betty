@@ -361,3 +361,10 @@ NameError: name 'Elemento1' is not defined
     	elemento1 = Elemento1(img = banana1 ,
 NameError: name 'Elemento1' is not defined
 '''},
+{'date': 'Fri Aug 30 2019 15:04:42.295 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  elemento.entra(cena)	elemento = Elemento(img = banana ,
+                        ^
+SyntaxError: invalid syntax
+'''},
