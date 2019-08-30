@@ -216,3 +216,10 @@ SyntaxError: invalid syntax
                                                                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Aug 30 2019 13:54:20.933 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  banana = "https://i.imgur.com/VbszxUx.png
+                                           ^
+SyntaxError: EOL while scanning string literal
+'''},
