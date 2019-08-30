@@ -8,7 +8,7 @@ def minions():
 	cena = Cena (img = bananeira)
 	elemento = Elemento(img = banana ,
                          tit="banana",
-                         style=dict(left=150, top=60, width=20, height=20))
+                         style=dict(left=150, top=160, width=20, height=20))
 	elemento.entra(cena)
 	cena.vai()
 minions()
