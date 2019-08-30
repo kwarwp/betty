@@ -237,3 +237,10 @@ SyntaxError: EOL while scanning string literal
                                            ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Fri Aug 30 2019 14:01:52.39 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  banana = "https://i.imgur.com/VbszxUx.png
+                                           ^
+SyntaxError: EOL while scanning string literal
+'''},
