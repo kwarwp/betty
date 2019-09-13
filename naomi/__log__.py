@@ -425,3 +425,10 @@ NameError: name 'cena' is not defined
                                                                                                                           ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Fri Sep 13 2019 14:35:44.389 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  elemento1.entra(cena
+                         ^
+SyntaxError: invalid syntax
+'''},
