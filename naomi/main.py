@@ -6,7 +6,7 @@ banana1 = "https://i.imgur.com/VbszxUx.png"
 banana2 = "https://i.imgur.com/VbszxUx.png"
 banana3 = "https://i.imgur.com/VbszxUx.png"
 banana4 = "https://i.imgur.com/VbszxUx.png"
-
+caminhao = "https://cdn.pixabay.com/photo/2017/03/27/12/00/truck-2178252_960_720.png"
 STYLE["width"]=1100
 STYLE["height"]="600px"
 def minions():
@@ -27,13 +27,14 @@ def minions():
 	elemento4 = Elemento(img = banana ,
                          tit="banana4",
                          style=dict(left=640,top=400, width="100px", heigth="2000px"))
-	caminhao = Caminhao(img = caminhao ,
-                         tit="caminhao",
-                         style=(left=350,top=200,width="50px",heigth="1000px"))
+	#caminhao = Elemento(img = caminhao ,
+                         #tit="caminhao",
+                         #style=(left=350,top=200,width="50px",heigth="1000px"))
                          
 	elemento1.entra(cena)
 	elemento2.entra(cena)
 	elemento3.entra(cena)
 	elemento4.entra(cena)
+	#elemento5.entra(cena)
 	cena.vai()
 minions()
