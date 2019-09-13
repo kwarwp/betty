@@ -20,14 +20,17 @@ def minions():
 	elemento.entra(cena)
 	elemento2 = Elemento(img = banana ,
                          tit="banana2",
-                         style=dict(left=40 , top=300, width="80px", height="100px"))
+                         style=dict(left=40 , top=250, width="80px", height="100px"))
 	elemento3 = Elemento(img = banana ,
                          tit="banana3",
                          style=dict(left=150, top=300, width="60px", height="80px"))
 	elemento4 = Elemento(img = banana ,
                          tit="banana4",
-                         style=dict(left=200, top=350, width="40px", height="50px"))
-
+                         style=dict(left=640,top=400, width="100px", heigth="2000px"))
+	caminhao = Caminhao(img = caminhao ,
+                         tit="caminhao",
+                         style=(left=350,top=200,width="50px",heigth="1000px"))
+                         
 	elemento1.entra(cena)
 	elemento2.entra(cena)
 	elemento3.entra(cena)
