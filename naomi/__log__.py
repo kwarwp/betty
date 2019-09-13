@@ -418,3 +418,10 @@ NameError: name 'cena' is not defined
     cena.vai()
 NameError: name 'cena' is not defined
 '''},
+{'date': 'Fri Sep 13 2019 14:28:59.300 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  caminhao= "https://png.pngtree.com/png-clipart/20190611/original/pngtree-truck-png-vector-material-png-image_2771951.jpg
+                                                                                                                          ^
+SyntaxError: EOL while scanning string literal
+'''},
