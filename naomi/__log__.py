@@ -488,3 +488,10 @@ SyntaxError: invalid syntax
                                                                   ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Fri Sep 13 2019 15:18:13.682 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  elemento5 = Elemento(img = caminhao ,
+                                                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
