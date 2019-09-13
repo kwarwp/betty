@@ -446,3 +446,10 @@ SyntaxError: invalid syntax
                                                                                                                                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Sep 13 2019 15:03:03.128 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  caminhao = Caminhao(img = caminhao ,
+                                                                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
