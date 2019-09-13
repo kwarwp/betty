@@ -31,5 +31,6 @@ def minions():
 	elemento1.entra(cena)
 	elemento2.entra(cena)
 	elemento3.entra(cena)
+	elemento4.entra(cena)
 	cena.vai()
 minions()
