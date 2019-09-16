@@ -73,3 +73,10 @@ TypeError: 'module' object is not callable
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Mon Sep 16 2019 15:07:02.942 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  def move_carta(item):
+  ^
+IndentationError: expected an indented block
+'''},
