@@ -615,3 +615,10 @@ UnboundLocalError: local variable 'caminhao' referenced before assignment
     	caminhao = Elemento(img = caminhao ,
 UnboundLocalError: local variable 'caminhao' referenced before assignment
 '''},
+{'date': 'Mon Sep 16 2019 08:46:47.644 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  geleia = https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png
+                 ^
+SyntaxError: invalid syntax
+'''},
