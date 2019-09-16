@@ -750,3 +750,10 @@ UnboundLocalError: local variable 'geleia' referenced before assignment
     	geleia.entra(cena)
 AttributeError: 'str' object has no attribute 'entra'
 '''},
+{'date': 'Mon Sep 16 2019 09:14:26.370 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  Podre = Elemento(img = podre
+                                                       ^
+SyntaxError: invalid syntax
+'''},
