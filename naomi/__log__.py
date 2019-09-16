@@ -622,3 +622,10 @@ UnboundLocalError: local variable 'caminhao' referenced before assignment
                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Sep 16 2019 08:47:14.30 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  banana podre = "https://i.imgur.com/sGUZfwF.png"
+          ^
+SyntaxError: invalid syntax
+'''},
