@@ -757,3 +757,10 @@ AttributeError: 'str' object has no attribute 'entra'
                                                        ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Sep 16 2019 09:14:59.702 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  Podre = Elemento(img = podre ,
+                                                                                             ^
+SyntaxError: invalid syntax
+'''},
