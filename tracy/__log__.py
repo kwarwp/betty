@@ -66,3 +66,10 @@ SyntaxError: invalid syntax
     circus(1, [[TOPO_ESQUERDA, TOPO_CENTRO, TOPO_DIREITA], [MEIO_ESQUERDA, CENTRO,
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Mon Sep 16 2019 15:04:16.803 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  def move_carta(item):
+  ^
+IndentationError: expected an indented block
+'''},
