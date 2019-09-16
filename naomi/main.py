@@ -32,15 +32,19 @@ def minions():
 	Caminhao = Elemento(img = caminhao ,
                          tit="caminhao",
                          style=dict(left=750,top=400,width="350px",heigth="100px"))
-	Geleia = Elemento(img = geleia, 
+	Geleia = Elemento(img = geleia , 
                         tit= "geleia",
-                        
-                         
+                        style=dict(left=50,top=400,width="200px",heigth="50px"))
+	Podre = Elemento(img = podre ,
+                       tit= "podre",
+                       style=dict(left=500,top=450,width="100px",heigth="80px"))
                          
 	elemento1.entra(cena)
 	elemento2.entra(cena)
 	elemento3.entra(cena)
 	elemento4.entra(cena)
-	Caminhao.entra(cena)    
+	Caminhao.entra(cena)
+	Geleia.entra(cena)
+	Podre.entra(cena)
 	cena.vai()
 minions()
