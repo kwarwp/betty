@@ -7,6 +7,8 @@ banana2 = "https://i.imgur.com/VbszxUx.png"
 banana3 = "https://i.imgur.com/VbszxUx.png"
 banana4 = "https://i.imgur.com/VbszxUx.png"
 caminhao = "https://cdn.pixabay.com/photo/2017/03/27/12/00/truck-2178252_960_720.png"
+geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
+podre = "https://i.imgur.com/sGUZfwF.png"
 STYLE["width"]=1100
 STYLE["height"]="600px"
 def minions():
@@ -29,7 +31,11 @@ def minions():
                          style=dict(left=640,top=400, width="100px", heigth="2000px"))
 	Caminhao = Elemento(img = caminhao ,
                          tit="caminhao",
-                         style=dict(left=350,top=200,width="50px",heigth="1000px"))
+                         style=dict(left=750,top=400,width="350px",heigth="100px"))
+	Geleia = Elemento(img = geleia, 
+                        tit= "geleia",
+                        
+                         
                          
 	elemento1.entra(cena)
 	elemento2.entra(cena)
