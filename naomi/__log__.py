@@ -650,3 +650,10 @@ SyntaxError: EOL while scanning string literal
                                                                                                                      ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Mon Sep 16 2019 08:51:38.692 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  geleia = "https://static.-organica-zero-acucar-sabor-banana-shambala-240g-2457.png
+                                                                                    ^
+SyntaxError: EOL while scanning string literal
+'''},
