@@ -629,3 +629,10 @@ SyntaxError: invalid syntax
           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Sep 16 2019 08:47:49.589 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  Banana podre = "https://i.imgur.com/sGUZfwF.png"
+          ^
+SyntaxError: invalid syntax
+'''},
