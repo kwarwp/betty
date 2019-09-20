@@ -9,6 +9,7 @@ banana4 = "https://i.imgur.com/VbszxUx.png"
 caminhao = "https://cdn.pixabay.com/photo/2017/03/27/12/00/truck-2178252_960_720.png"
 geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
 podre = "https://i.imgur.com/sGUZfwF.png"
+lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
 STYLE["width"]=1100
 STYLE["height"]="600px"
 def minions():
@@ -22,7 +23,7 @@ def minions():
 	elemento.entra(cena)
 	elemento2 = Elemento(img = banana ,
                          tit="banana2",
-                         style=dict(left=40 , top=250, width="80px", height="100px"))
+                         style=dict(left=40 , top=250, width="80px", height="90px"))
 	elemento3 = Elemento(img = banana ,
                          tit="banana3",
                          style=dict(left=150, top=300, width="60px", height="80px"))
@@ -34,15 +35,19 @@ def minions():
                          style=dict(left=750,top=400,width="350px",heigth="100px"))
 	Geleia = Elemento(img = geleia , 
                         tit= "geleia",
-                        style=dict(left=50,top=400,width="200px",heigth="50px"))
+                        style=dict(left=50,top=400,width="80px",heigth="50px"))
 	Podre = Elemento(img = podre ,
                        tit= "podre",
                        style=dict(left=500,top=450,width="100px",heigth="80px"))
-                         
+        
+	Lixeira = Elemento(img = lixeira ,
+                        tit= "lixeira", 
+                        style=dict(left=200,top=420,width="200px",heigth="250px"))
 	elemento1.entra(cena)
 	elemento2.entra(cena)
 	elemento3.entra(cena)
 	elemento4.entra(cena)
+	Lixeira.entra(cena)
 	Caminhao.entra(cena)
 	Geleia.entra(cena)
 	Podre.entra(cena)
