@@ -12,7 +12,7 @@ podre = "https://i.imgur.com/sGUZfwF.png"
 lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
 STYLE["width"]=1100
 STYLE["height"]="600px"
-def minions():
+def Incrivel_banana_python():
 	cena = Cena (img = bananeira)
 	elemento = Elemento(img = banana ,
                          tit="banana",
@@ -52,4 +52,4 @@ def minions():
 	Geleia.entra(cena)
 	Podre.entra(cena)
 	cena.vai()
-minions()
+Incrivel_banana_python()
