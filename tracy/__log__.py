@@ -80,3 +80,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Oct 01 2019 18:27:11.597 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 71
+  DRAGGER_LIXEIRA.update(podre: rejeita_podre_lixo)
+                               ^
+SyntaxError: invalid syntax
+'''},
