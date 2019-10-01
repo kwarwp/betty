@@ -60,7 +60,14 @@ def Incrivel_banana_python():
 	cena.vai()
 def rejeita_lixo(evento, nome):
     Texto(cena, f"você não deveria jogar esta {nome} no lixo").vai()
+def aceita_boa(evento, nome):
+    Texto(cena, f"Muito bem você aproveitou uma boa {nome}").vai()
+def rejeita_podre(evento, nome):
+    Texto(cena, f"você não deveria vender esta coisa {nome}").vai()
+def rejeita_podre_lixo(evento, nome):
+    Texto(cena, f"você não deveria reaproveitar esta coisa {nome}").vai()
 
 DRAGGER_LIXEIRA = {coisa: rejeita_lixo for coisa in BOAS}
+DRAGGER_LIXEIRA.update(podre: rejeita_podre_lixo)
     
 Incrivel_banana_python()
