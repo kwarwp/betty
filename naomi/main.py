@@ -10,6 +10,7 @@ caminhao = "https://i.imgur.com/M62FANW.png"
 geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
 podre = "https://i.imgur.com/sGUZfwF.png"
 lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
+podre17 = "https://i.imgur.com/sGUZfwF.png"
 STYLE["width"]=1100
 STYLE["height"]="600px"
 def Incrivel_banana_python():
@@ -43,6 +44,9 @@ def Incrivel_banana_python():
 	Lixeira = Elemento(img = lixeira ,
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
+	podre1 = Elemento(img = podre1 ,
+                        tit= "podre1",
+                        style=dict(left=150,top=400,width="100px",heigth="250px"))
 	elemento1.entra(cena)
 	elemento2.entra(cena)
 	elemento3.entra(cena)
@@ -51,5 +55,6 @@ def Incrivel_banana_python():
 	Caminhao.entra(cena)
 	Geleia.entra(cena)
 	Podre.entra(cena)
+	podre1.entra(cena)
 	cena.vai()
 Incrivel_banana_python()
