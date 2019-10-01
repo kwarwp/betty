@@ -1,5 +1,6 @@
 # betty.tracy.main.py
-from _spy.vitollino.main import Cena, Elemento, STYLE, Texto
+from _spy.vitollino.main import Cena, STYLE, Texto
+from elemento.main import Elemento
 bananeira = "https://bykamy.com.br/media/magpleasure/mpblog/upload/a/e/ae69211a1a37d81e6472903dca1ff6c7.jpg"
 banana = "https://i.imgur.com/VbszxUx.png"
 banana1 = "https://i.imgur.com/VbszxUx.png"
@@ -12,23 +13,28 @@ podre = "https://i.imgur.com/sGUZfwF.png"
 lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
 STYLE["width"]=1100
 STYLE["height"]="600px"
+DRAGGER_CAMINHAO = {}
+DRAGGER_GELEIA = {}
+DRAGGER_LIXEIRA = {}
+BOAS = "banana banana1 banana2 banana3 banana4".split()
+cena = Cena (img = bananeira)
+
 def Incrivel_banana_python():
-	cena = Cena (img = bananeira)
 	elemento = Elemento(img = banana ,
-                         tit="banana",
+                         tit="banana", drag=True,
                          style=dict(left=320 , top=250, width="100px", height="120px"))
-	elemento1 = Elemento(img = banana1 ,
+	elemento1 = Elemento(img = banana1 , drag=True,
                          tit="banana1",
                          style=dict(left=400, top=250, width="90px", height="110px"))                      
 	elemento.entra(cena)
 	elemento2 = Elemento(img = banana ,
-                         tit="banana2",
+                         tit="banana2", drag=True,
                          style=dict(left=40 , top=250, width="80px", height="90px"))
 	elemento3 = Elemento(img = banana ,
-                         tit="banana3",
+                         tit="banana3", drag=True,
                          style=dict(left=150, top=300, width="60px", height="80px"))
 	elemento4 = Elemento(img = banana ,
-                         tit="banana4",
+                         tit="banana4", drag=True,
                          style=dict(left=640,top=400, width="100px", heigth="2000px"))
 	Caminhao = Elemento(img = caminhao ,
                          tit="caminhao",
@@ -37,10 +43,10 @@ def Incrivel_banana_python():
                         tit= "geleia",
                         style=dict(left=50,top=400,width="80px",heigth="50px"))
 	Podre = Elemento(img = podre ,
-                       tit= "podre",
+                       tit= "podre", drag=True,
                        style=dict(left=500,top=450,width="100px",heigth="80px"))
         
-	Lixeira = Elemento(img = lixeira ,
+	Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA,
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
 	elemento1.entra(cena)
@@ -52,4 +58,9 @@ def Incrivel_banana_python():
 	Geleia.entra(cena)
 	Podre.entra(cena)
 	cena.vai()
+def rejeita_lixo(evento, nome):
+    Texto(cena, f"você não deveria jogar esta {nome} no lixo").vai()
+
+DRAGGER_LIXEIRA = {coisa: rejeita_lixo for coisa in BOAS}
+    
 Incrivel_banana_python()
