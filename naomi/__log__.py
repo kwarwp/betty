@@ -879,3 +879,10 @@ UnboundLocalError: local variable 'podre1' referenced before assignment
     	podre1 = Elemento(img = podre1 ,
 UnboundLocalError: local variable 'podre1' referenced before assignment
 '''},
+{'date': 'Wed Oct 02 2019 10:54:12.563 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 64
+  def aceita_banana_boa (evento, nome)
+                                       ^
+SyntaxError: invalid syntax
+'''},
