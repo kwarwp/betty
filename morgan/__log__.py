@@ -20,3 +20,10 @@ SyntaxError: invalid syntax
                                                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Oct 02 2019 09:26:08.611 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  carro = 'https://www.pinclipart.com/picdir/middle/106-1066670_audi-clipart-fast-car-lamborghini-de-lado-png.png']
+           ^
+SyntaxError: invalid syntax
+'''},
