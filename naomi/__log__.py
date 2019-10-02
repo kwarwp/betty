@@ -825,3 +825,21 @@ NameError: name 'podre1' is not defined
     	podre1.entra(cena)
 AttributeError: 'str' object has no attribute 'entra'
 '''},
+{'date': 'Wed Oct 02 2019 08:41:43.686 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 60
+    Incrivel_banana_python()
+  module <module> line 47
+    	podre1 = Elemento(img = podre1 ,
+UnboundLocalError: local variable 'podre1' referenced before assignment
+'''},
