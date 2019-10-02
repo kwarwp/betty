@@ -17,7 +17,7 @@ DRAGGER_CAMINHAO = {}
 DRAGGER_GELEIA = {}
 DRAGGER_LIXEIRA = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
-cena = Cena (img = bananeira)
+cenario = Cena (img = bananeira)
 
 def Incrivel_banana_python():
 	elemento = Elemento(img = banana ,
@@ -26,7 +26,7 @@ def Incrivel_banana_python():
 	elemento1 = Elemento(img = banana1 , drag=True,
                          tit="banana1",
                          style=dict(left=400, top=250, width="90px", height="110px"))                      
-	elemento.entra(cena)
+	elemento.entra(cenario)
 	elemento2 = Elemento(img = banana ,
                          tit="banana2", drag=True,
                          style=dict(left=40 , top=250, width="80px", height="90px"))
@@ -49,27 +49,27 @@ def Incrivel_banana_python():
 	Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA,
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
-	elemento1.entra(cena)
-	elemento2.entra(cena)
-	elemento3.entra(cena)
-	elemento4.entra(cena)
-	Lixeira.entra(cena)
-	Caminhao.entra(cena)
-	Geleia.entra(cena)
-	Podre.entra(cena)
-	cena.vai()
+	elemento1.entra(cenario)
+	elemento2.entra(cenario)
+	elemento3.entra(cenario)
+	elemento4.entra(cenario)
+	Lixeira.entra(cenario)
+	Caminhao.entra(cenario)
+	Geleia.entra(cenario)
+	Podre.entra(cenario)
+	cenario.vai()
 def rejeita_lixo(evento, nome):
-    Texto(cena, f"você não deveria jogar esta {nome} no lixo").vai()
+    Texto(cenario, f"você não deveria jogar esta {nome} no lixo").vai()
 def aceita_boa(evento, nome):
-    Texto(cena, f"Muito bem você aproveitou uma boa {nome}").vai()
+    Texto(cenario, f"Muito bem você aproveitou uma boa {nome}").vai()
 def rejeita_boa(evento, nome):
-    Texto(cena, f"você não deveria fazer geléia com esta {nome} boa").vai()
+    Texto(cenario, f"você não deveria fazer geléia com esta {nome} boa").vai()
 def aceita_podre(evento, nome):
-    Texto(cena, f"Muito bem você reaproveitou uma coisa {nome}").vai()
+    Texto(cenario, f"Muito bem você reaproveitou uma coisa {nome}").vai()
 def rejeita_podre(evento, nome):
-    Texto(cena, f"você não deveria vender esta coisa {nome}").vai()
+    Texto(cenario, f"você não deveria vender esta coisa {nome}").vai()
 def rejeita_podre_lixo(evento, nome):
-    Texto(cena, f"você deveria reaproveitar esta coisa {nome}").vai()
+    Texto(cenario, f"você deveria reaproveitar esta coisa {nome}").vai()
 
 DRAGGER_LIXEIRA = {coisa: rejeita_lixo for coisa in BOAS}
 DRAGGER_LIXEIRA.update(podre= rejeita_podre_lixo)
