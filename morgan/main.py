@@ -12,6 +12,8 @@ def cidade_legal():
 	elemento_pessoa = Elemento (img = pessoa,
 	tit="homem",style=dict(left=700 , top=300, width="200px", height="300px"))    
 	elemento_carro.entra(cenario)
-	elemento_pessoa.entra(cenario)    
+	elemento_pessoa.entra(cenario)  
+	txthomem = Texto (cenario,"Olhem meu carro novo!")
+	pessoa.vai = txthomem.vai    
 	cenario.vai()
 cidade_legal()    
