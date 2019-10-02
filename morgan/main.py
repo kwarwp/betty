@@ -14,6 +14,6 @@ def cidade_legal():
 	elemento_carro.entra(cenario)
 	elemento_pessoa.entra(cenario)  
 	txthomem = Texto (cenario,"Olhem meu carro novo!")
-	pessoa.vai = txthomem.vai    
+	elemento_pessoa.vai = txthomem.vai    
 	cenario.vai()
 cidade_legal()    
