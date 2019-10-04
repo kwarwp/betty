@@ -62,9 +62,9 @@ def Incrivel_banana_python():
 	cenario.vai()
     
 def aceita_banana_boa(evento, nome):
-    Texto (cenario, f"Muito bem, esta {nome} boa  pode ser vendida!").vai() 
+    Texto (cenario, f"Muito bem, esta coisa {nome} boa  pode ser vendida!").vai() 
 def aceita_banana_madura(evento, nome):
-    Texto (cenario, f"voce nao deveria vender esta {nome}").vai()
+    Texto (cenario, f"voce nao deveria vender esta coisa {nome}").vai()
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
 DICIONARIO_CAMINHAO.update(banana_madura=aceita_banana_madura)
