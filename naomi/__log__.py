@@ -886,3 +886,10 @@ UnboundLocalError: local variable 'podre1' referenced before assignment
                                        ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Oct 04 2019 13:33:12.85 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 64
+  def aceita_banana_boa (evento, nome)
+                                       ^
+SyntaxError: invalid syntax
+'''},
