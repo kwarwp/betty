@@ -22,6 +22,7 @@ cenario = Cena (img = bananeira)
 def Incrivel_banana_python():
 	elemento = Elemento(img = banana ,
                          tit="banana", drag=True,
+                        
                          style=dict(left=320 , top=250, width="100px", height="120px"))
 	elemento1 = Elemento(img = banana1 , drag=True,
                          tit="banana1",
