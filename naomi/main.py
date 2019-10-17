@@ -43,7 +43,7 @@ def Incrivel_banana_python():
                         tit= "geleia",
                         style=dict(left=50,top=400,width="80px",heigth="50px"))
 	Banana_madura= Elemento(img = banana_madura ,
-                       tit= "banana_madura",
+                       tit= "banana_madura",drag=True,
                        style=dict(left=500,top=450,width="100px",heigth="80px"))
         
 	Lixeira = Elemento(img = lixeira ,
