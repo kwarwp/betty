@@ -15,8 +15,10 @@ STYLE["width"]=1100
 STYLE["height"]="600px"
 DICIONARIO_CAMINHAO = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
+cenario=None
 
 def Incrivel_banana_python():
+	global cenario
 	cenario = Cena (img = bananeira)
 	elemento = Elemento(img = banana ,
                          tit="banana",drag=True,
@@ -62,8 +64,10 @@ def Incrivel_banana_python():
 	cenario.vai()
     
 def aceita_banana_boa(evento, nome):
+    global cenario
     Texto(cenario, f"Muito bem, esta coisa {nome} boa  pode ser vendida!").vai() 
 def aceita_banana_madura(evento, nome):
+    global cenario
     Texto(cenario, f"voce não deveria vender esta coisa {nome}!").vai()
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
