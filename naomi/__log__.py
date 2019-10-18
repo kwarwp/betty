@@ -1063,3 +1063,10 @@ SyntaxError: invalid syntax
     	deBanana_madura2.entra(cenario)
 NameError: name 'deBanana_madura2' is not defined
 '''},
+{'date': 'Fri Oct 18 2019 10:38:19.577 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 96
+  def rejeita_banana_boa(evento, nome
+                                        ^
+SyntaxError: invalid syntax
+'''},
