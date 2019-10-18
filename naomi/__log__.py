@@ -1102,3 +1102,10 @@ NameError: name 'MADURA' is not defined
     DICIONARIO_LIXEIRA={coisa:rejeita_banana_boa for coisa in BOAS}
 NameError: name 'rejeita_banana_boa' is not defined
 '''},
+{'date': 'Fri Oct 18 2019 14:23:56.775 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 102
+  DICIONARIO_GELEQUA={gelequa:
+                     ^
+SyntaxError: Unbalanced bracket {
+'''},
