@@ -92,13 +92,11 @@ def aceita_banana_madura(evento, nome):
 def rejeita_banana_madura(evento, nome):
 	global cenario
 	Texto(cenario, f"você não deveria desperdiçar esta {nome}, ela pode ser usada pra fazer geleia!").vai()   
-def rejeita_banana_boa(evento, nome):
-	global cenario
-	Texto(cenario, f"você não deveria jogar esta {nome} no lixo, ela pode ser vendida!").vai()
+
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
-DICIONARIO_CAMINHAO={coisamadura:aceita_banana_madura for coisamadura in MADURAS}
+DICIONARIO_CAMINHAO.update(coisamadura= aceita_banana_madura)
 DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura for coisamadura in MADURAS}
-DICIONARIO_LIXEIRA={coisa:rejeita_banana_boa for coisa in BOAS}
+
 Incrivel_banana_python()
 
