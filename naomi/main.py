@@ -17,6 +17,7 @@ lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.
 STYLE["width"]=1100
 STYLE["height"]="600px"
 DICIONARIO_CAMINHAO = {}
+DICIONARIO_LIXEIRA = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
 MADURAS = "banana_madura banana_madura1 banana_madura2 banana_madura3 banana_madura4".split()
 cenario=None     
@@ -54,7 +55,7 @@ def Incrivel_banana_python():
                        style=dict(left=650,top=350,width="100px",heigth="80px"))
 	Banana_madura2= Elemento(img = banana_madura2 ,
                        tit= "banana_madura2",drag=True,
-                       style=dict(left=300,top=420,width="100px",heigth="80px"))
+                       style=dict(left=600,top=420,width="100px",heigth="80px"))
 	Banana_madura3= Elemento(img = banana_madura3 ,
                        tit= "banana_madura3",drag=True,
                        style=dict(left=60,top=500,width="100px",heigth="80px"))
@@ -63,7 +64,7 @@ def Incrivel_banana_python():
                        style=dict(left=89,top=251,width="100px",heigth="80px"))                    
                        
         
-	Lixeira = Elemento(img = lixeira ,
+	Lixeira = Elemento(img = lixeira , drop = DICIONARIO_LIXEIRA,
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
 	
@@ -88,7 +89,16 @@ def aceita_banana_boa(evento, nome):
 def aceita_banana_madura(evento, nome):
     global cenario
     Texto(cenario, f"voce não deveria vender esta {nome}!").vai()
+def rejeita_banana_madura(evento, nome):
+	global cenario
+	Texto(cenario, f"você não deveria desperdiçar esta {nome}, ela pode ser usada pra fazer geleia!").vai()   
+def rejeita_banana_boa(evento, nome):
+	global cenario
+	Texto(cenario, f"você não deveria jogar esta {nome} no lixo, ela pode ser vendida!").vai()
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
 DICIONARIO_CAMINHAO={coisamadura:aceita_banana_madura for coisamadura in MADURAS}
+DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura for coisamadura in MADURAS}
+DICIONARIO_LIXEIRA={coisa:rejeita_banana_boa for coisa in BOAS}
 Incrivel_banana_python()
+
