@@ -6,52 +6,67 @@ banana1 = "https://i.imgur.com/VbszxUx.png"
 banana2 = "https://i.imgur.com/VbszxUx.png"
 banana3 = "https://i.imgur.com/VbszxUx.png"
 banana4 = "https://i.imgur.com/VbszxUx.png"
-caminhao = "https://i.imgur.com/M62FANW.png"
+caminhao = "https://i.imgur.com/M62FANW.png"               
 geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
 banana_madura = "https://i.imgur.com/sGUZfwF.png"
-lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
-podre1 = "https://i.imgur.com/sGUZfwF.png"
+banana_madura1 = "https://i.imgur.com/sGUZfwF.png"
+banana_madura2 = "https://i.imgur.com/sGUZfwF.png"                           
+banana_madura3 = "https://i.imgur.com/sGUZfwF.png"
+banana_madura4 = "https://i.imgur.com/sGUZfwF.png"
+lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"                  
 STYLE["width"]=1100
 STYLE["height"]="600px"
 DICIONARIO_CAMINHAO = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
-cenario=None
+MADURAS = "banana_madura banana_madura1 banana_madura2 banana_madura3 banana_madura4".split()
+cenario=None     
 
-def Incrivel_banana_python():
+def Incrivel_banana_python():                        
 	global cenario
 	cenario = Cena (img = bananeira)
-	elemento = Elemento(img = banana ,
+	elemento = Elemento(img = banana ,                        
                          tit="banana",drag=True,
                          style=dict(left=320 , top=250, width="100px", height="120px"))
 	elemento1 = Elemento(img = banana1 ,
                          tit="banana1",drag=True,
-                         style=dict(left=400, top=250, width="90px", height="110px"))                      
+                         style=dict(left=400, top=250, width="90px", height="110px"))                                  
 	elemento.entra(cenario)
-	elemento2 = Elemento(img = banana ,
+	elemento2 = Elemento(img = banana ,                       
                          tit="banana2",drag=True,
-                         style=dict(left=40 , top=250, width="80px", height="90px"))
+                         style=dict(left=40 , top=250, width="80px", height="90px"))            
 	elemento3 = Elemento(img = banana ,
                          tit="banana3",drag=True,
-                         style=dict(left=150, top=300, width="60px", height="80px"))
+                         style=dict(left=150, top=300, width="60px", height="80px")) 
 	elemento4 = Elemento(img = banana ,
                          tit="banana4",drag=True,
-                         style=dict(left=640,top=400, width="100px", heigth="2000px"))
-	Caminhao = Elemento(img = caminhao ,drop=DICIONARIO_CAMINHAO,
-                         tit="caminhao",
+                         style=dict(left=400,top=400, width="100px", heigth="2000px"))
+	Caminhao = Elemento(img = caminhao ,drop=DICIONARIO_CAMINHAO, 
+                         tit="caminhao", 
                          style=dict(left=750,top=400,width="350px",heigth="100px"))
 	Geleia = Elemento(img = geleia , 
                         tit= "geleia",
                         style=dict(left=50,top=400,width="80px",heigth="50px"))
 	Banana_madura= Elemento(img = banana_madura ,
-                       tit= "banana_madura",drag=True,
-                       style=dict(left=500,top=450,width="100px",heigth="80px"))
+                       tit= "banana_madura",drag=True,                                         
+                       style=dict(left=490,top=500,width="100px",heigth="80px"))
+	Banana_madura1= Elemento(img = banana_madura1 ,
+                       tit= "banana_madura1",drag=True,
+                       style=dict(left=650,top=350,width="100px",heigth="80px"))
+	Banana_madura2= Elemento(img = banana_madura2 ,
+                       tit= "banana_madura2",drag=True,
+                       style=dict(left=300,top=420,width="100px",heigth="80px"))
+	Banana_madura3= Elemento(img = banana_madura3 ,
+                       tit= "banana_madura3",drag=True,
+                       style=dict(left=60,top=500,width="100px",heigth="80px"))
+	Banana_madura4= Elemento(img = banana_madura4 ,
+                       tit= "banana_madura4",drag=True,
+                       style=dict(left=89,top=251,width="100px",heigth="80px"))                    
+                       
         
 	Lixeira = Elemento(img = lixeira ,
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
-	"""banana_madura1 = Elemento(img = banana_madura1 ,
-                        tit= "banana_madura1",
-                        style=dict(left=150,top=400,width="100px",heigth="250px"))"""
+	
 	elemento1.entra(cenario)
 	elemento2.entra(cenario)
 	elemento3.entra(cenario)
@@ -60,16 +75,20 @@ def Incrivel_banana_python():
 	Caminhao.entra(cenario)
 	Geleia.entra(cenario)
 	Banana_madura.entra(cenario)
+	Banana_madura1.entra(cenario)
+	Banana_madura2.entra(cenario)
+	Banana_madura3.entra(cenario) 
+	Banana_madura4.entra(cenario)    
 	"""banana_madura1.entra(cenario)"""
 	cenario.vai()
     
 def aceita_banana_boa(evento, nome):
     global cenario
-    Texto(cenario, f"Muito bem, esta coisa {nome} boa  pode ser vendida!").vai() 
+    Texto(cenario, f"Muito bem, esta {nome} boa  pode ser vendida!").vai() 
 def aceita_banana_madura(evento, nome):
     global cenario
-    Texto(cenario, f"voce não deveria vender esta coisa {nome}!").vai()
+    Texto(cenario, f"voce não deveria vender esta {nome}!").vai()
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
-DICIONARIO_CAMINHAO.update(banana_madura=aceita_banana_madura)
+DICIONARIO_CAMINHAO={coisamadura:aceita_banana_madura for coisamadura in MADURAS}
 Incrivel_banana_python()
