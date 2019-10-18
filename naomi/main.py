@@ -1,14 +1,14 @@
 # betty.naomi.main.py
 from _spy.vitollino.main import Cena, Elemento, STYLE, Texto
 bananeira = "https://bykamy.com.br/media/magpleasure/mpblog/upload/a/e/ae69211a1a37d81e6472903dca1ff6c7.jpg"
-banana = "https://i.imgur.com/VbszxUx.png"
+banana0 = "https://i.imgur.com/VbszxUx.png"
 banana1 = "https://i.imgur.com/VbszxUx.png"
 banana2 = "https://i.imgur.com/VbszxUx.png"
 banana3 = "https://i.imgur.com/VbszxUx.png"
 banana4 = "https://i.imgur.com/VbszxUx.png"
 caminhao = "https://i.imgur.com/M62FANW.png"               
-geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
-banana_madura = "https://i.imgur.com/sGUZfwF.png"
+gelequa = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
+banana_madura0 = "https://i.imgur.com/sGUZfwF.png"
 banana_madura1 = "https://i.imgur.com/sGUZfwF.png"
 banana_madura2 = "https://i.imgur.com/sGUZfwF.png"                           
 banana_madura3 = "https://i.imgur.com/sGUZfwF.png"
@@ -18,6 +18,7 @@ STYLE["width"]=1100
 STYLE["height"]="600px"
 DICIONARIO_CAMINHAO = {}
 DICIONARIO_LIXEIRA = {}
+DICIONARIO_GELEQUA = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
 MADURAS = "banana_madura banana_madura1 banana_madura2 banana_madura3 banana_madura4".split()
 cenario=None     
@@ -25,30 +26,29 @@ cenario=None
 def Incrivel_banana_python():                        
 	global cenario
 	cenario = Cena (img = bananeira)
-	elemento = Elemento(img = banana ,                        
-                         tit="banana",drag=True,
+	elemento = Elemento(img = banana0 ,                        
+                         tit="banana0",drag=True,
                          style=dict(left=320 , top=250, width="100px", height="120px"))
 	elemento1 = Elemento(img = banana1 ,
                          tit="banana1",drag=True,
-                         style=dict(left=400, top=250, width="90px", height="110px"))                                  
-	elemento.entra(cenario)
-	elemento2 = Elemento(img = banana ,                       
+                         style=dict(left=400, top=250, width="90px", height="110px"))                                
+	elemento2 = Elemento(img = banana2 ,                       
                          tit="banana2",drag=True,
                          style=dict(left=40 , top=250, width="80px", height="90px"))            
-	elemento3 = Elemento(img = banana ,
+	elemento3 = Elemento(img = banana3 ,
                          tit="banana3",drag=True,
                          style=dict(left=150, top=300, width="60px", height="80px")) 
-	elemento4 = Elemento(img = banana ,
+	elemento4 = Elemento(img = banana4 ,
                          tit="banana4",drag=True,
                          style=dict(left=400,top=400, width="100px", heigth="2000px"))
 	Caminhao = Elemento(img = caminhao ,drop=DICIONARIO_CAMINHAO, 
                          tit="caminhao", 
                          style=dict(left=750,top=400,width="350px",heigth="100px"))
-	Geleia = Elemento(img = geleia , 
-                        tit= "geleia",
+	Geleia = Elemento(img = gelequa ,drop=DICIONARIO_GELEQUA,
+                        tit= "gelequa",
                         style=dict(left=50,top=400,width="80px",heigth="50px"))
-	Banana_madura= Elemento(img = banana_madura ,
-                       tit= "banana_madura",drag=True,                                         
+	Banana_madura= Elemento(img = banana_madura0 ,
+                       tit= "banana_madura0",drag=True,                                         
                        style=dict(left=490,top=500,width="100px",heigth="80px"))
 	Banana_madura1= Elemento(img = banana_madura1 ,
                        tit= "banana_madura1",drag=True,
@@ -68,6 +68,7 @@ def Incrivel_banana_python():
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
 	
+	elemento.entra(cenario)
 	elemento1.entra(cenario)
 	elemento2.entra(cenario)
 	elemento3.entra(cenario)
@@ -85,18 +86,23 @@ def Incrivel_banana_python():
     
 def aceita_banana_boa(evento, nome):
     global cenario
+    nome=nome[:-1]
     Texto(cenario, f"Muito bem, esta {nome} boa  pode ser vendida!").vai() 
 def aceita_banana_madura(evento, nome):
     global cenario
-    Texto(cenario, f"voce não deveria vender esta {nome}!").vai()
+    nome=nome[:-1]
+    Texto(cenario, f"Você não deveria vender esta {nome}!").vai()
 def rejeita_banana_madura(evento, nome):
 	global cenario
-	Texto(cenario, f"você não deveria desperdiçar esta {nome}, ela pode ser usada pra fazer geleia!").vai()   
-
+	nome=nome[:-1]
+	Texto(cenario, f"Você não deveria desperdiçar esta {nome}, ela pode ser usada pra fazer geléia!").vai()   
+def aceita_gelequa(evento, nome):
+    global cenario
+    Texto(cenario,f"Muito bem!!! Essa {nome} pode virar uma geléia").vai()
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
 DICIONARIO_CAMINHAO.update(coisamadura= aceita_banana_madura)
 DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura for coisamadura in MADURAS}
-
+DICIONARIO_GELEQUA={gelequa: aceita_gelequa for gelequa in MADURAS}
 Incrivel_banana_python()
 
