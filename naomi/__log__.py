@@ -1181,3 +1181,9 @@ NameError: name 'banana' is not defined
     	elemento3 = Elemento(img = banana ,
 NameError: name 'banana' is not defined
 '''},
+{'date': 'Fri Oct 18 2019 14:42:45.559 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: obj is undefined
+  module '$exec_2009' line 103
+DICIONARIO_GELEQUA={gelequa: aceita_gelequa for gelequa in gelequa}
+'''},
