@@ -1205,3 +1205,10 @@ DICIONARIO_GELEQUA={gelequa: aceita_gelequa for gelequa in gelequa}
     	Geleia = Elemento(img = geleia , 
 NameError: name 'geleia' is not defined
 '''},
+{'date': 'Fri Oct 18 2019 14:57:11.184 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 99
+  Texto(cenario,f"muito bem essa banana pode vira uma geleia
+                                                            ^
+SyntaxError: EOL while scanning string literal
+'''},
