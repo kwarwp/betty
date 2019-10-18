@@ -1237,3 +1237,10 @@ NameError: name 'Banana_madura0' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Fri Oct 18 2019 15:17:16.474 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 97
+  nome=nome[:-1]
+  ^
+IndentationError: unexpected indent
+'''},
