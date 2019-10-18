@@ -1086,3 +1086,19 @@ SyntaxError: invalid syntax
     DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura for coisamadura in MADURA}
 NameError: name 'MADURA' is not defined
 '''},
+{'date': 'Fri Oct 18 2019 11:00:16.759 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 102
+    DICIONARIO_LIXEIRA={coisa:rejeita_banana_boa for coisa in BOAS}
+NameError: name 'rejeita_banana_boa' is not defined
+'''},
