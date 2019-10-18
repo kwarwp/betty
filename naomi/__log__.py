@@ -1038,3 +1038,10 @@ AttributeError: 'str' object has no attribute 'entra'
     	Banana_madura1.entra(cenario)
 NameError: name 'Banana_madura1' is not defined
 '''},
+{'date': 'Fri Oct 18 2019 10:18:58.317 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  Lixeira = Elemento(img = lixeira ,drop = DICIONARIO_LIXEIRA
+                                                                                       ^
+SyntaxError: invalid syntax
+'''},
