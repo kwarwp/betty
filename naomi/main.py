@@ -89,9 +89,9 @@ def aceita_banana_boa(evento, nome):
 	nome=nome[:-1]
 	Texto(cenario, f"Muito bem, esta {nome} boa  pode ser vendida!").vai() 
 def rejeita_banana_madura_caminhao(evento, nome):
-	global cenario
+	global cenario	
 	nome=nome[:-1]
-	Texto(cenario, f"Você não deveria vender esta {nome}!").vai()
+	Texto(cenario, f"Você não deveria vender esta {nome} tão madura!").vai()
 def rejeita_banana_madura_lixeira(evento, nome):
 	global cenario
 	nome=nome[:-1]
@@ -109,15 +109,19 @@ def rejeita_gelequa_boa(evento, nome):
 	nome=nome[:-1]
 	Texto(cenario,f"Essa {nome} está boa e pode ser vendida").vai()
     
-    
+
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
-DICIONARIO_CAMINHAO.update(MADURAS= rejeita_banana_madura_caminhao)
+DICIONARIO_CAMINHAO.update(banana_madura0= rejeita_banana_madura_caminhao)
 
 DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura_lixeira for coisamadura in MADURAS}
-DICIONARIO_LIXEIRA.update(BOAS=rejeita_banana_boa_lixeira)
+DICIONARIO_LIXEIRA.update(banana0=rejeita_banana_boa_lixeira)
+DICIONARIO_LIXEIRA.update(banana1=rejeita_banana_boa_lixeira)
+DICIONARIO_LIXEIRA.update(banana2=rejeita_banana_boa_lixeira)
+DICIONARIO_LIXEIRA.update(banana3=rejeita_banana_boa_lixeira)
+DICIONARIO_LIXEIRA.update(banana4=rejeita_banana_boa_lixeira)
 
 DICIONARIO_GELEQUA={gelequa: aceita_gelequa for gelequa in MADURAS}
-DICIONARIO_GELEQUA.update(BOAS= rejeita_gelequa_boa)
+DICIONARIO_GELEQUA.update(banana0= rejeita_gelequa_boa)
 
 Incrivel_banana_python()
 
