@@ -141,3 +141,10 @@ NameError: name 'podre' is not defined
     	Podre = Elemento(img = podre ,
 NameError: name 'podre' is not defined
 '''},
+{'date': 'Tue Oct 22 2019 16:43:36.899 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  cenario2 = Cena(img = Tela_Inicial = esquerdo=cenario)
+                                                        ^
+SyntaxError: invalid syntax
+'''},
