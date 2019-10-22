@@ -22,7 +22,7 @@ DICIONARIO_GELEQUA = {}
 BOAS = "banana0 banana1 banana2 banana3 banana4".split()
 MADURAS = "banana_madura0 banana_madura1 banana_madura2 banana_madura3 banana_madura4".split()
 cenario=None
-tela_inicial="https://i.imgur.com/sIvENaT.jpg"
+tela_inicial="https://i.imgur.com/jGmzHct.jpg"
 
 def Incrivel_banana_python():                        
 	global cenario
