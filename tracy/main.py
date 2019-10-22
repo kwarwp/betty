@@ -18,11 +18,13 @@ DRAGGER_GELEIA = {}
 DRAGGER_LIXEIRA = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
 cenario = Cena (img = bananeira)
+tela_inicial = "https://i.imgur.com/jGmzHct.jpg"
+cenario2 = Cena(img = tela_inicial = esquerda=cenario)
 
 def Incrivel_banana_python():
+
 	elemento = Elemento(img = banana ,
                          tit="banana", drag=True,
-                        
                          style=dict(left=320 , top=250, width="100px", height="120px"))
 	elemento1 = Elemento(img = banana1 , drag=True,
                          tit="banana1",
@@ -58,6 +60,8 @@ def Incrivel_banana_python():
 	Caminhao.entra(cenario)
 	Geleia.entra(cenario)
 	Podre.entra(cenario)
+	cenario2.vai()
+	cenario2.esquerda = cenario2.cenario
 	cenario.vai()
 def rejeita_lixo(evento, nome):
     Texto(cenario, f"você não deveria jogar esta {nome} no lixo").vai()
