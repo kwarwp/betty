@@ -1924,3 +1924,10 @@ AttributeError: 'NoneType' object has no attribute 'esquerda'
     	cenario2.meio.direita.esquerda = Cena (img = bananeira)
 AttributeError: 'NoneType' object has no attribute 'esquerda'
 '''},
+{'date': 'Tue Oct 22 2019 00:45:59.553 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  cenario2 = Cena (img = tela_inicial, meio, direita, esquerda)
+                                           ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
