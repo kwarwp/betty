@@ -91,7 +91,7 @@ def aceita_banana_boa(evento, nome):
 def rejeita_banana_madura_caminhao(evento, nome):
 	global cenario	
 	nome=nome[:-1]
-	Texto(cenario, f"Você não deveria vender esta {nome} tão madura!").vai()
+	Texto(cenario, f"Você não deveria vender esta {nome}, ela não vai resistir até chegar no mercado!").vai()
 def rejeita_banana_madura_lixeira(evento, nome):
 	global cenario
 	nome=nome[:-1]
