@@ -1931,3 +1931,10 @@ AttributeError: 'NoneType' object has no attribute 'esquerda'
                                            ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Tue Oct 22 2019 00:48:20.912 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  cenario2 = Cena (img = tela_inicial, meio = cenario2.cenario, direita = cenario2=cenario, esquerda = cenario2=cenario)
+                                                                                                                        ^
+SyntaxError: invalid syntax
+'''},
