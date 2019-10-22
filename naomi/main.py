@@ -103,7 +103,7 @@ def rejeita_banana_boa_lixeira(evento, nome):
 def aceita_gelequa(evento, nome):
 	global cenario
 	nome=nome[:-1]
-	Texto(cenario,f"Muito bem!!! Essa {nome} pode virar uma geléia").vai()
+	Texto(cenario,f"Muito bem!!! Essa {nome} pode virar uma geléia!").vai()
 def rejeita_gelequa_boa(evento, nome):
 	global cenario
 	nome=nome[:-1]
@@ -111,13 +111,13 @@ def rejeita_gelequa_boa(evento, nome):
     
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
-DICIONARIO_CAMINHAO.update(coisamadura= rejeita_banana_madura_caminhao)
+DICIONARIO_CAMINHAO.update(MADURAS= rejeita_banana_madura_caminhao)
 
 DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura_lixeira for coisamadura in MADURAS}
-DICIONARIO_LIXEIRA.update(coisa=rejeita_banana_madura_lixeira)
+DICIONARIO_LIXEIRA.update(BOAS=rejeita_banana_boa_lixeira)
 
 DICIONARIO_GELEQUA={gelequa: aceita_gelequa for gelequa in MADURAS}
-DICIONARIO_GELEQUA.update(coisa= rejeita_gelequa_boa)
+DICIONARIO_GELEQUA.update(BOAS= rejeita_gelequa_boa)
 
 Incrivel_banana_python()
 
