@@ -6,7 +6,7 @@ banana1 = "https://i.imgur.com/VbszxUx.png"
 banana2 = "https://i.imgur.com/VbszxUx.png"
 banana3 = "https://i.imgur.com/VbszxUx.png"
 banana4 = "https://i.imgur.com/VbszxUx.png"
-caminhao = "https://i.imgur.com/M62FANW.png"               
+caminhao = "https://i.imgur.com/Izt2rSG.png"               
 gelequa = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
 banana_madura0 = "https://i.imgur.com/sGUZfwF.png"
 banana_madura1 = "https://i.imgur.com/sGUZfwF.png"
@@ -21,7 +21,8 @@ DICIONARIO_LIXEIRA = {}
 DICIONARIO_GELEQUA = {}
 BOAS = "banana0 banana1 banana2 banana3 banana4".split()
 MADURAS = "banana_madura0 banana_madura1 banana_madura2 banana_madura3 banana_madura4".split()
-cenario=None     
+cenario=None
+cenario2="https://i.imgur.com/sIvENaT.jpg"
 
 def Incrivel_banana_python():                        
 	global cenario
@@ -43,7 +44,7 @@ def Incrivel_banana_python():
                          style=dict(left=400,top=400, width="100px", heigth="2000px"))
 	Caminhao = Elemento(img = caminhao ,drop=DICIONARIO_CAMINHAO, 
                          tit="caminhao", 
-                         style=dict(left=750,top=400,width="350px",heigth="100px"))
+                         style=dict(left=750,top=460,width="330px",heigth="100px"))
 	Geleia = Elemento(img = gelequa ,drop=DICIONARIO_GELEQUA,
                         tit= "gelequa",
                         style=dict(left=50,top=400,width="80px",heigth="50px"))
@@ -80,8 +81,10 @@ def Incrivel_banana_python():
 	Banana_madura1.entra(cenario)
 	Banana_madura2.entra(cenario)
 	Banana_madura3.entra(cenario) 
-	Banana_madura4.entra(cenario)    
-	
+	Banana_madura4.entra(cenario)   
+    
+	"""cenario2.vai()
+	cnario2.meio"""
 	cenario.vai()
     
 def aceita_banana_boa(evento, nome):
