@@ -183,3 +183,10 @@ SyntaxError: invalid syntax
                                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Oct 22 2019 16:47:31.751 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  cenario2 = Cena(img = tela_inicial = esquerda=cenario)
+                                                        ^
+SyntaxError: invalid syntax
+'''},
