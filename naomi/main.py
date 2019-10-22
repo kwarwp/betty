@@ -27,7 +27,7 @@ tela_inicial="https://i.imgur.com/sIvENaT.jpg"
 def Incrivel_banana_python():                        
 	global cenario
 	cenario = Cena (img = bananeira)
-	cenario2 = Cena (img = tela_inicial, meio = cenario2.cenario, direita = cenario2=cenario, esquerda = cenario2=cenario)
+	cenario2 = Cena (img = tela_inicial, meio = cenario, direita = cenario, esquerda = cenario)
 	elemento = Elemento(img = banana0 ,                        
                          tit="banana0",drag=True,
                          style=dict(left=320 , top=250, width="100px", height="120px"))
