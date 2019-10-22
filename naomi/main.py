@@ -85,11 +85,12 @@ def Incrivel_banana_python():
 	Banana_madura4.entra(cenario)   
     
 	cenario2.vai()
-	cnario2.meio.esquerda.direita = cenario.cenario2
+	cenario2.meio.esquerda.direita = cenario
 	cenario.vai()
     
 def aceita_banana_boa(evento, nome):
 	global cenario
+    
 	nome=nome[:-1]
 	Texto(cenario, f"Muito bem, esta {nome} boa  pode ser vendida!").vai() 
 def rejeita_banana_madura_caminhao(evento, nome):
