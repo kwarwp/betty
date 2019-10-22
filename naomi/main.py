@@ -19,8 +19,8 @@ STYLE["height"]="600px"
 DICIONARIO_CAMINHAO = {}
 DICIONARIO_LIXEIRA = {}
 DICIONARIO_GELEQUA = {}
-BOAS = "banana banana1 banana2 banana3 banana4".split()
-MADURAS = "banana_madura banana_madura1 banana_madura2 banana_madura3 banana_madura4".split()
+BOAS = "banana0 banana1 banana2 banana3 banana4".split()
+MADURAS = "banana_madura0 banana_madura1 banana_madura2 banana_madura3 banana_madura4".split()
 cenario=None     
 
 def Incrivel_banana_python():                        
@@ -47,7 +47,7 @@ def Incrivel_banana_python():
 	Geleia = Elemento(img = gelequa ,drop=DICIONARIO_GELEQUA,
                         tit= "gelequa",
                         style=dict(left=50,top=400,width="80px",heigth="50px"))
-	Banana_madura= Elemento(img = banana_madura0 ,
+	Banana_madura0= Elemento(img = banana_madura0 ,
                        tit= "banana_madura0",drag=True,                                         
                        style=dict(left=490,top=500,width="100px",heigth="80px"))
 	Banana_madura1= Elemento(img = banana_madura1 ,
@@ -76,33 +76,45 @@ def Incrivel_banana_python():
 	Lixeira.entra(cenario)
 	Caminhao.entra(cenario)
 	Geleia.entra(cenario)
-	Banana_madura.entra(cenario)
+	Banana_madura0.entra(cenario)
 	Banana_madura1.entra(cenario)
 	Banana_madura2.entra(cenario)
 	Banana_madura3.entra(cenario) 
 	Banana_madura4.entra(cenario)    
-	"""banana_madura1.entra(cenario)"""
+	
 	cenario.vai()
     
 def aceita_banana_boa(evento, nome):
-    global cenario
-    nome=nome[:-1]
-    Texto(cenario, f"Muito bem, esta {nome} boa  pode ser vendida!").vai() 
-def aceita_banana_madura(evento, nome):
-    global cenario
-    nome=nome[:-1]
-    Texto(cenario, f"Você não deveria vender esta {nome}!").vai()
-def rejeita_banana_madura(evento, nome):
+	global cenario
+	nome=nome[:-1]
+	Texto(cenario, f"Muito bem, esta {nome} boa  pode ser vendida!").vai() 
+def rejeita_banana_madura_caminhao(evento, nome):
+	global cenario
+	nome=nome[:-1]
+	Texto(cenario, f"Você não deveria vender esta {nome}!").vai()
+def rejeita_banana_madura_lixeira(evento, nome):
 	global cenario
 	nome=nome[:-1]
 	Texto(cenario, f"Você não deveria desperdiçar esta {nome}, ela pode ser usada pra fazer geléia!").vai()   
+def rejeita_banana_boa_lixeira(evento, nome):
+	global cenario
+	nome=nome[:-1]
+	Texto(cenario, f"Você não deveria desperdiçar esta {nome}, ela pode ser vendida!").vai()  
 def aceita_gelequa(evento, nome):
-    global cenario
-    Texto(cenario,f"Muito bem!!! Essa {nome} pode virar uma geléia").vai()
+	global cenario
+	nome=nome[:-1]
+	Texto(cenario,f"Muito bem!!! Essa {nome} pode virar uma geléia").vai()
+def rejeita_gelequa_boa(evento, nome):
+	global cenario
+	nome=nome[:-1]
+	Texto(cenario,f"Essa {nome} está boa e pode ser vendida").vai()
+    
     
 DICIONARIO_CAMINHAO={coisa:aceita_banana_boa for coisa in BOAS}
-DICIONARIO_CAMINHAO.update(coisamadura= aceita_banana_madura)
-DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura for coisamadura in MADURAS}
+DICIONARIO_CAMINHAO.update(coisamadura= rejeita_banana_madura_caminhao)
+DICIONARIO_LIXEIRA={coisamadura: rejeita_banana_madura_lixeira for coisamadura in MADURAS}
+DICIONARIO_LIXEIRA.update(coisa=rejeita_banana_madura_lixeira)
 DICIONARIO_GELEQUA={gelequa: aceita_gelequa for gelequa in MADURAS}
+DICIONARIO_GELEQUA.update(coisa= rejeita_gelequa_boa)
 Incrivel_banana_python()
 
