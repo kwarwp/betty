@@ -27,3 +27,10 @@ SyntaxError: invalid syntax
                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Oct 30 2019 08:49:03.706 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 7
+  Cfuturistica = Cena (img FUTURO)
+                            ^
+SyntaxError: invalid syntax
+'''},
