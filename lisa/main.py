@@ -4,5 +4,7 @@ FUTURO = "https://www.ideiasdecor.com/wp-content/uploads/2018/09/plantas-de-casa
 STYLE["width"]=1100
 
 def meu_futuro():
-	Cfuturistica = Cena (img FUTURO)
-    Cfuturistica.vai()
+	Cfuturistica = Cena (img = FUTURO)
+	Cfuturistica.vai()
+    
+meu_futuro()
