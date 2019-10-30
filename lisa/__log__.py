@@ -64,3 +64,10 @@ IndentationError: unexpected indent
     Cfuturistica.vai()
 NameError: name 'Cfuturistica' is not defined
 '''},
+{'date': 'Wed Oct 30 2019 09:32:26.622 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  fulaninho = Elemento (img = fulaninho ,
+                                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
