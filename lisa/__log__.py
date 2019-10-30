@@ -34,3 +34,10 @@ SyntaxError: invalid syntax
                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Oct 30 2019 08:50:31.416 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  Cfuturistica.vai()
+  ^
+IndentationError: unexpected indent
+'''},
