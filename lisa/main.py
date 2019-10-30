@@ -7,7 +7,7 @@ STYLE["width"]=1100
 def meu_futuro():
 	Cfuturistica = Cena (img = FUTURO)
 	Cfuturistica.vai()
-	fulaninho = Elemento (img = FULANINHO, tit= "mulher",
+	fulaninho = Elemento (img = FULANINHO, tit= "men",
                             style=dict(left=320 , top=250, width="1OOpx", height="120px"))
 	fulaninho.entra(Cfuturistica)    
 meu_futuro()
