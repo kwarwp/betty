@@ -41,3 +41,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Oct 30 2019 08:52:22.277 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  Cfuturistica.vai()
+  ^
+IndentationError: unexpected indent
+'''},
