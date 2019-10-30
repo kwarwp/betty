@@ -107,3 +107,10 @@ NameError: name 'Elemento' is not defined
     flash = Elemento(img=FLASH, tit="Flash", style=dict(left=150, top=160, width=60, height=200))
 NameError: name 'Elemento' is not defined
 '''},
+{'date': 'Wed Oct 30 2019 08:10:58.740 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  flash = Elemento(img=FLASH, tit="Flash", style=dict(left
+  ^
+IndentationError: unexpected indent
+'''},
