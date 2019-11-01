@@ -253,3 +253,10 @@ SyntaxError: EOL while scanning string literal
                                                                                                                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Nov 01 2019 13:43:29.498 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA, drag=True
+                                                                                              ^
+SyntaxError: invalid syntax
+'''},
