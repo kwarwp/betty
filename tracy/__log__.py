@@ -288,3 +288,10 @@ SyntaxError: invalid syntax
                                                                                                                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Nov 01 2019 13:47:25.294 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA,
+                                                                                                                                      ^
+SyntaxError: invalid syntax
+'''},
