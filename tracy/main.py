@@ -51,9 +51,9 @@ def Incrivel_banana_python():
                        style=dict(left=500,top=450,width="100px",heigth="80px"))
         
 	Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA,
-                        tit= "lixeira", drag=True
+                        tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
-	lixo = Elemento(img = lixo, drag=True
+	Lixo = Elemento(img = lixo, drag=True ,
                      tit="lixo",
                      style=dict(left= 150, top=300,width="60px",heigth="80px"))
                     
@@ -68,6 +68,7 @@ def Incrivel_banana_python():
 	cenario2.vai()
 	cenario2.esquerda = cenario2.cenario
 	cenario.vai()
+	Lixo.entra(cenario)
 def rejeita_lixo(evento, nome):
     Texto(cenario, f"você não deveria jogar esta {nome} no lixo").vai()
 def aceita_boa(evento, nome):
