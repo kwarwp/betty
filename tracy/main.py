@@ -20,7 +20,7 @@ DRAGGER_LIXEIRA = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
 cenario = Cena (img = bananeira)
 tela_inicial = "https://i.imgur.com/jGmzHct.jpg"
-
+cenario2 = Cena (img = tela_inicial, meio = cenario, direita = cenario, esquerda = cenario)
 
 def Incrivel_banana_python():
 
