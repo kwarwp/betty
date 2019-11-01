@@ -11,6 +11,7 @@ caminhao = "https://i.imgur.com/M62FANW.png"
 geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
 podre = "https://i.imgur.com/sGUZfwF.png"
 lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
+lixo = "https://olharesdaserra.files.wordpress.com/2017/06/garrafa-pet-verde-corte-deitada.jpg?w=584"
 STYLE["width"]=1100
 STYLE["height"]="600px"
 DRAGGER_CAMINHAO = {}
@@ -19,7 +20,7 @@ DRAGGER_LIXEIRA = {}
 BOAS = "banana banana1 banana2 banana3 banana4".split()
 cenario = Cena (img = bananeira)
 tela_inicial = "https://i.imgur.com/jGmzHct.jpg"
-cenario2 = Cena(img = tela_inicial = esquerda=cenario)
+
 
 def Incrivel_banana_python():
 
@@ -50,8 +51,12 @@ def Incrivel_banana_python():
                        style=dict(left=500,top=450,width="100px",heigth="80px"))
         
 	Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA,
-                        tit= "lixeira", 
+                        tit= "lixeira", drag=True
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
+	lixo = Elemento(img = lixo, drag=True
+                     tit="lixo",
+                     style=dict(left= 150, top=300,width="60px",heigth="80px"))
+                    
 	elemento1.entra(cenario)
 	elemento2.entra(cenario)
 	elemento3.entra(cenario)
@@ -75,8 +80,10 @@ def rejeita_podre(evento, nome):
     Texto(cenario, f"você não deveria vender esta coisa {nome}").vai()
 def rejeita_podre_lixo(evento, nome):
     Texto(cenario, f"você deveria reaproveitar esta coisa {nome}").vai()
+def aceita_lixo(evento,nome):
+    Texto (cenario,f"muito bem você jogou o {nome} na lixeira").vai()
 
-DRAGGER_LIXEIRA = {coisa: rejeita_lixo for coisa in BOAS}
+DRAGGER_LIXEIRA = {coisa: rejeita_lixo for coisa in BOAS} 
 DRAGGER_LIXEIRA.update(podre= rejeita_podre_lixo)
     
 DRAGGER_CAMINHAO = {coisa: aceita_boa for coisa in BOAS}
