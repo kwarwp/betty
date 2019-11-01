@@ -363,3 +363,10 @@ AttributeError: 'Cena' object has no attribute 'cenario'
                                                                                                                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Nov 01 2019 13:57:24.235 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 58
+  lixo = Elemento(img = lixo, drag=True
+                                                              ^
+SyntaxError: invalid syntax
+'''},
