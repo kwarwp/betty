@@ -356,3 +356,10 @@ NameError: name 'cenario2' is not defined
     	cenario2.esquerda = cenario2.cenario
 AttributeError: 'Cena' object has no attribute 'cenario'
 '''},
+{'date': 'Fri Nov 01 2019 13:55:04.285 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA,
+                                                                                                                                      ^
+SyntaxError: invalid syntax
+'''},
