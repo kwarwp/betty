@@ -320,3 +320,21 @@ SyntaxError: invalid syntax
     	lixo = Elemento(img = lixo, drag=True,
 UnboundLocalError: local variable 'lixo' referenced before assignment
 '''},
+{'date': 'Fri Nov 01 2019 13:49:24.2 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 95
+    Incrivel_banana_python()
+  module <module> line 68
+    	cenario2.vai()
+NameError: name 'cenario2' is not defined
+'''},
