@@ -8,7 +8,7 @@ def meu_futuro():
 	Cfuturistica = Cena (img = FUTURO)
 	Cfuturistica.vai()
 	fulaninho = Elemento (img = FULANINHO, tit= "men",
-                            style=dict(left=370 , top=370, width="400px", height="200px"))
+                            style=dict(left=370 , top=370, width="300px", height="200px"))
 	fulaninho.entra(Cfuturistica)  
 	txtmen = Texto (Cfuturistica,
                      "Olá, vem dar uma olhada na casa, estava te esperando. Vamos entrar! Clique na porta.")
