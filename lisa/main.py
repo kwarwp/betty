@@ -9,6 +9,8 @@ def meu_futuro():
 	Cfuturistica.vai()
 	fulaninho = Elemento (img = FULANINHO, tit= "men",
                             style=dict(left=370 , top=370, width="400px", height="200px"))
-	fulaninho.entra(Cfuturistica)    
+	fulaninho.entra(Cfuturistica)  
+	txtmen = Texto (Cfuturistica,
+                     "Olá, vem dar uma olhada na casa, estava te esperando.Clique na porta.")
+	fulaninho.vai = txtmen.vai                     
 meu_futuro()
-
