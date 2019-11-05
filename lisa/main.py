@@ -11,6 +11,6 @@ def meu_futuro():
                             style=dict(left=370 , top=370, width="400px", height="200px"))
 	fulaninho.entra(Cfuturistica)  
 	txtmen = Texto (Cfuturistica,
-                     "Olá, vem dar uma olhada na casa, estava te esperando.Clique na porta.")
+                     "Olá, vem dar uma olhada na casa, estava te esperando. Vamos entrar! Clique na porta.")
 	fulaninho.vai = txtmen.vai                     
 meu_futuro()
