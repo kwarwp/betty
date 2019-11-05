@@ -141,3 +141,10 @@ SyntaxError: invalid syntax
                                                                                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Nov 05 2019 10:59:55.420 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  txtmen = Texto (Cfuturistica,
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
