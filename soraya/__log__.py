@@ -251,3 +251,10 @@ SyntaxError: EOL while scanning string literal
                                                                                                                                                    ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Wed Nov 06 2019 10:31:27.579 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  pessoa = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Dilma_Rousseff_2010_Transparent.png/480px-Dilma_Rousseff_2010_Transparent.png
+                                                                                                                                                   ^
+SyntaxError: EOL while scanning string literal
+'''},
