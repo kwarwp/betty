@@ -8,7 +8,7 @@ STYLE["height"]="600px"
 def lol():
 	Cenario = Cena(img = praia)
 	Cenario.vai()
-	elementopessoa = Elemento(img = pessoa tit="flamengo",
+	elementopessoa = Elemento(img = pessoa tit="flamengo",)
                          style=dict(left=320 , top=250, width="1000px", height="1200px")) 
 	elemento.entra()
-lol():  
+lol()
