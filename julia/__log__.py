@@ -127,3 +127,10 @@ AttributeError: 'Sala' object has no attribute 'norete'
     sala.vai()
 AttributeError: 'Sala' object has no attribute 'vai'
 '''},
+{'date': 'Wed Nov 06 2019 09:30:40.3 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  nave"https://www.trzcacak.rs/myfile/detail/298-2980234_nave-espacial-png-3d-space-shuttle-metal-3d.png"
+       ^
+SyntaxError: invalid syntax
+'''},
