@@ -321,3 +321,10 @@ SyntaxError: EOL while scanning string literal
                                                                                          ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Wed Nov 06 2019 10:47:05.780 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  pessoa = "https://upload.wikimedia.org/wikipedia/commons/9/93/Flamengo-RJ_%28BRA%29.png
+                                                                                         ^
+SyntaxError: EOL while scanning string literal
+'''},
