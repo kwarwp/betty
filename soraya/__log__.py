@@ -157,3 +157,7 @@ TypeError: 'module' object is not callable
     	cena = Cena (img = linkcenario)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Wed Nov 06 2019 09:53:03.364 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: module is undefined>
+'''},
