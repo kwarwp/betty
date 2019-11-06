@@ -328,3 +328,10 @@ SyntaxError: EOL while scanning string literal
                                                                                          ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Wed Nov 06 2019 10:47:26.225 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  elementopessoa = Elemento(img = pessoa tit="banana", drag=True,
+                                          ^
+SyntaxError: invalid syntax
+'''},
