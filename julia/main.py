@@ -1,7 +1,7 @@
 # betty.julia.main.py
 from  _spy.vitollino.main import Cena, Elemento, STYLE, Texto
 Espaco="https://hypescience.com/wp-content/uploads/2016/05/espaco-tres-dimensoes-3d.jpg"
-nave="https://www.trzcacak.rs/myfile/detail/298-2980234_nave-espacial-png-3d-space-shuttle-metal-3d.png"
+nave=""
 STYLE["width"]=1100
 STYLE["height"]="600px"
 def sistemasolar():
