@@ -11,4 +11,4 @@ def lol():
 	elementopessoa = Elemento(img = pessoa, tit = "flamengo",
                          style=dict(left=320 , top=250, width="1000px", height="1200px"))
 	elemento.entra(cenario)
-lol()
+lol()xxx
