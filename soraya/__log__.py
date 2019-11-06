@@ -223,3 +223,10 @@ Traceback (most recent call last):
   module <module> line 2
     from _spy.vitollino.main import Cena, STYLE, Texto, Cenario
 '''},
+{'date': 'Wed Nov 06 2019 10:25:05.572 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  pessoa = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Dilma_Rousseff_2010_Transparent.png/480px-Dilma_Rousseff_2010_Transparent.png
+                                                                                                                                                   ^
+SyntaxError: EOL while scanning string literal
+'''},
