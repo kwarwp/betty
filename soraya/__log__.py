@@ -374,3 +374,10 @@ SyntaxError: invalid syntax
     	elementopessoa.entra(cenario)
 NameError: name 'cenario' is not defined
 '''},
+{'date': 'Wed Nov 06 2019 10:50:48.48 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  pessoa = "https://upload.wikimedia.org/wikipedia/commons/9/93/Flamengo-RJ_%28BRA%29.png
+                                                                                         ^
+SyntaxError: EOL while scanning string literal
+'''},
