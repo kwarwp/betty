@@ -1,7 +1,7 @@
 # betty.soraya.main.py
 from _spy.vitollino.main import Cena, STYLE, Texto, Elemento
 praia = "http://baboonnomundao.com.br/bannersist/conteudo/BC_Floripa_-_SC.jpg"
-pessoa = https://upload.wikimedia.org/wikipedia/commons/9/93/Flamengo-RJ_%28BRA%29.png
+pessoa = "https://upload.wikimedia.org/wikipedia/commons/9/93/Flamengo-RJ_%28BRA%29.png
 STYLE["width"]=1500
 STYLE["height"]="600px"
 
@@ -10,6 +10,5 @@ def lol():
 	Cenario.vai()
 	elementopessoa = Elemento(img = pessoa tit="banana", drag=True,
                          style=dict(left=320 , top=250, width="100px", height="120px")) 
-	elemento1.vai(png = pessoa)
-    
-lol()
+	elemento.vai(png = pessoa)
+lol():  
