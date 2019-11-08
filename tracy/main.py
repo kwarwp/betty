@@ -55,7 +55,7 @@ def Incrivel_banana_python():
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
 	Lixo = Elemento(img = lixo, drag=True ,
                      tit="lixo",
-                     style=dict(left= 150, top=300,width="60px",heigth="80px"))
+                     style=dict(left= 150, top=300,width="600px",heigth="80px"))
                     
 	elemento1.entra(cenario)
 	elemento2.entra(cenario)
