@@ -66,10 +66,11 @@ def Incrivel_banana_python():
 	Caminhao.entra(cenario)
 	Geleia.entra(cenario)
 	Podre.entra(cenario)
+	elementolixo.entra(cenario)
 	cenario2.vai()
 	cenario2.esquerda = cenario2.cenario
 	cenario.vai()
-	elementolixo.entra(cenario)
+	
 def rejeita_lixo(evento, nome):
     Texto(cenario, f"você não deveria jogar esta {nome} no lixo").vai()
 def aceita_boa(evento, nome):
