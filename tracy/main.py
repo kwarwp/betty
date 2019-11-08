@@ -53,8 +53,14 @@ def Incrivel_banana_python():
 	Lixeira = Elemento(img = lixeira , drop=DRAGGER_LIXEIRA,
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
-	Lixo = Elemento(img = lixo, tit="lixo", style=dict(left= 250, top=40,width="400px",heigth="150px"))
-                    
+#	Lixo = Elemento(img = lixo, tit="lixo", style=dict(left= 250, top=40,width="400px",heigth="150px"))	Podre = Elemento(img = podre ,
+                       tit= "podre", drag=True,
+                       style=dict(left=500,top=450,width="100px",heigth="80px"))
+                       
+	elementolixo = Elemento(img = lixo ,
+                       tit= "lixo", drag=True,
+                       style=dict(left=275,top=425,width="150px",heigth="80px"))
+        
 	elemento1.entra(cenario)
 	elemento2.entra(cenario)
 	elemento3.entra(cenario)
