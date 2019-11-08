@@ -816,3 +816,10 @@ AttributeError: 'Cena' object has no attribute 'cenario'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Fri Nov 08 2019 15:00:49.744 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  tit= "podre", drag=True,
+  ^
+IndentationError: unexpected indent
+'''},
