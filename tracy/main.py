@@ -11,7 +11,7 @@ caminhao = "https://i.imgur.com/M62FANW.png"
 geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
 podre = "https://i.imgur.com/sGUZfwF.png"
 lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
-lixo = "https://olharesdaserra.files.wordpress.com/2017/06/garrafa-pet-verde-corte-deitada.jpg?w=584"
+lixo = "https://www.gratispng.com/png-lqvvmz/"
 STYLE["width"]=1100
 STYLE["height"]="600px"
 DRAGGER_CAMINHAO = {}
