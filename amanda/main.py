@@ -5,4 +5,5 @@ NATUREZA="https://i0.wp.com/parqueibirapuera.org/wp/wp-content/uploads/2019/04/A
 def natura():
 	natural=Cena (img=NATUREZA)
 	natural.vai()
-   
+
+natura()
