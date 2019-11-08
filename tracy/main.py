@@ -56,9 +56,7 @@ def Incrivel_banana_python():
 #	Lixo = Elemento(img = lixo, tit="lixo", style=dict(left= 250, top=40,width="400px",heigth="150px"))	Podre = Elemento(img = podre ,
                        #tit= "podre", drag=True, style=dict(left=500,top=450,width="100px",heigth="80px"))
                        
-	elementolixo = Elemento(img = lixo ,
-                       tit= "lixo", drag=True,
-                       style=dict(left=275,top=425,width="150px",heigth="80px"))
+	elementolixo = Elemento(img = lixo, tit= "lixo",style=dict(left=275,top=425,width="150px",heigth="80px"))
         
 	elemento1.entra(cenario)
 	elemento2.entra(cenario)
@@ -71,7 +69,7 @@ def Incrivel_banana_python():
 	cenario2.vai()
 	cenario2.esquerda = cenario2.cenario
 	cenario.vai()
-	Lixo.entra(cenario)
+	elementolixo.entra(cenario)
 def rejeita_lixo(evento, nome):
     Texto(cenario, f"você não deveria jogar esta {nome} no lixo").vai()
 def aceita_boa(evento, nome):
@@ -84,8 +82,7 @@ def rejeita_podre(evento, nome):
     Texto(cenario, f"você não deveria vender esta coisa {nome}").vai()
 def rejeita_podre_lixo(evento, nome):
     Texto(cenario, f"você deveria reaproveitar esta coisa {nome}").vai()
-#def aceita_lixo(evento,nome):
-    
+#def aceita_lixo(evento,nome):    
     #Texto (cenario,f"muito bem você jogou o {nome} na lixeira").vai()
 
 DRAGGER_LIXEIRA = {coisa: rejeita_lixo for coisa in BOAS} 
