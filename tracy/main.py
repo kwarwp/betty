@@ -11,7 +11,7 @@ caminhao = "https://i.imgur.com/M62FANW.png"
 geleia = "https://static.extratoverde.com.br/public/extratoverde/imagens/produtos/geleia-organica-zero-acucar-sabor-banana-shambala-240g-2457.png"
 podre = "https://i.imgur.com/sGUZfwF.png"
 lixeira = "https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png"
-lixo = "http://www.hmembalagens.ind.br/imagens/produtos/gd/Frasco-pet-carbon-600-ml-22-gramas-2.jpg"
+lixo = "https://www.imigrantesbebidas.com.br/bebida/images/products/full/1984_Refrigerante_Coca_Cola_Lata_350_ml.1534621776.jpg"
 STYLE["width"]=1100
 STYLE["height"]="600px"
 DRAGGER_CAMINHAO = {}
@@ -54,7 +54,7 @@ def Incrivel_banana_python():
                         tit= "lixeira", 
                         style=dict(left=200,top=420,width="200px",heigth="250px"))
 #	Lixo = Elemento(img = lixo, tit="lixo", style=dict(left= 250, top=40,width="400px",heigth="150px"))	Podre = Elemento(img = podre ,
-                       tit= "podre", drag=True,
+                       #tit= "podre", drag=True,
                        style=dict(left=500,top=450,width="100px",heigth="80px"))
                        
 	elementolixo = Elemento(img = lixo ,
