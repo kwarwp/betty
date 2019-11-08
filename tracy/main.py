@@ -86,7 +86,7 @@ def aceita_lixo(evento,nome):
 
 DRAGGER_LIXEIRA = {coisa: rejeita_lixo for coisa in BOAS} 
 DRAGGER_LIXEIRA.update(podre= rejeita_podre_lixo)
-    
+DRAGGER_LIXEIRA.update(lixo=aceita_lixo)    
 DRAGGER_CAMINHAO = {coisa: aceita_boa for coisa in BOAS}
 DRAGGER_CAMINHAO.update(podre= rejeita_podre)
     
