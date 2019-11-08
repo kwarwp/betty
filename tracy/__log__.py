@@ -784,3 +784,10 @@ AttributeError: 'Cena' object has no attribute 'cenario'
     	cenario2.esquerda = cenario2.cenario
 AttributeError: 'Cena' object has no attribute 'cenario'
 '''},
+{'date': 'Fri Nov 08 2019 14:54:44.626 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  tit= "podre", drag=True,
+  ^
+IndentationError: unexpected indent
+'''},
