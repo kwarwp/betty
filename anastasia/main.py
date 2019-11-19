@@ -8,6 +8,6 @@ ESPACO= Cena ( img=espaco)
 
 def funciona():
 	ESPACO.vai()
-	NAVE=Elemento(img=nave)
+	NAVE=Elemento(img=nave, tit="NAVE1",style=dict(left= , top=250, width="80px", height="90px"))
 	NAVE.entra(ESPACO)
 funciona()
