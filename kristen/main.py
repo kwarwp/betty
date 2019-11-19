@@ -12,6 +12,6 @@ def Quadra():
 	Elemento_Dogin=Elemento(img=Dogin, tit="DOGIN1",style=dict(left=300, top=360, width="120px",height="190") )   
 	Elemento_Dogin.entra(Cena_Campo)
 	Elemento_Carinha=Elemento(img=Carinha, tit="CARINHA2",style=dict(left=500, top=360, width="140px",height="280")
-	Elemento_Carinho.entra(Cena_Campo)
+	Elemento_Carinha.entra(Cena_Campo)
     
 Quadra()
