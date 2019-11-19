@@ -2,7 +2,7 @@
 from _spy.vitollino.main import Cena, Texto, Elemento, STYLE
 Campo='https://turismo.buenosaires.gob.ar/sites/turismo/files/campo_de_golf_1200_c.jpg'
 Dogin='http://3.bp.blogspot.com/-4A5-CTXo8Jk/VUqmCKVdwfI/AAAAAAAAzzI/aiYW51qUD-s/s1600/dog_PNG147.png'
-Carinha='https://3.bp.blogspot.com/-idzGAlThRZg/XBSNOsSCBKI/AAAAAAAAAU4/ThSjxkVy02s0JV9I80yi2TVX2VdiKwclgCEwYBhgL/s1600/20181213_190914.png'
+Carinha='https://myrealdomain.com/images/pessoa-correndo-4.png'
 STYLE['width']=1350
 STYLE['height']='600px'
 
