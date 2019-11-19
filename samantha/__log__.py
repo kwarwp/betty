@@ -42,3 +42,10 @@ NameError: name 'elemento_Battle' is not defined
     	elemento_Battle.entra(Cena_Campo)
 NameError: name 'elemento_Battle' is not defined
 '''},
+{'date': 'Tue Nov 19 2019 11:27:12.824 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  Elemento_Battle=Elemento(img=Battle, tit="Battle1",style=dict(left=300, top=500, width="126" height="26"))
+                                                                                                ^
+SyntaxError: invalid syntax
+'''},
