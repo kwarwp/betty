@@ -8,4 +8,6 @@ ESPACO= Cena ( img=espaco)
 
 def funciona():
 	ESPACO.vai()
+	NAVE=Elemento(img=nave)
+	NAVE.entra(ESPACO)
 funciona()
