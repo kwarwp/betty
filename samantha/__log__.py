@@ -49,3 +49,10 @@ NameError: name 'elemento_Battle' is not defined
                                                                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Nov 19 2019 11:27:43.867 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  Elemento_Battle=Elemento(img=Battle, tit="BATTLE1",style=dict(left=300, top=500, width="126" height="26"))
+                                                                                                ^
+SyntaxError: invalid syntax
+'''},
