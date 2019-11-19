@@ -10,5 +10,5 @@ def Quadra():
 	Cena_Campo.vai()
 	Elemento_Dogin= Elemento(img=Dogin)    
 	Elemento_Dogin.entra(Cena_Campo)
-    
+	Dogin=Elemento(img=dogin, tit="DOGIN1",style=dict(left=300, top=40, width="200px",height="260"))
 Quadra()
