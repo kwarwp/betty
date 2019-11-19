@@ -154,3 +154,10 @@ NameError: name 'nave' is not defined
                                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Nov 19 2019 09:55:12.694 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  NAVE=Elemento(img=nave, tit="NAVE1",style=dict(left= , top=250, width="80px", height="90px"))
+                                                        ^
+SyntaxError: invalid syntax
+'''},
