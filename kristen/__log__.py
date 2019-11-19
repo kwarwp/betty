@@ -17,3 +17,10 @@
     	Elemento_Dogin= Elemento(img=Dogin)    
 UnboundLocalError: local variable 'Dogin' referenced before assignment
 '''},
+{'date': 'Tue Nov 19 2019 10:49:30.481 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 14
+  Elemento_Carinha=Elemento(img=Carinha, tit="CARINHA1",style=dict(left=5000, top=360, width="120px",height="190")
+                                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
