@@ -8,7 +8,7 @@ STYLE['height']='600px'
 def Quadra():
 	Cena_Campo= Cena(img=Campo)
 	Cena_Campo.vai()
-	Elemento_Dogin= Elemento(img=Dogin, tit="DOGIN1",style=dict(left=300, top=300, width="200px",height="260"))   
+	Elemento_Dogin= Elemento(img=Dogin, tit="DOGIN1",style=dict(left=300, top=300, width="100px",height="190"))   
 	Elemento_Dogin.entra(Cena_Campo)
 	
 Quadra()
