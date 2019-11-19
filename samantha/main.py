@@ -8,7 +8,7 @@ STYLE['height']='605px'
 def dragonballz():
 	Cena_Namek= Cena(img=Namek)
 	Cena_Namek.vai()
-	Elemento_Battle=Elemento(img=Battle, tit="Battle1",style=dict(left=300, top=500, width="126" height="26"))
+	Elemento_Battle=Elemento(img=Battle, tit="BATTLE1",style=dict(left=300, top=500, width="126" height="26"))
 	elemento_Battle.entra(Cena_Namek)
     
     
