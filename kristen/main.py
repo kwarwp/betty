@@ -14,7 +14,7 @@ def Quadra():
 	Elemento_Dogin.entra(Cena_Campo)
 	Elemento_Carinha=Elemento(img=Carinha, tit="CARINHA1",style=dict(left=500, top=300, width="190px",height="300"))
 	Elemento_Carinha.entra(Cena_Campo)
-	Elemento_Pombo=Elemento(img=Pombo, tit="POMBO1",style=dict(left=700, top=700, width="190px",height="300"))
+	Elemento_Pombo=Elemento(img=Pombo, tit="POMBO1",style=dict(left=3000, top=3000, width="190px",height="300"))       
 	Elemento_Pombo.entra(Cena_Campo)
     
 Quadra()
