@@ -3,6 +3,7 @@ from _spy.vitollino.main import Cena, Texto, Elemento, STYLE
 Campo='https://turismo.buenosaires.gob.ar/sites/turismo/files/campo_de_golf_1200_c.jpg'
 Dogin='http://3.bp.blogspot.com/-4A5-CTXo8Jk/VUqmCKVdwfI/AAAAAAAAzzI/aiYW51qUD-s/s1600/dog_PNG147.png'
 Carinha='https://myrealdomain.com/images/pessoa-correndo-4.png'
+Pombo='http://www.pombocorreiodf.com.br/wp-content/uploads/2018/03/pombo-voando.png'
 STYLE['width']=1350
 STYLE['height']='600px'
 
@@ -13,5 +14,7 @@ def Quadra():
 	Elemento_Dogin.entra(Cena_Campo)
 	Elemento_Carinha=Elemento(img=Carinha, tit="CARINHA1",style=dict(left=500, top=300, width="190px",height="300"))
 	Elemento_Carinha.entra(Cena_Campo)
+	Elemento_Pombo=Elemento(img=Pombo, tit="POMBO1",style=dict(left=700, top=700, width="190px",height="300"))
+	Elemento_Pombo.entra(Cena_Campo)
     
 Quadra()
