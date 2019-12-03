@@ -20,7 +20,7 @@ def Quadra():
 	Elemento_Carinha.entra(Cena_Campo)
 	Elemento_Pombo=Elemento(img=Carinha, tit="POMBO1",style=dict(left=200, top=100, width="190px",height="300px"))
 	Elemento_Pombo.entra(Cena_Campo)
-	Elemento_Lixeira_Vidro=Elemento(img=Lixeira_Vidro, tit="LIXEIRA_VIDRO1",style=dict(left=700, top=450, width="150px",height="150px"))
+	Elemento_Lixeira_Vidro=Elemento(img=Lixeira_Vidro, tit="LIXEIRA_VIDRO1",style=dict(left=700, top=450, width="200px",height="150px"))
 	Elemento_Lixeira_Vidro.entra(Cena_Campo)
 	Elemento_Lixeira_Papel=Elemento(img=Lixeira_Papel, tit="LIXEIRA_PAPEL1",style=dict(left=900, top=450, width="100px",height="150px"))
 	Elemento_Lixeira_Papel.entra(Cena_Campo)
