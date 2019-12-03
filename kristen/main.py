@@ -26,7 +26,7 @@ def Quadra():
 	Elemento_Lixeira_Papel.entra(Cena_Campo)
 	Elemento_Lixeira_Metal=Elemento(img=Lixeira_Metal, tit="LIXEIRA_METAL1",style=dict(left=900, top=450, width="190px",height="150px"))
 	Elemento_Lixeira_Metal.entra(Cena_Campo)
-	Elemento_Lixeira_Plastico=Elemento(img=Lixeira_Plastico, tit="LIXEIRA_PLASTICO1",style=dict(left=1000, top=450, width="190px",height="100px"))
+	Elemento_Lixeira_Plastico=Elemento(img=Lixeira_Plastico, tit="LIXEIRA_PLASTICO1",style=dict(left=1000, top=450, width="100px",height="150px"))
 	Elemento_Lixeira_Plastico.entra(Cena_Campo)    
     
 Quadra()
