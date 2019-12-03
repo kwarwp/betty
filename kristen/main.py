@@ -10,11 +10,11 @@ STYLE['height']='600px'
 def Quadra():
 	Cena_Campo= Cena(img=Campo)
 	Cena_Campo.vai()
-	Elemento_Dogin=Elemento(img=Dogin, tit="DOGIN1",style=dict(left=300, top=500, width="120px",height="20") )   
+	Elemento_Dogin=Elemento(img=Dogin, tit="DOGIN1",style=dict(left=300, top=500, width="120px",height="20px") )   
 	Elemento_Dogin.entra(Cena_Campo)
-	Elemento_Carinha=Elemento(img=Carinha, tit="CARINHA1",style=dict(left=500, top=300, width="190px",height="300"))
+	Elemento_Carinha=Elemento(img=Carinha, tit="CARINHA1",style=dict(left=500, top=300, width="190px",height="300px"))
 	Elemento_Carinha.entra(Cena_Campo)
-	Elemento_Pombo=Elemento(img=Pombo, tit="POMBO1",style=dict(left=300, top=300, width="190px",height="300"))       
+	Elemento_Pombo=Elemento(img=Pombo, tit="POMBO1",style=dict(left=600, top=200, width="190px",height="300px"))       
 	Elemento_Pombo.entra(Cena_Campo)
     
 Quadra()
