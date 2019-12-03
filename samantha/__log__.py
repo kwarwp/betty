@@ -56,3 +56,10 @@ SyntaxError: invalid syntax
                                                                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Dec 03 2019 09:25:26.233 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  Elemento_Battle=Elemento(img=Battle, tit="BATTLE1",style=dict(left=300, top=500, width="126" height="26"))
+                                                                                                ^
+SyntaxError: invalid syntax
+'''},
