@@ -10,6 +10,6 @@ def foto1():
 	cenapraia.vai()
 	elementobarco=Elemento(img=barco,style=dict (top=400,left=300,width="600px",heigth="400px"))
 	elementobarco.entra(cenapraia)
-	elementobolsonaro=Elemento(img=bolsonaro,style=dict (top=480,left=300,width="200px",heigth="100px"))
+	elementobolsonaro=Elemento(img=bolsonaro,style=dict (top=200,left=300,width="200px",heigth="100px"))
 	elementobolsonaro.entra(cenapraia)
 foto1()
