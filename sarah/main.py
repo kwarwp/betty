@@ -8,7 +8,6 @@ STYLE["width"]=1280
 STYLE["height"]="670px"
 def foto1():
 	cenapraia=Cena(img=praia)
-	cenapraia.vai()
 	elementobarco=Elemento(img=barco,style=dict (top=400,left=300,width="600px",heigth="400px"))
 	elementobarco.entra(cenapraia)
 	elementobolsonaro=Elemento(img=bolsonaro,style=dict (top=350,left=500,width="200px",heigth="100px"))
@@ -17,4 +16,5 @@ def foto1():
 	elementorusso.entra(cenapraia)
 	textobolsonaro=Texto(cenapraia,"Comunismo é coisa do lula")
 	textobolsonaro.vai=elementobolsonaro.vai
+	cenapraia.vai()
 foto1()
