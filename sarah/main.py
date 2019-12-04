@@ -14,5 +14,5 @@ def foto1():
 	elementobolsonaro=Elemento(img=bolsonaro,style=dict (top=350,left=500,width="200px",heigth="100px"))
 	elementobolsonaro.entra(cenapraia)
 	elementomorinho=Elemento(img=morinho,style=dict (top=350,left=500,width="200px",heigth="100px"))
-  
+	elementomorinho.entra(cenapraia)
 foto1()
