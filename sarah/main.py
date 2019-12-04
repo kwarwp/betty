@@ -7,7 +7,7 @@ STYLE["width"]=1280
 STYLE["height"]="670px"
 def foto1():
 	cenapraia=Cena(img=praia)
-	elementobarco=Elemento(img=barco,style=dict (top=4000,left=300,width="600px",heigth="400px"))
+	elementobarco=Elemento(img=barco,style=dict (top=400,left=300,width="600px",heigth="400px"))
 	elementobarco.entra(cenapraia)
 	elementobolsonaro=Elemento(img=bolsonaro,style=dict (top=360,left=500,width="150px",heigth="4000px"))
 	elementobolsonaro.entra(cenapraia)
