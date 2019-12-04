@@ -7,6 +7,6 @@ STYLE["height"]="670px"
 def foto1():
 	cenapraia=Cena(img=praia)
 	cenapraia.vai()
-	elementobarco=Elemento(png=barco)
+	elementobarco=Elemento(img=barco)
 	elementobarco.entra(cenapraia)
 foto1()
