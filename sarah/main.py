@@ -15,4 +15,5 @@ def foto1():
 	elementobolsonaro.entra(cenapraia)
 	elementorusso=Elemento(img=russo,style=dict (top=200,left=200,width="600px",heigth="400px"))
 	elementorusso.entra(cenapraia)
+	textobolsonaro=Texto(cenapraia,"Comunismo é coisa do lula")
 foto1()
