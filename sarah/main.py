@@ -2,7 +2,7 @@
 from _spy.vitollino.main import Cena,Elemento,Texto,STYLE
 naruto="https://uploads.jovemnerd.com.br/wp-content/uploads/2017/03/v-naruto-1210x540.jpg"
 logonaruto="https://logodownload.org/wp-content/uploads/2014/10/naruto-shippuden-logo-1.png"
-STYLE["width"]=1280
+STYLE["width"]=1000
 STYLE["height"]="670px"
 def foto1():
 	cenanaruto=Cena(img=naruto)
