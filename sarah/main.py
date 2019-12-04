@@ -15,6 +15,6 @@ def foto1():
 	elementorusso=Elemento(img=russo,style=dict (top=200,left=200,width="600px",heigth="400px"))
 	elementorusso.entra(cenapraia)
 	textobolsonaro=Texto(cenapraia,"Comunismo é coisa do lula")
-	textobolsonaro.vai=elementobolsonaro.vai
+	elementobolsonaro.vai=textobolsonaro.vai
 	cenapraia.vai()
 foto1()
