@@ -9,7 +9,7 @@ def foto1():
 	cenapraia=Cena(img=praia)
 	elementobarco=Elemento(img=barco,style=dict (top=400,left=300,width="450px",heigth="400px"))
 	elementobarco.entra(cenapraia)
-	elementobolsonaro=Elemento(img=bolsonaro,style=dict (top=330,left=500,width="130px",heigth="800"))
+	elementobolsonaro=Elemento(img=bolsonaro,style=dict (top=330,left=500,width="130px",heigth="670"))
 	elementobolsonaro.entra(cenapraia)
 	textobolsonaro=Texto(cenapraia,"Comunismo é coisa do lula")
 	elementobolsonaro.vai=textobolsonaro.vai
