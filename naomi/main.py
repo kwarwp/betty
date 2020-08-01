@@ -100,7 +100,7 @@ def rejeita_banana_madura_caminhao(evento, nome):
 def rejeita_banana_madura_lixeira(evento, nome):
 	global cenario
 	nome=nome[:-1]
-	Texto(cenario, f"Você não deveria desperdiçar esta {nome}, ela pode ser usada pra fazer geléia!").vai()   
+	Texto(cenario, f"Você não deveria desperdiçar esta {nome}, ela pode ser usada pra fazer geleia!").vai()   
 def rejeita_banana_boa_lixeira(evento, nome):
 	global cenario
 	nome=nome[:-1]
@@ -108,7 +108,7 @@ def rejeita_banana_boa_lixeira(evento, nome):
 def aceita_gelequa(evento, nome):
 	global cenario
 	nome=nome[:-1]
-	Texto(cenario,f"Muito bem!!! Essa {nome} pode virar uma geléia!").vai()
+	Texto(cenario,f"Muito bem!!! Essa {nome} pode virar uma geleia!").vai()
 def rejeita_gelequa_boa(evento, nome):
 	global cenario
 	nome=nome[:-1]
