@@ -1,7 +1,7 @@
 # betty.sara.main.py
 ""     xxxxx
 
-.. codeauthor:: Marco <marcolemosss@gmail.com>
+.. codeauthor:: xxxx <xxxxx@xxx.com>
 
 Changelog
 ---------
