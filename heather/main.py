@@ -52,10 +52,10 @@ for i in range(200):
                 #return valor_int
 
         if valor == novo_valor_leitura:
-           Formata_leitura()
-           hora_atual = datetime.now()
-           hora_texto = hora_atual.strftime("%H:%M:%S")
-           print(valor_int, hora_texto)
+            Formata_leitura()
+            hora_atual = datetime.now()
+            hora_texto = hora_atual.strftime("%H:%M:%S")
+            print(valor_int, hora_texto)
 
         else:
             Formata_leitura()
@@ -71,6 +71,7 @@ for i in range(200):
                     hora_texto = hora_atual.strftime("%H:%M:%S")
                     print(valor_int, hora_texto, ' %i Ponto de Proc. Sucessivo peças azuis: ' % pontos_suc, flush=True)
 
+            # inicio de formação sequencial em mais de um plano peças azuis: ponto de Processamento Simultâneo
             def Processamento_Simultaneo(prim_casa, seg_casa, terc_casa):
                 global pontos_sim
                 if (valor_int[prim_casa] == 11 or valor_int[prim_casa] == 12 or valor_int[prim_casa] == 13 or
@@ -91,14 +92,12 @@ for i in range(200):
             Processamento_Sucessivo(4, 5)
             Processamento_Sucessivo(6, 7)
             Processamento_Sucessivo(7, 8)
-
             Processamento_Sucessivo(0, 3)
             Processamento_Sucessivo(3, 6)
             Processamento_Sucessivo(1, 4)
             Processamento_Sucessivo(4, 7)
             Processamento_Sucessivo(2, 5)
             Processamento_Sucessivo(5, 8)
-
             Processamento_Sucessivo(0, 4)
             Processamento_Sucessivo(4, 8)
             Processamento_Sucessivo(2, 4)
