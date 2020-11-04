@@ -23,13 +23,29 @@ class Tabuleiro():
     def __init__(self):
         # self.leitor = list(leitura.readline().decode("utf8"))
         # isto deve ser um metodo, pois é uma ação de ler
+        def calcula_casas_alinhadas():
+            casas = range(27)
+            linhas_x = [alinhadas for alinhadas in zip(casas[::3], casas[1::3], casas[2::3])]
+            matriz_y = [alinhadas for alinhadas in zip(linhas_x[::3], linhas_x[1::3], linhas_x[2::3])]
+            linhas_yy = [list(zip(*matriz)) for matriz in matriz_y]
+            linhas_y = [linha for matriz in linhas_yy for linha in matriz]
+            linhas_z = [alinhadas for alinhadas in zip(casas, casas[9:], casas[18:])]
+
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
         
     def leitor(self):
         return list(leitura.readline().decode("utf8"))
+        
+    def formata_leitura(self, linha_lida):
+        """ Pega o texto lido e converte em um vetor de inteiros
+        
+        O dado vem como um texto continuo com os valores separados por tab
+        """
+        return [int(dado) for dado in linha_lida.split("\t")]
+        """ o metodo split quebra o texto em um vetor de strings qe estavam separadas pelo tab"""
 
-    def formata_leitura(self, valor):
+    def velho_formata_leitura(self, valor):
         global valor_int
         self.valor = self.leitor
         n_remove = '\n'
