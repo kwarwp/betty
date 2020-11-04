@@ -1,10 +1,10 @@
 # betty.adda.main.py
-import serial
+#import serial
 from datetime import timedelta
 from datetime import date
 from datetime import datetime
-from sys import stdout
-from time import sleep
+#from sys import stdout
+#from time import sleep
 
 # leitura = serial.Serial('COM7', 9600)
 
@@ -13,17 +13,17 @@ data_texto = data_atual.strftime("%d/%m/%Y")
 print(data_texto)
 
 # Gera o cronômetro
-segundos = int(input('Inicie digitando 0: '))
+# segundos = int(input('Inicie digitando 0: '))
 # tempo = timedelta(seconds=segundos)
 pontos_suc = int(0)
 pontos_sim = int(0)
-
 
 
 class FakeSerial:
     def readline(self):
         line = [20, 20] + [10]*25
         return "\t".join(f"{dado}" for dado in line).encode("utf8")
+        
 leitura = FakeSerial()
 
 class Tabuleiro():
