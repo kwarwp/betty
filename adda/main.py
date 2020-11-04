@@ -21,7 +21,14 @@ pontos_sim = int(0)
 
 class FakeSerial:
     def readline(self):
-        line = [20, 20] + [10]*25
+        from random import shuffle
+        line = [10]*27
+        pecas = list(range(10,40))
+        lugares = list(range(27))
+        shuffle(pecas)
+        shuffle(lugares)
+        for lugar in lugares[:6]:
+            line[lugar] = pecas[lugar]
         return "\t".join(["{}".format(dado) for dado in line]).encode("utf8")
         
 leitura = FakeSerial()
@@ -101,16 +108,17 @@ class Tabuleiro():
     def atualiza_leitura(self, novo_valor_leitura=""):
         #novo_valor_leitura = self.novo_valor_leitura
         # self.novo_valor_leitura = list(leitura.readline().decode("utf8"))
-        novo_valor_leitura = self.leitor()
+        novo_valor_leitura = self.formata_leitura(self.leitor())
 
         if self.valor != novo_valor_leitura:
-            self.valor = self.formata_leitura(novo_valor_leitura)
+            self.valor = novo_valor_leitura
             hora_atual = datetime.now()
             hora_texto = hora_atual.strftime("%H:%M:%S")
             print(self.valor, hora_texto)
             print( "promessas = {}".format(self.proc_sucessivo()))
 
-        #else:
+        else:
+            self.valor = novo_valor_leitura
             #self.valor = self.formata_leitura(self.novo_valor_leitura)
             #self.novo_valor_leitura.proc_suc_azul()
             #self.novo_valor_leitura.proc_suc_amar()
