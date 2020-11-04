@@ -26,13 +26,30 @@ class Tabuleiro():
         def calcula_casas_alinhadas():
             casas = range(27)
             linhas_x = [alinhadas for alinhadas in zip(casas[::3], casas[1::3], casas[2::3])]
-            matriz_y = [alinhadas for alinhadas in zip(linhas_x[::3], linhas_x[1::3], linhas_x[2::3])]
-            linhas_yy = [list(zip(*matriz)) for matriz in matriz_y]
-            linhas_y = [linha for matriz in linhas_yy for linha in matriz]
+            linhas_y = [alinhadas for n in (0,1,2) for alinhadas in zip(casas[n::9], casas[n+3::9], casas[n+6::9])]
             linhas_z = [alinhadas for alinhadas in zip(casas, casas[9:], casas[18:])]
+            # ainda faltam as diagonais
+            return linha_x + linhas_y + linhas_z
 
         self.valor = []
+        self.acertos = calcula_casas_alinhadas()
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
+        
+    def calcula_propriedade_peca(self, peca):
+        """
+        Usando a artmética de módulo cria um byte para representar as propriedades da peça
+        cada bit do byte representa cor e forma da peça na seguinte ordem:
+        q= quadrado, c= circulo, g = grande, p=pequeno, f = furado, n= negro, b= branco
+        bqp,bqg,bcf,bcg,bcp,nqp,nqg,ncf,ncg,ncp, vermelho, verde, purpura, laranja, amarelo, azul
+        """
+        if peca < 11:
+            return 0
+        else 
+            peca -= 11
+        cor = peca // 5
+        forma = peca % 5
+        return (1<<cor) + (1 << (forma + 6 * (peca//15 + 1) )
+         
         
     def leitor(self):
         return list(leitura.readline().decode("utf8"))
