@@ -78,3 +78,26 @@ Traceback (most recent call last):
     self.pinos = [self.calcula_propriedade_peca(int(dado)) for dado in linha_lida.split("\t")]
 ValueError: invalid literal for int() with base 10: '{dado}'
 '''},
+{'date': 'Wed Nov 04 2020 16:17:32.74 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''04/11/2020
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 157
+    tabuleiro.atualiza_leitura()
+  module <module> line 104
+    novo_valor_leitura = self.leitor()
+  module <module> line 67
+    return leitura.readline().decode("utf8")
+  module <module> line 25
+    return "\t".join([f"{dado}" for dado in line]).encode("utf8")
+TypeError: sequence item 0: expected str instance, int found
+'''},
