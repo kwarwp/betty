@@ -101,3 +101,10 @@ Traceback (most recent call last):
     return "\t".join([f"{dado}" for dado in line]).encode("utf8")
 TypeError: sequence item 0: expected str instance, int found
 '''},
+{'date': 'Wed Nov 04 2020 19:36:45.191 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 26
+  pecas = list(range(10:40))
+                        ^
+SyntaxError: invalid syntax
+'''},
