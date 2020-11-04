@@ -6,7 +6,7 @@ from datetime import datetime
 from sys import stdout
 from time import sleep
 
-leitura = serial.Serial('COM7', 9600)
+# leitura = serial.Serial('COM7', 9600)
 
 data_atual = date.today()
 data_texto = data_atual.strftime("%d/%m/%Y")
@@ -18,6 +18,13 @@ segundos = int(input('Inicie digitando 0: '))
 pontos_suc = int(0)
 pontos_sim = int(0)
 
+
+
+class FakeSerial:
+    def readline(self):
+        line = [20, 20] + [10]*25
+        return "\t".join(f"{dado}" for dado in line).encode("utf8")
+leitura = FakeSerial()
 
 class Tabuleiro():
     def __init__(self):
@@ -32,8 +39,13 @@ class Tabuleiro():
             return linha_x + linhas_y + linhas_z
 
         self.valor = []
-        self.acertos = calcula_casas_alinhadas()
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
+        self.acertos = calcula_casas_alinhadas()
+        """ conjunto de todas as casas alinhadas três a três"""
+        alinhados = ((0, 1), (0, 2), (1, 2))
+        self.promessas = [(lin[a], lin[b]) for a,b in alinhados for lin in self.acertos]
+        """ conjunto de todas as casas alinhadas dois a dois"""
+        self.pinos = []
         
     def calcula_propriedade_peca(self, peca):
         """
@@ -59,8 +71,9 @@ class Tabuleiro():
         
         O dado vem como um texto continuo com os valores separados por tab
         """
-        return [int(dado) for dado in linha_lida.split("\t")]
+        self.pinos = [self.calcula_propriedade_peca(int(dado)) for dado in linha_lida.split("\t")]
         """ o metodo split quebra o texto em um vetor de strings qe estavam separadas pelo tab"""
+        return self.pinos
 
     def velho_formata_leitura(self, valor):
         global valor_int
@@ -85,20 +98,27 @@ class Tabuleiro():
                 if valor_int[m] == 10:
                     valor_int[m] = valor_int[m] - 10
 
-    def atualiza_leitura(self, novo_valor_leitura):
-        novo_valor_leitura = self.novo_valor_leitura
-        self.novo_valor_leitura = list(leitura.readline().decode("utf8"))
+    def atualiza_leitura(self, novo_valor_leitura=""):
+        #novo_valor_leitura = self.novo_valor_leitura
+        # self.novo_valor_leitura = list(leitura.readline().decode("utf8"))
+        novo_valor_leitura = self.leitor()
 
-        if self.valor == self.novo_valor_leitura:
-            self.novo_valor_leitura = self.formata_leitura()
+        if self.valor != novo_valor_leitura:
+            self.valor = self.formata_leitura(novo_valor_leitura)
             hora_atual = datetime.now()
             hora_texto = hora_atual.strftime("%H:%M:%S")
             print(valor_int, hora_texto)
+            print( "promessas = {}".format(self.proc_sucessivo()))
 
-        else:
-            self.novo_valor_leitura = self.formata_leitura()
-            self.novo_valor_leitura.proc_suc_azul()
-            self.novo_valor_leitura.proc_suc_amar()
+        #else:
+            #self.valor = self.formata_leitura(self.novo_valor_leitura)
+            #self.novo_valor_leitura.proc_suc_azul()
+            #self.novo_valor_leitura.proc_suc_amar()
+            
+    def proc_sucessivo(self):
+        pinos = self.pinos
+        promete = sum( 1 if bool(pinos[a] & pinos[b]) else 0 for a, b in self.promessas)
+        return promete
 
 
     # inicio de formação sequencial peças azuis: ponto de Processamento Sucessivo
@@ -134,5 +154,4 @@ def main():
 if __name__ == '__main__':
     tabuleiro = main()
     for i in range(200):
-        Tabuleiro()
-        sleep(0.5)
+        tabuleiro.atualiza_leitura()
