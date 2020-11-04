@@ -21,8 +21,13 @@ pontos_sim = int(0)
 
 class Tabuleiro():
     def __init__(self):
-        self.leitor = list(leitura.readline().decode("utf8"))
-        self.valor = None
+        # self.leitor = list(leitura.readline().decode("utf8"))
+        # isto deve ser um metodo, pois é uma ação de ler
+        self.valor = []
+        """ Aqui ficarão armazenados os valores lidos da porta serial"""
+        
+    def leitor(self):
+        return list(leitura.readline().decode("utf8"))
 
     def formata_leitura(self, valor):
         global valor_int
