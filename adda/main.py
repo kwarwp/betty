@@ -22,7 +22,7 @@ pontos_sim = int(0)
 class FakeSerial:
     def readline(self):
         line = [20, 20] + [10]*25
-        return "\t".join(f"{dado}" for dado in line).encode("utf8")
+        return "\t".join(["{}".format(dado) for dado in line]).encode("utf8")
         
 leitura = FakeSerial()
 
@@ -36,7 +36,7 @@ class Tabuleiro():
             linhas_y = [alinhadas for n in (0,1,2) for alinhadas in zip(casas[n::9], casas[n+3::9], casas[n+6::9])]
             linhas_z = [alinhadas for alinhadas in zip(casas, casas[9:], casas[18:])]
             # ainda faltam as diagonais
-            return linha_x + linhas_y + linhas_z
+            return linhas_x + linhas_y + linhas_z
 
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
@@ -56,15 +56,15 @@ class Tabuleiro():
         """
         if peca < 11:
             return 0
-        else 
+        else: 
             peca -= 11
         cor = peca // 5
         forma = peca % 5
-        return (1<<cor) + (1 << (forma + 6 * (peca//15 + 1) )
+        return (1<<cor) + (1 << (forma + 6 * (peca//15 + 1) ))
          
         
     def leitor(self):
-        return list(leitura.readline().decode("utf8"))
+        return leitura.readline().decode("utf8")
         
     def formata_leitura(self, linha_lida):
         """ Pega o texto lido e converte em um vetor de inteiros
@@ -107,7 +107,7 @@ class Tabuleiro():
             self.valor = self.formata_leitura(novo_valor_leitura)
             hora_atual = datetime.now()
             hora_texto = hora_atual.strftime("%H:%M:%S")
-            print(valor_int, hora_texto)
+            print(self.valor, hora_texto)
             print( "promessas = {}".format(self.proc_sucessivo()))
 
         #else:
