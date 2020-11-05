@@ -15,7 +15,7 @@ SZ = 4
 
 data_atual = date.today()
 data_texto = data_atual.strftime("%d/%m/%Y")
-print(data_texto)
+#print(data_texto)
 
 # Gera o cronômetro
 # segundos = int(input('Inicie digitando 0: '))
@@ -38,7 +38,7 @@ class FakeSerial:
         
 leitura = FakeSerial()
 
-
+'''
 class Casa:
     CASAS = {}  # esta coleção serve para achar o objeto casa a partir de sua posicão
 
@@ -73,14 +73,8 @@ class Casa:
         #print(self.pos)
 
     def testa_ganhou(self):
-        '''
-        def casas_ganhadoras(tira):
-            tipo_tira = [Casa.CASAS[casa].tipo_peca() for casa in tira if isinstance(casa, tuple)]
-            return tipo_tira == [1, 1, 1] or tipo_tira == [2, 2, 2]
-        tiras = [tira for tira in TIRASD[self.pos] if casas_ganhadoras(tira)]  # crie aqui um teste para saber se alguem venceu
-        #print("testa_ganhou", tiras,  casas_ganhadoras(tiras))
-        '''
         return Tabuleiro.TABULEIRO.ganhou()
+'''
 
 class Tabuleiro():
     TABULEIRO = None
