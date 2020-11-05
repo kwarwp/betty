@@ -237,5 +237,5 @@ def main():
 
 if __name__ == '__main__':
     tabuleiro = main()
-    for i in range(200):
+    for i in range(1):
         tabuleiro.atualiza_leitura()
