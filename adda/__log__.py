@@ -197,3 +197,8 @@ Traceback (most recent call last):
     print(diags)
 NameError: name 'diags' is not defined
 '''},
+{'date': 'Thu Nov 05 2020 16:02:06.690 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''05/11/2020
+
+Exception: <TypeError: window.__context is undefined>
+'''},
