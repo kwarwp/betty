@@ -123,12 +123,12 @@ class Tabuleiro():
             diag_f_z = [alinhadas for alinhadas in zip(casas[::3], casas[10::3], casas[20::3])]
             diag_b_z = [alinhadas for alinhadas in zip(casas[2::3], casas[10::3], casas[18::3])]
             diag_xyz = [(0,13,26), (2, 13, 24),(6,13,20), (8, 13, 18)]
-            #diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
-            diags = diag_xyz
+            diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
+            #diags = diag_xyz
             # print(diags)
-            # return linhas_x + linhas_y + linhas_z + diags
-            return diags
-        #Tabuleiro.TABULEIRO = self
+            return linhas_x + linhas_y + linhas_z + diags
+
+        Tabuleiro.TABULEIRO = self
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
         self.acertos = calcula_casas_alinhadas()
@@ -158,7 +158,8 @@ class Tabuleiro():
         pos_casas = [casa.pos for casa in Casa.ACASA]
         #print(pos_casas)
         #[line(vec(*pos_casas[a]), vec(*pos_casas[b]), vec(*pos_casas[c])) for a, b, c in self.acertos]
-        Cubo(-2,0,0,self.calcula_propriedade_peca(20))
+        #Cubo(-2,0,0,self.calcula_propriedade_peca(20))
+        [Cubo(-2, y, z, tipo+11) for y, z, tipo in enumerate((y,z) for y in (-1,0,1) for z in (-2,-1,0,1,2))]
 
         
     def calcula_propriedade_peca(self, peca):
