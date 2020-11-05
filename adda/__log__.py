@@ -400,3 +400,7 @@ Exception: <SyntaxError: Unexpected token ','>
 
 Exception: <TypeError: Cannot read property 'canvas_selected' of undefined>
 '''},
+{'date': 'Thu Nov 05 2020 18:31:19.693 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Unexpected token ','>
+'''},
