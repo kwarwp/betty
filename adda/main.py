@@ -38,7 +38,7 @@ class FakeSerial:
         
 leitura = FakeSerial()
 
-'''
+
 class Casa:
     CASAS = {}  # esta coleção serve para achar o objeto casa a partir de sua posicão
 
@@ -74,7 +74,7 @@ class Casa:
 
     def testa_ganhou(self):
         return Tabuleiro.TABULEIRO.ganhou()
-'''
+
 
 class Tabuleiro():
     TABULEIRO = None
