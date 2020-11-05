@@ -206,3 +206,7 @@ Exception: <TypeError: window.__context is undefined>
 'error': '''
 Exception: <SyntaxError: missing ] in computed property name>
 '''},
+{'date': 'Thu Nov 05 2020 16:05:20.239 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: missing ] in computed property name>
+'''},
