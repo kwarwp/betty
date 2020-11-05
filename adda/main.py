@@ -99,7 +99,7 @@ class Tabuleiro():
             # print(diags)
             return linhas_x + linhas_y + linhas_z + diags
 
-        Tabuleiro.TABULEIRO = self
+        #Tabuleiro.TABULEIRO = self
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
         self.acertos = calcula_casas_alinhadas()
