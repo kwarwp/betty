@@ -114,13 +114,13 @@ class Tabuleiro():
         self.promessas = [(lin[a], lin[b]) for a,b in alinhados for lin in self.acertos]
         """ conjunto de todas as casas alinhadas dois a dois"""
         self.pinos = []
-        self._casas = [Casa(coluna, linha, camada)
-                 for coluna in TAM for linha in TAM for camada in TAM]
         doc['pydiv'].html = ""
         _gs = Glow('pydiv')
         cena = canvas()
         cena.width = 900
         cena.height = 600
+        self._casas = [Casa(coluna, linha, camada)
+                 for coluna in TAM for linha in TAM for camada in TAM]
 
         
     def calcula_propriedade_peca(self, peca):
