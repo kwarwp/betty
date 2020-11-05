@@ -131,9 +131,9 @@ class Tabuleiro():
         """ conjunto de todas as casas alinhadas dois a dois"""
         self.pinos = []
         #print(self.acertos)
-        #self.paint()
-        #self.casas()
-        print([(k, v) for k,v in FORMAS.items()])
+        self.paint()
+        self.casas()
+        #print([(k, v) for k,v in FORMAS.items()])
         #print(CORES)
     def paint(self):
         doc['pydiv'].html = ""
