@@ -100,9 +100,6 @@ class Tabuleiro():
             diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
             # print(diags)
             return linhas_x + linhas_y + linhas_z + diags
-        def line(*args):
-            c = curve()
-            [c.append(pt) for pt in args]
         #Tabuleiro.TABULEIRO = self
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
@@ -112,7 +109,8 @@ class Tabuleiro():
         self.promessas = [(lin[a], lin[b]) for a,b in alinhados for lin in self.acertos]
         """ conjunto de todas as casas alinhadas dois a dois"""
         self.pinos = []
-        print(self.acertos)
+        #print(self.acertos)
+        self.paint()
         self.casas()
     def paint(self):
         doc['pydiv'].html = ""
@@ -121,12 +119,15 @@ class Tabuleiro():
         cena.width = 900
         cena.height = 600
     def casas(self):
+        def line(*args):
+            c = curve()
+            [c.append(pt) for pt in args]
         self._casas = [Casa(coluna, linha, camada)
                  for coluna in TAM for linha in TAM for camada in TAM]
         #line(vec(-4,0,0), vec(0,1,0), vec(4,0,0))
         pos_casas = [casa.pos for casa in Casa.ACASA]
-        print(pos_casas)
-        #[line(vec(pos_casas[a]), vec(pos_casas[b]), vec(pos_casas[c])) for a, b, c in self.acertos]
+        #print(pos_casas)
+        [line(vec(pos_casas[a]), vec(pos_casas[b]), vec(pos_casas[c])) for a, b, c in self.acertos]
 
         
     def calcula_propriedade_peca(self, peca):
