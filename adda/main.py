@@ -41,12 +41,14 @@ leitura = FakeSerial()
 
 class Casa:
     CASAS = {}  # esta coleção serve para achar o objeto casa a partir de sua posicão
+    ACASA = []
 
     def __init__(self, x, y, z):
         self.pos = (x*SP, y*SP, z*SP)
         tam = SZ /2
         self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
         Casa.CASAS[self.pos] = self  # adiciona esta casa na coleção de casas
+        Casa.ACASA.append[self]
         self.peca = None
 
     def recebe(self, algo3d):
@@ -118,6 +120,8 @@ class Tabuleiro():
         self._casas = [Casa(coluna, linha, camada)
                  for coluna in TAM for linha in TAM for camada in TAM]
         line(vec(-4,0,0), vec(4,0,0))
+        pos_casas = [casa.pos for casa in Casa.ACASA]
+        [line(vec(pos_casas(a)), vec(pos_casas(b)), vec(pos_casas(c))) for a, b, c in self.acertos]
 
         
     def calcula_propriedade_peca(self, peca):
