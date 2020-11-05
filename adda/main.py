@@ -115,6 +115,7 @@ class Tabuleiro():
         cena.height = 600
         self._casas = [Casa(coluna, linha, camada)
                  for coluna in TAM for linha in TAM for camada in TAM]
+        curve((-2,0,0), (2,0,0))
 
         
     def calcula_propriedade_peca(self, peca):
