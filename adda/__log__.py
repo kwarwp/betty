@@ -391,3 +391,7 @@ AttributeError: 'method' object has no attribute '__getitem__'
     [line(vec(pos_casas(a)), vec(pos_casas(b)), vec(pos_casas(c))) for a, b, c in self.acertos]
 TypeError: 'list' object is not callable
 '''},
+{'date': 'Thu Nov 05 2020 18:30:25.882 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Unexpected token ','>
+'''},
