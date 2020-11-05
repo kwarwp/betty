@@ -73,7 +73,7 @@ class Casa:
         #print(self.pos)
 
     def testa_ganhou(self):
-        return Tabuleiro.TABULEIRO.ganhou()
+        return Tabuleiro.TABULEIRO.testa_ganhou()
 
 
 class Tabuleiro():
