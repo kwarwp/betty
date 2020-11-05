@@ -238,3 +238,7 @@ Exception: <SyntaxError: Unexpected token ','>
 'error': '''
 Exception: <SyntaxError: Unexpected token ','>
 '''},
+{'date': 'Thu Nov 05 2020 16:22:25.684 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Unexpected token ','>
+'''},
