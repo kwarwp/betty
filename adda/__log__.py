@@ -242,3 +242,10 @@ Exception: <SyntaxError: Unexpected token ','>
 'error': '''
 Exception: <SyntaxError: Unexpected token ','>
 '''},
+{'date': 'Thu Nov 05 2020 16:31:04.231 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 118
+  curve((-2,0,0), (2,0,0)
+                                         ^
+SyntaxError: invalid syntax
+'''},
