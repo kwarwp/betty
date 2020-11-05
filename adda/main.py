@@ -52,13 +52,17 @@ class Cubo:
         self.pos = (x*SP, y*SP, z*SP)
         self.tipo = tipo
         tam = SP/3
-        mark = tam+1
+        mark = tam+0.2
         forma, gran, peq, des = FORMAS[tipo >> 6]
         cor = CORES[tipo % (1<<6)]
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
         x, y, z = self.pos
         pos = x-mark/2*des, y, z
         marca = forma(pos=pos, size=(mark, gran, gran), color=color.black)
+        pos = x, y-mark/2*des, z
+        marca = forma(pos=pos, size=(gran, mark, gran), color=color.black)
+        pos = x, y, z-mark/2*des
+        marca = forma(pos=pos, size=(gran, gran, mark), color=color.black)
 
 
 class Casa:
