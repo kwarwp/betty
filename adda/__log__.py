@@ -595,3 +595,7 @@ TypeError: append() takes 2 positional argument but more were given
 'error': '''
 Exception: <SyntaxError: Unexpected token ','>
 '''},
+{'date': 'Thu Nov 05 2020 20:10:36.189 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$nat' of undefined>
+'''},
