@@ -49,9 +49,10 @@ class Tabuleiro():
             diag_b_y = [alinhadas for alinhadas in zip(casas[6:9], casas[12:15], casas[18:21])]
             diag_f_z = [alinhadas for alinhadas in zip(casas[::3], casas[10::3], casas[20::3])]
             diag_b_z = [alinhadas for alinhadas in zip(casas[2::9], casas[10::3], casas[18::3])]
-            diag_xyx = [(0,13,27), (2, 13, 25),(5,13,20), (7, 13, 18)]
+            diag_xyz = [(0,13,26), (2, 13, 24),(5,13,20), (7, 13, 18)]
             diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
-            return linhas_x + linhas_y + linhas_z + diagz
+            print(diags)
+            return linhas_x + linhas_y + linhas_z + diags
 
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
