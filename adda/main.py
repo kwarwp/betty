@@ -112,6 +112,8 @@ class Tabuleiro():
         self.promessas = [(lin[a], lin[b]) for a,b in alinhados for lin in self.acertos]
         """ conjunto de todas as casas alinhadas dois a dois"""
         self.pinos = []
+        print(self.acertos)
+    def paint(self):
         doc['pydiv'].html = ""
         _gs = Glow('pydiv')
         cena = canvas()
