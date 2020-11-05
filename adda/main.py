@@ -11,7 +11,8 @@ TAM = (-1, 0, 1)
 SP = 18
 SZ = 8
 L, S, Z = 8, 4, 0
-CORES = {1<<bit: cor for bit, cor in enumerate("blue orange yellow purple green red".split())}
+COR = (color.blue, color.orange , color.yellow , color.purple , color.green , color.red)
+CORES = {1<<bit: cor for bit, cor in enumerate(COR)}
 FORMA = ((box,L,Z), (box,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
 FORMAS = {2**bit:forma for bit, forma in enumerate(FORMA)}
 
@@ -55,7 +56,7 @@ class Cubo:
         forma, gran, peq = FORMAS[tipo >> 6]
         cor = CORES[tipo % (1<<6)]
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
-        marca = forma(pos=self.pos, size=(gran, gran, mark), color="black")
+        marca = forma(pos=self.pos, size=(gran, gran, mark), color=color.black)
 
 
 class Casa:
