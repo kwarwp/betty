@@ -92,13 +92,13 @@ class Tabuleiro():
             # ainda faltam as diagonais
             diag_f_x = [alinhadas for alinhadas in zip(casas[::9], casas[4::9], casas[8::9])]
             diag_b_x = [alinhadas for alinhadas in zip(casas[2::9], casas[4::9], casas[6::9])]
-            diag_f_y = [alinhadas for alinhadas in zip(casas, casas[12:], casas[25:])]
+            diag_f_y = [alinhadas for alinhadas in zip(casas, casas[12:], casas[24:])]
             diag_b_y = [alinhadas for alinhadas in zip(casas[6:9], casas[12:15], casas[18:21])]
             diag_f_z = [alinhadas for alinhadas in zip(casas[::3], casas[10::3], casas[20::3])]
             diag_b_z = [alinhadas for alinhadas in zip(casas[2::9], casas[10::3], casas[18::3])]
             diag_xyz = [(0,13,26), (2, 13, 24),(5,13,20), (7, 13, 18)]
             #diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
-            diags = diag_f_x +diag_b_x
+            diags = diag_f_y +diag_b_y
             # print(diags)
             # return linhas_x + linhas_y + linhas_z + diags
             return diags
