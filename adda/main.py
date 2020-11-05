@@ -48,7 +48,7 @@ class Casa:
         tam = SZ /2
         self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
         Casa.CASAS[self.pos] = self  # adiciona esta casa na coleção de casas
-        Casa.ACASA.append[self]
+        Casa.ACASA.append(self)
         self.peca = None
 
     def recebe(self, algo3d):
