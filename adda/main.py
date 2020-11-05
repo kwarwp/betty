@@ -52,7 +52,7 @@ class Cubo:
         self.tipo = tipo
         tam = SP/3
         mark = tam+1
-        forma, gran, peq = FORMA[tipo >> 6]
+        forma, gran, peq = FORMAS[tipo >> 6]
         cor = CORES[tipo % (1<<6)]
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
         marca = forma(pos=self.pos, size=(gran, gran, mark), color="black")
