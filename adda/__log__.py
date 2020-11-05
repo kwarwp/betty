@@ -210,3 +210,7 @@ Exception: <SyntaxError: missing ] in computed property name>
 'error': '''
 Exception: <SyntaxError: missing ] in computed property name>
 '''},
+{'date': 'Thu Nov 05 2020 16:09:15.881 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: missing ] in computed property name>
+'''},
