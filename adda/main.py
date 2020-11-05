@@ -121,7 +121,7 @@ class Tabuleiro():
                  for coluna in TAM for linha in TAM for camada in TAM]
         line(vec(-4,0,0), vec(4,0,0))
         pos_casas = [casa.pos for casa in Casa.ACASA]
-        [line(vec(pos_casas(a)), vec(pos_casas(b)), vec(pos_casas(c))) for a, b, c in self.acertos]
+        [line(vec(pos_casas[a]), vec(pos_casas[b]), vec(pos_casas[c])) for a, b, c in self.acertos]
 
         
     def calcula_propriedade_peca(self, peca):
