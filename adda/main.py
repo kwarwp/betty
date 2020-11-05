@@ -148,7 +148,8 @@ class Tabuleiro():
         #line(vec(-4,0,0), vec(0,1,0), vec(4,0,0))
         pos_casas = [casa.pos for casa in Casa.ACASA]
         #print(pos_casas)
-        [line(vec(*pos_casas[a]), vec(*pos_casas[b]), vec(*pos_casas[c])) for a, b, c in self.acertos]
+        #[line(vec(*pos_casas[a]), vec(*pos_casas[b]), vec(*pos_casas[c])) for a, b, c in self.acertos]
+        Cubo(-2,0,0,self.calcula_propriedade_peca(20))
 
         
     def calcula_propriedade_peca(self, peca):
