@@ -591,3 +591,7 @@ Exception: <SyntaxError: Unexpected token ','>
     print([k, v for k,v in FORMAS.items()])
 TypeError: append() takes 2 positional argument but more were given
 '''},
+{'date': 'Thu Nov 05 2020 20:10:01.520 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Unexpected token ','>
+'''},
