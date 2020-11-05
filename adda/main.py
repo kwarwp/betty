@@ -13,7 +13,7 @@ SZ = 8
 L, S, Z = 8, 4, 0
 CORES = {1<<bit: cor for bit, cor in enumerate("blue orange yellow purple green red".split())}
 FORMA = ((box,L,Z), (box,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
-FORMAS = {1<<(bit+6): for bit, forma in enumerate(FORMA)}
+FORMAS = {1<<bit: for bit, forma in enumerate(FORMA)}
 
 # leitura = serial.Serial('COM7', 9600)
 
@@ -49,11 +49,13 @@ class Cubo:
 
     def __init__(self, x, y, z, tipo):
         self.pos = (x*SP, y*SP, z*SP)
-        tam = SZ /2
-        self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
-        Casa.CASAS[self.pos] = self  # adiciona esta casa na coleção de casas
-        Casa.ACASA.append(self)
-        self.peca = None
+        self.tipo = tipo
+        tam = SP/3
+        mark = tam+1
+        forma, gran, peq = FORMA[tipo >> 6]
+        cor = CORES[tipo % (1<<6)]
+        self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
+        marca = forma(pos=self.pos, size=(gran, gran, mark), color="black")
 
 
 class Casa:
