@@ -10,8 +10,8 @@ from browser import doc
 TAM = (-1, 0, 1)
 SP = 18
 SZ = 8
-CORES = {1<<bit: cor for bit, cor in enumerate("blue orange yellow purple green red".split())
-FORMA = ((cube,L,Z), (cube,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
+CORES = {1<<bit: cor for bit, cor in enumerate("blue orange yellow purple green red".split())}
+FORMA = ((box,L,Z), (box,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
 FORMAS = {1<<(bit+6): for bit, forma in enumerate(FORMA)}
 
 # leitura = serial.Serial('COM7', 9600)
