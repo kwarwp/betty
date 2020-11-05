@@ -8,8 +8,11 @@ from browser import doc
 #from sys import stdout
 #from time import sleep
 TAM = (-1, 0, 1)
-SP = 9
-SZ = 4
+SP = 18
+SZ = 8
+CORES = {1<<bit: cor for bit, cor in enumerate("blue orange yellow purple green red".split())
+FORMA = ((cube,L,Z), (cube,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
+FORMAS = {1<<(bit+6): for bit, forma in enumerate(FORMA)}
 
 # leitura = serial.Serial('COM7', 9600)
 
@@ -37,6 +40,19 @@ class FakeSerial:
         return "\t".join(["{}".format(dado) for dado in line]).encode("utf8")
         
 leitura = FakeSerial()
+
+
+class Cubo:
+    CASAS = {}  # esta coleção serve para achar o objeto casa a partir de sua posicão
+    ACASA = []
+
+    def __init__(self, x, y, z, tipo):
+        self.pos = (x*SP, y*SP, z*SP)
+        tam = SZ /2
+        self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
+        Casa.CASAS[self.pos] = self  # adiciona esta casa na coleção de casas
+        Casa.ACASA.append(self)
+        self.peca = None
 
 
 class Casa:
