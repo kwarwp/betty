@@ -7,6 +7,9 @@ from _spy.vpython.main import *
 from browser import doc
 #from sys import stdout
 #from time import sleep
+TAM = (-1, 0, 1)
+SP = 9
+SZ = 4
 
 # leitura = serial.Serial('COM7', 9600)
 
@@ -35,7 +38,53 @@ class FakeSerial:
         
 leitura = FakeSerial()
 
+
+class Casa:
+    CASAS = {}  # esta coleção serve para achar o objeto casa a partir de sua posicão
+
+    def __init__(self, x, y, z):
+        self.pos = (x*SP, y*SP, z*SP)
+        tam = SZ /2
+        self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
+        Casa.CASAS[self.pos] = self  # adiciona esta casa na coleção de casas
+        self.peca = None
+
+    def recebe(self, algo3d):
+        self.peca = algo3d
+        vencedores = self.testa_ganhou()
+        if vencedores:
+            #print("ganhou")
+            #self.pinta_vencedores(vencedores)
+            Tabuleiro.TABULEIRO.ganhou(vencedores)
+            return True
+        return False
+
+    def tipo_peca(self):
+        #print("tipo_peca", self.peca.tipo if self.peca is not None else 0)
+        return self.peca.tipo if self.peca else 0
+
+    def clicou(self):
+        coluna, linha, camada = self.pos  # aposição da peça vai ser a posição da casa
+        Tabuleiro.TABULEIRO.registra_jogada_na_historia(self.pos)
+        #peca = Peca(pecas.pop(), coluna, linha, camada, cores.pop())  # cria uma peça aqui
+        peca = Tabuleiro.TABULEIRO.joga(coluna, linha, camada)  # cria uma peça aqui
+        #Casa.CASAS.pop(self.pos)  # remove esta da lista de casas para não ser clicada
+        return self.recebe(peca)  # avisa a casa que ela esta é a peça que está nela
+        #print(self.pos)
+
+    def testa_ganhou(self):
+        '''
+        def casas_ganhadoras(tira):
+            tipo_tira = [Casa.CASAS[casa].tipo_peca() for casa in tira if isinstance(casa, tuple)]
+            return tipo_tira == [1, 1, 1] or tipo_tira == [2, 2, 2]
+        tiras = [tira for tira in TIRASD[self.pos] if casas_ganhadoras(tira)]  # crie aqui um teste para saber se alguem venceu
+        #print("testa_ganhou", tiras,  casas_ganhadoras(tiras))
+        '''
+        return Tabuleiro.TABULEIRO.ganhou()
+
 class Tabuleiro():
+    TABULEIRO = None
+
     def __init__(self):
         # self.leitor = list(leitura.readline().decode("utf8"))
         # isto deve ser um metodo, pois é uma ação de ler
@@ -56,6 +105,7 @@ class Tabuleiro():
             # print(diags)
             return linhas_x + linhas_y + linhas_z + diags
 
+        Tabuleiro.TABULEIRO = self
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
         self.acertos = calcula_casas_alinhadas()
@@ -64,6 +114,8 @@ class Tabuleiro():
         self.promessas = [(lin[a], lin[b]) for a,b in alinhados for lin in self.acertos]
         """ conjunto de todas as casas alinhadas dois a dois"""
         self.pinos = []
+        self._casas = [Casa(coluna, linha, camada)
+                 for coluna in TAM for linha in TAM for camada in TAM]
         doc['pydiv'].html = ""
         _gs = Glow('pydiv')
         cena = canvas()
