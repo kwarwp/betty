@@ -99,7 +99,8 @@ class Tabuleiro():
             diag_xyz = [(0,13,26), (2, 13, 24),(5,13,20), (7, 13, 18)]
             diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
             # print(diags)
-            return linhas_x + linhas_y + linhas_z + diags
+            # return linhas_x + linhas_y + linhas_z + diags
+            return diags
         #Tabuleiro.TABULEIRO = self
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
