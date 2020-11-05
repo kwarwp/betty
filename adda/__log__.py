@@ -131,3 +131,26 @@ Traceback (most recent call last):
     diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
 NameError: name 'diag_xyz' is not defined
 '''},
+{'date': 'Thu Nov 05 2020 15:31:55.964 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''05/11/2020
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 171
+    tabuleiro = main()
+  module <module> line 166
+    tabuleiro = Tabuleiro()
+  module <module> line 58
+    self.acertos = calcula_casas_alinhadas()
+  module <module> line 54
+    return linhas_x + linhas_y + linhas_z + diagz
+NameError: name 'diagz' is not defined
+'''},
