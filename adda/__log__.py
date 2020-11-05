@@ -253,3 +253,23 @@ SyntaxError: invalid syntax
 'error': '''
 Exception: <SyntaxError: Unexpected token ','>
 '''},
+{'date': 'Thu Nov 05 2020 16:31:42.743 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 227
+    tabuleiro = main()
+  module <module> line 222
+    tabuleiro = Tabuleiro()
+  module <module> line 118
+    curve((-2,0,0), (2,0,0))
+TypeError: __init__() takes 1 positional arguments but more were given
+'''},
