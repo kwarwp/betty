@@ -46,7 +46,7 @@ class Casa:
     def __init__(self, x, y, z):
         self.pos = (x*SP, y*SP, z*SP)
         tam = SZ /2
-        self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
+        #self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
         Casa.CASAS[self.pos] = self  # adiciona esta casa na coleção de casas
         Casa.ACASA.append(self)
         self.peca = None
@@ -113,16 +113,19 @@ class Tabuleiro():
         """ conjunto de todas as casas alinhadas dois a dois"""
         self.pinos = []
         print(self.acertos)
+        self.casas()
     def paint(self):
         doc['pydiv'].html = ""
         _gs = Glow('pydiv')
         cena = canvas()
         cena.width = 900
         cena.height = 600
+    def casas(self):
         self._casas = [Casa(coluna, linha, camada)
                  for coluna in TAM for linha in TAM for camada in TAM]
         line(vec(-4,0,0), vec(0,1,0), vec(4,0,0))
         pos_casas = [casa.pos for casa in Casa.ACASA]
+        print(pos_casas)
         #[line(vec(pos_casas[a]), vec(pos_casas[b]), vec(pos_casas[c])) for a, b, c in self.acertos]
 
         
