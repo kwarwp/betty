@@ -293,3 +293,7 @@ TypeError: __init__() takes 1 positional arguments but more were given
     curve(vec(-2,0,0), vec(2,0,0))
 TypeError: __init__() takes 1 positional arguments but more were given
 '''},
+{'date': 'Thu Nov 05 2020 16:42:23.3 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <Error: A pos of a curve object must be a vector.>
+'''},
