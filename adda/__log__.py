@@ -543,3 +543,7 @@ KeyError: 16
     forma, gran, peq = FORMAS[tipo >> 6]
 KeyError: 8
 '''},
+{'date': 'Thu Nov 05 2020 20:01:43.950 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$nat' of undefined>
+'''},
