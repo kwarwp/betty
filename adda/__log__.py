@@ -444,3 +444,7 @@ SyntaxError: invalid syntax
     FORMA = ((cube,L,Z), (cube,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
 NameError: name 'cube' is not defined
 '''},
+{'date': 'Thu Nov 05 2020 19:25:06.517 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Unexpected token ','>
+'''},
