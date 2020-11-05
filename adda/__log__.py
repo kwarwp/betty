@@ -323,3 +323,7 @@ TypeError: __init__() takes 2 positional argument but more were given
 'error': '''
 Exception: <Error: A pos of a curve object must be a vector.>
 '''},
+{'date': 'Thu Nov 05 2020 16:55:24.101 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <Error: A curve object point must include a pos.>
+'''},
