@@ -13,7 +13,7 @@ SZ = 8
 L, S, Z = 8, 4, 0
 CORES = {1<<bit: cor for bit, cor in enumerate("blue orange yellow purple green red".split())}
 FORMA = ((box,L,Z), (box,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
-FORMAS = {1<<bit: for bit, forma in enumerate(FORMA)}
+FORMAS = {2**bit: for bit, forma in enumerate(FORMA)}
 
 # leitura = serial.Serial('COM7', 9600)
 
@@ -134,7 +134,7 @@ class Tabuleiro():
         #self.paint()
         #self.casas()
         print(FORMAS)
-        print(CORES)
+        #print(CORES)
     def paint(self):
         doc['pydiv'].html = ""
         _gs = Glow('pydiv')
