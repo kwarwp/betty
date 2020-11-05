@@ -98,7 +98,9 @@ class Tabuleiro():
             diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
             # print(diags)
             return linhas_x + linhas_y + linhas_z + diags
-
+        def line(*args):
+            c = curve()
+            [c.append(pt) for pt in args]
         #Tabuleiro.TABULEIRO = self
         self.valor = []
         """ Aqui ficarão armazenados os valores lidos da porta serial"""
@@ -115,7 +117,7 @@ class Tabuleiro():
         cena.height = 600
         self._casas = [Casa(coluna, linha, camada)
                  for coluna in TAM for linha in TAM for camada in TAM]
-        curve(vec(-4,0,0), vec(4,0,0))
+        line(vec(-4,0,0), vec(4,0,0))
 
         
     def calcula_propriedade_peca(self, peca):
