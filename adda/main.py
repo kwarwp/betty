@@ -46,7 +46,7 @@ class Casa:
     def __init__(self, x, y, z):
         self.pos = (x*SP, y*SP, z*SP)
         tam = SZ /2
-        #self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
+        self.e_casa = sphere(pos=self.pos, size=(tam, tam, tam), opacity=0.2)
         Casa.CASAS[self.pos] = self  # adiciona esta casa na coleção de casas
         Casa.ACASA.append(self)
         self.peca = None
@@ -127,7 +127,7 @@ class Tabuleiro():
         #line(vec(-4,0,0), vec(0,1,0), vec(4,0,0))
         pos_casas = [casa.pos for casa in Casa.ACASA]
         #print(pos_casas)
-        [line(vec(*pos_casas[a]), vec(*pos_casas[b]), vec(*pos_casas[c])) for a, b, c in self.acertos[:2]]
+        [line(vec(*pos_casas[a]), vec(*pos_casas[b]), vec(*pos_casas[c])) for a, b, c in self.acertos]
 
         
     def calcula_propriedade_peca(self, peca):
