@@ -123,7 +123,7 @@ class Tabuleiro():
     def casas(self):
         self._casas = [Casa(coluna, linha, camada)
                  for coluna in TAM for linha in TAM for camada in TAM]
-        line(vec(-4,0,0), vec(0,1,0), vec(4,0,0))
+        #line(vec(-4,0,0), vec(0,1,0), vec(4,0,0))
         pos_casas = [casa.pos for casa in Casa.ACASA]
         print(pos_casas)
         #[line(vec(pos_casas[a]), vec(pos_casas[b]), vec(pos_casas[c])) for a, b, c in self.acertos]
