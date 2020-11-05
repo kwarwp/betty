@@ -519,3 +519,27 @@ IndexError: list index out of range
     forma, gran, peq = FORMAS[tipo >> 6]
 KeyError: 16
 '''},
+{'date': 'Thu Nov 05 2020 19:56:55.601 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 261
+    tabuleiro = main()
+  module <module> line 256
+    tabuleiro = Tabuleiro()
+  module <module> line 135
+    self.casas()
+  module <module> line 152
+    Cubo(-2,0,0,self.calcula_propriedade_peca(19))
+  module <module> line 55
+    forma, gran, peq = FORMAS[tipo >> 6]
+KeyError: 8
+'''},
