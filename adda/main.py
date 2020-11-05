@@ -13,7 +13,7 @@ SZ = 8
 L, S, Z = 8, 4, 0
 COR = (color.blue, color.orange , color.yellow , color.purple , color.green , color.red)
 CORES = {1<<bit: cor for bit, cor in enumerate(COR)}
-FORMA = ((box,L,Z), (box,S,Z), (cylinder,L,Z), (cylinder,S,Z), (cylinder,L,S))
+FORMA = ((box,L,Z,Z), (box,S,Z,Z), (cylinder,L/2,Z,SZ), (cylinder,S/2,Z,SZ), (cylinder,L/2,S,SZ))
 FORMAS = {2**bit:forma for bit, forma in enumerate(FORMA)}
 
 # leitura = serial.Serial('COM7', 9600)
@@ -53,10 +53,12 @@ class Cubo:
         self.tipo = tipo
         tam = SP/3
         mark = tam+1
-        forma, gran, peq = FORMAS[tipo >> 6]
+        forma, gran, peq, des = FORMAS[tipo >> 6]
         cor = CORES[tipo % (1<<6)]
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
-        marca = forma(pos=self.pos, size=(gran, gran, mark), color=color.black)
+        x, y, z = self.pos
+        pos = x-des/2, y, z
+        marca = forma(pos=pos, size=(gran, gran, mark), color=color.black)
 
 
 class Casa:
