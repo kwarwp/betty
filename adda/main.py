@@ -3,6 +3,8 @@
 from datetime import timedelta
 from datetime import date
 from datetime import datetime
+from _spy.vpython.main import *
+from browser import doc
 #from sys import stdout
 #from time import sleep
 
@@ -51,7 +53,7 @@ class Tabuleiro():
             diag_b_z = [alinhadas for alinhadas in zip(casas[2::9], casas[10::3], casas[18::3])]
             diag_xyz = [(0,13,26), (2, 13, 24),(5,13,20), (7, 13, 18)]
             diags = diag_f_x +diag_b_x +diag_f_y +diag_b_y +diag_f_z +diag_b_z+diag_xyz
-            print(diags)
+            # print(diags)
             return linhas_x + linhas_y + linhas_z + diags
 
         self.valor = []
@@ -62,6 +64,12 @@ class Tabuleiro():
         self.promessas = [(lin[a], lin[b]) for a,b in alinhados for lin in self.acertos]
         """ conjunto de todas as casas alinhadas dois a dois"""
         self.pinos = []
+        doc['pydiv'].html = ""
+        _gs = Glow('pydiv')
+        cena = canvas()
+        cena.width = 900
+        cena.height = 600
+
         
     def calcula_propriedade_peca(self, peca):
         """
@@ -123,8 +131,8 @@ class Tabuleiro():
             self.valor = novo_valor_leitura
             hora_atual = datetime.now()
             hora_texto = hora_atual.strftime("%H:%M:%S")
-            print(self.valor, hora_texto)
-            print( "promessas = {}".format(self.proc_sucessivo()))
+            # print(self.valor, hora_texto)
+            # print( "promessas = {}".format(self.proc_sucessivo()))
 
         else:
             self.valor = novo_valor_leitura
