@@ -599,3 +599,7 @@ Exception: <SyntaxError: Unexpected token ','>
 'error': '''
 Exception: <TypeError: Cannot read property '$nat' of undefined>
 '''},
+{'date': 'Thu Nov 05 2020 20:13:10.453 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <Error: Property 'color' must be a vector.>
+'''},
