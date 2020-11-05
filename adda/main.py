@@ -10,10 +10,10 @@ from browser import doc
 TAM = (-1, 0, 1)
 SP = 18
 SZ = 8
-L, S, Z = 8, 4, 0
+L, S, Z, U= 8, 4, 0, 1
 COR = (color.blue, color.orange , color.yellow , color.purple , color.green , color.red)
 CORES = {1<<bit: cor for bit, cor in enumerate(COR)}
-FORMA = ((box,L,Z,Z), (box,S,Z,Z), (cylinder,L/2,Z,SZ), (cylinder,S/2,Z,SZ), (cylinder,L/2,S,SZ))
+FORMA = ((box,L,Z,Z), (box,S,Z,Z), (cylinder,L/2,Z,U), (cylinder,S/2,Z,U), (cylinder,L/2,S,U))
 FORMAS = {2**bit:forma for bit, forma in enumerate(FORMA)}
 
 # leitura = serial.Serial('COM7', 9600)
@@ -57,7 +57,7 @@ class Cubo:
         cor = CORES[tipo % (1<<6)]
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
         x, y, z = self.pos
-        pos = x-des/2, y, z
+        pos = x-mark/2*des, y, z
         marca = forma(pos=pos, size=(mark, gran, gran), color=color.black)
 
 
