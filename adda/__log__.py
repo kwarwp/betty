@@ -202,3 +202,7 @@ NameError: name 'diags' is not defined
 
 Exception: <TypeError: window.__context is undefined>
 '''},
+{'date': 'Thu Nov 05 2020 16:03:20.111 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: missing ] in computed property name>
+'''},
