@@ -230,3 +230,7 @@ Exception: <SyntaxError: missing ] in computed property name>
 'error': '''
 Exception: <SyntaxError: Unexpected token ','>
 '''},
+{'date': 'Thu Nov 05 2020 16:18:08.99 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Unexpected token ','>
+'''},
