@@ -133,7 +133,7 @@ class Tabuleiro():
         #print(self.acertos)
         #self.paint()
         #self.casas()
-        print([k, v for k,v in FORMAS.items()])
+        print([(k, v) for k,v in FORMAS.items()])
         #print(CORES)
     def paint(self):
         doc['pydiv'].html = ""
