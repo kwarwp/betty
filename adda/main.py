@@ -60,9 +60,9 @@ class Cubo:
         pos = x-mark/2*des, y, z
         marca = forma(pos=pos, size=(mark, gran, gran), color=color.black)
         pos = x, y-mark/2*des, z
-        marca = forma(pos=pos, size=(gran, mark, gran), axis=(0,1,0), color=color.black)
+        marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,1,0), color=color.black)
         pos = x, y, z-mark/2*des
-        marca = forma(pos=pos, size=(gran, gran, mark), axis=(0,0,1), color=color.black)
+        marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,0,1), color=color.black)
 
 
 class Casa:
