@@ -154,3 +154,25 @@ Traceback (most recent call last):
     return linhas_x + linhas_y + linhas_z + diagz
 NameError: name 'diagz' is not defined
 '''},
+{'date': 'Thu Nov 05 2020 15:32:23.17 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''05/11/2020
+[0, 0, 0, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 258, 0, 0, 0, 0, 0, 0, 0, 65, 0, 8208, 66] 15:32:22
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 173
+    tabuleiro.atualiza_leitura()
+  module <module> line 126
+    print( "promessas = {}".format(self.proc_sucessivo()))
+  module <module> line 136
+    promete = sum( 1 if bool(pinos[a] & pinos[b]) else 0 for a, b in self.promessas)
+IndexError: list index out of range
+'''},
