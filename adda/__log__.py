@@ -448,3 +448,10 @@ NameError: name 'cube' is not defined
 'error': '''
 Exception: <SyntaxError: Unexpected token ','>
 '''},
+{'date': 'Thu Nov 05 2020 19:25:23.625 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  CORES = {1<<bit: cor for bit, cor in enumerate("blue orange yellow purple green red".split())
+                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
