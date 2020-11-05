@@ -119,8 +119,8 @@ class Tabuleiro():
         cena = canvas()
         cena.width = 900
         cena.height = 600
-        self._casas = [Casa(coluna, linha, camada)
-                 for coluna in TAM for linha in TAM for camada in TAM]
+        #self._casas = [Casa(coluna, linha, camada)
+                 #for coluna in TAM for linha in TAM for camada in TAM]
 
         
     def calcula_propriedade_peca(self, peca):
