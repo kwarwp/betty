@@ -58,7 +58,7 @@ class Cubo:
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
         x, y, z = self.pos
         pos = x-des/2, y, z
-        marca = forma(pos=pos, size=(gran, gran, mark), color=color.black)
+        marca = forma(pos=pos, size=(mark, gran, gran), color=color.black)
 
 
 class Casa:
