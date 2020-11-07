@@ -161,6 +161,8 @@ class Tabuleiro():
         #Cubo(-2,0,0,self.calcula_propriedade_peca(20))
         [Cubo(-2, y, z, self.calcula_propriedade_peca(tipo+11))
             for tipo, (y, z) in enumerate((y,z) for y in (-1,0,1) for z in (-2,-1,0,1,2))]
+        [Cubo(2, y, z, self.calcula_propriedade_peca(tipo+26))
+            for tipo, (y, z) in enumerate((y,z) for y in (-1,0,1) for z in (-2,-1,0,1,2))]
 
         
     def calcula_propriedade_peca(self, peca):
