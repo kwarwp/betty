@@ -52,7 +52,7 @@ class Cubo:
         self.pos = (x*SP, y*SP, z*SP)
         self.tipo = tipo
         tam = SP/3
-        mark = tam+0.2
+        mark = tam+0.05
         forma, gran, peq, des = FORMAS[tipo >> 6]
         cor = CORES[tipo % (1<<6)]
         marcor = color.white if tipo > 2**11 else color.black
@@ -64,6 +64,15 @@ class Cubo:
         marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,1,0), color=marcor)
         pos = x, y, z-mark/2*des
         marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,0,1), color=marcor)
+        if peq:
+            gran = peq
+            mark += 0.05
+            pos = x-mark/2*des, y, z
+            marca = forma(pos=pos, size=(mark, gran, gran), color=cor)
+            pos = x, y-mark/2*des, z
+            marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,1,0), color=cor)
+            pos = x, y, z-mark/2*des
+            marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,0,1), color=cor)
 
 
 class Casa:
