@@ -755,3 +755,7 @@ KeyError: 64
 'error': '''
 Exception: <SyntaxError: missing ] in computed property name>
 '''},
+{'date': 'Sat Nov 07 2020 17:44:08.559 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <Error: Property 'color' must be a vector.>
+'''},
