@@ -13,7 +13,7 @@ SZ = 8
 L, S, Z, U= 8, 4, 0, 1
 COR = (color.blue, color.orange , color.yellow , color.purple , color.green , color.red , color.white)
 CORES = {1<<bit: cor for bit, cor in enumerate(COR)}
-FORMA = ((box,L,Z,Z), (box,S,Z,Z), (cylinder,L/2,Z,U), (cylinder,S/2,Z,U), (cylinder,L/2,S,U), (box,L,S,Z))
+FORMA = ((box,L,Z,Z), (box,S,Z,Z), (cylinder,L/2,Z,U), (cylinder,S/2,Z,U), (cylinder,L/2,S,U))*2
 FORMAS = {2**bit:forma for bit, forma in enumerate(FORMA)}
 
 # leitura = serial.Serial('COM7', 9600)
