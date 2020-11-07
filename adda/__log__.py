@@ -751,3 +751,7 @@ KeyError: 1024
     forma, gran, peq, des = FORMAS[tipo >> 6]
 KeyError: 64
 '''},
+{'date': 'Sat Nov 07 2020 17:39:08.915 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: missing ] in computed property name>
+'''},
