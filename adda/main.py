@@ -56,7 +56,6 @@ class Cubo:
         forma, gran, peq, des = FORMAS[tipo >> 6]
         cor = CORES[tipo % (1<<6)]
         marcor = color.white if tipo > 2**11 else color.black
-        marcor = color.white
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
         x, y, z = self.pos
         pos = x-mark/2*des, y, z
