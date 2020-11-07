@@ -55,15 +55,16 @@ class Cubo:
         mark = tam+0.2
         forma, gran, peq, des = FORMAS[tipo >> 6]
         cor = CORES[tipo % (1<<6)]
-        marca = color.white if tipo > 2**11 else color.black
+        marcor = color.white if tipo > 2**11 else color.black
+        marcor = color.white
         self.e_cubo = box(pos=self.pos, size=(tam, tam, tam), color=cor)
         x, y, z = self.pos
         pos = x-mark/2*des, y, z
-        marca = forma(pos=pos, size=(mark, gran, gran), color=marca)
+        marca = forma(pos=pos, size=(mark, gran, gran), color=marcor)
         pos = x, y-mark/2*des, z
-        marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,1,0), color=marca)
+        marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,1,0), color=marcor)
         pos = x, y, z-mark/2*des
-        marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,0,1), color=marca)
+        marca = forma(pos=pos, size=(mark, gran, gran), axis=(0,0,1), color=marcor)
 
 
 class Casa:
