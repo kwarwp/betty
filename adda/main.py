@@ -179,7 +179,7 @@ class Tabuleiro():
             peca -= 11
         cor = peca // 5
         forma = peca % 5
-        return (1<<cor) + (1 << (forma + 6 if peca < 15 else 11 ))
+        return (1<<cor) + (1 << (forma + (6 if peca < 15 else 11) ))
          
         
     def leitor(self):
